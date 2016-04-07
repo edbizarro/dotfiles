@@ -1,0 +1,19 @@
+[user]
+	name = Eduardo Bizarro
+	email = edbizarro@gmail.com
+	signingkey = E9BA9C4C
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[github]
+	user = edbizarro
+[core]
+	editor = vim
+
+[push]
+	default = simple
