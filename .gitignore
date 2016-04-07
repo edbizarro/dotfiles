@@ -1,0 +1,6 @@
+oh-my-zsh/
+vim/.netrwhist
+chef/
+private
+tmux/.tmux/resurrect/
+tmux/.tmux/plugins/*
