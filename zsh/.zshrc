@@ -69,6 +69,13 @@ export TERM=xterm-256color
 BASE16_SHELL="$HOME/.base16-shell/base16-ocean.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
+# Set the url that Rancher is on
+export RANCHER_URL=http://45.32.225.221:8080/
+# Set the access key, i.e. username
+export RANCHER_ACCESS_KEY=05DCAA06FEFCD6241397
+# Set the secret key, i.e. password
+export RANCHER_SECRET_KEY=pyqkbPPhFLaPUZa4CFWJ94K21Cv1jMusnQbDxnRx
+
 
 # ALIAS
 
