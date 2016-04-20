@@ -10,12 +10,12 @@ ZSH_THEME="ham"
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git laravel5 command-not-found common-aliases composer docker git-extras git-flow gitignore gulp node npm pip ssh-agent supervisor tmux vagrant vim-interaction battery last-working-dir themes)
+plugins=(git laravel5 command-not-found common-aliases composer docker docker-compose git-extras git-flow gitignore gulp npm pip ssh-agent supervisor tmux vagrant vim-interaction last-working-dir themes)
 
 # User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/PhpStorm-144.3656/bin:$PATH"
 
-if [ `uname -o` = "Cygwin" ]; then  
+if [ `uname -o` = "Cygwin" ]; then
   export VAGRANT_DETECTED_OS=cygwin
   VAGRANT_HOME=/cygdrive/c/Users/edbiz/
   export VAGRANT_HOME
@@ -43,7 +43,7 @@ bindkey '\e.' insert-last-word
 unsetopt CORRECT_ALL
 
 # Make history files large and shared over multiple sessions
-#EXTENDED_HISTORY=ON
+EXTENDED_HISTORY=ON
 #export HISTFILE= ~/.zsh_history
 #export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 #export HISTSIZE=100000                   # big big history
@@ -70,12 +70,33 @@ BASE16_SHELL="$HOME/.base16-shell/base16-ocean.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # Set the url that Rancher is on
-export RANCHER_URL=http://45.32.225.221:8080/
+export RANCHER_URL=http://45.32.1.73:8080/
 # Set the access key, i.e. username
-export RANCHER_ACCESS_KEY=05DCAA06FEFCD6241397
+export RANCHER_ACCESS_KEY=16103F25FC3562C5B75C
 # Set the secret key, i.e. password
-export RANCHER_SECRET_KEY=pyqkbPPhFLaPUZa4CFWJ94K21Cv1jMusnQbDxnRx
+export RANCHER_SECRET_KEY=wrc5Bx76MRphYdfSxXPFv7ZPcrCd7oFxnWB1p6Ki
 
+export IBUS_ENABLE_SYNC_MODE=1
+
+
+
+#################
+### FUNCTIONS ###
+#################
+
+# Docker
+
+function docker_build() {
+  sudo docker build -t $1 .
+}
+
+function docker_tag() {
+  sudo docker tag $1 $2
+}
+
+function docker_push() {
+  sudo docker push $1
+}
 
 # ALIAS
 
@@ -108,7 +129,7 @@ alias vbu='vagrant box update'
 alias cu='composer update --prefer-dist'
 alias ci='composer install --prefer-dist'
 
-# NPM 
+# NPM
 alias ni='npm install'
 alias nig='npm install -g'
 
@@ -116,3 +137,9 @@ alias nig='npm install -g'
 
 alias g='gulp'
 alias gw='gulp watch'
+
+# Docker
+
+alias db='docker_build '
+alias dt='docker_tag '
+alias dp='docker_push '
