@@ -1,4 +1,5 @@
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    sudo apt-get install curl -y
     curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 fi
 
