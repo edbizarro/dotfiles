@@ -3,6 +3,8 @@ dotfiles
 
 A collection of my personal dotfiles. Here's a little preview of what it can look like:
 
+![screenshot-ubuntu](screenshot-ubuntu.png)
+
 ![screenshot](screenshot.png)
 
 Ps: Yes i'm using windows with cygwin in this screenshot, haters gonna hate.
