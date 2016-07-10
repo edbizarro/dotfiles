@@ -45,6 +45,8 @@ Thumbs.db
 .metadata
 *.iml
 *.ipr
+_ide_helper.php
+.phpstorm.meta.php
 
 # Vagrant
 .vagrant

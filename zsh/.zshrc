@@ -11,16 +11,10 @@ ZSH_THEME="ham"
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git laravel5 command-not-found common-aliases composer docker git-extras git-flow gitignore gulp node npm pip ssh-agent supervisor tmux vagrant vim-interaction battery last-working-dir themes)
+plugins=(git laravel5 command-not-found common-aliases composer docker git-extras git-flow gitignore gulp node npm pip ssh-agent tmux vagrant vim-interaction last-working-dir themes)
 
 # User configuration
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/PhpStorm-144.3656/bin:$PATH"
-
-if [ `uname -o` = "Cygwin" ]; then  
-  export VAGRANT_DETECTED_OS=cygwin
-  VAGRANT_HOME=/cygdrive/c/Users/edbiz/
-  export VAGRANT_HOME
-fi
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/PhpStorm-144.3656/bin:/usr/local/terraform/bin:/home/edbizarro/terraform:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -72,6 +66,51 @@ BASE16_SHELL="$HOME/.base16-shell/base16-ocean.dark.sh"
 
 fpath=(~/.zsh/completion $fpath)
 
+#################
+### FUNCTIONS ###
+#################
+
+lsp() {
+  lpass show -c --password $(lpass ls  | fzf | awk '{print $(NF)}' | sed 's/\]//g')
+}
+
+# fbr - checkout git branch (including remote branches)
+fbr() {
+  local branches branch
+  branches=$(git branch --all | grep -v HEAD) &&
+  branch=$(echo "$branches" |
+           fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+  git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+}
+
+fkill() {
+  pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
+
+  if [ "x$pid" != "x" ]
+  then
+    kill -${1:-9} $pid
+  fi
+}
+
+ftpane() {
+  local panes current_window current_pane target target_window target_pane
+  panes=$(tmux list-panes -s -F '#I:#P - #{pane_current_path} #{pane_current_command}')
+  current_pane=$(tmux display-message -p '#I:#P')
+  current_window=$(tmux display-message -p '#I')
+
+  target=$(echo "$panes" | grep -v "$current_pane" | fzf +m --reverse) || return
+
+  target_window=$(echo $target | awk 'BEGIN{FS=":|-"} {print$1}')
+  target_pane=$(echo $target | awk 'BEGIN{FS=":|-"} {print$2}' | cut -c 1)
+
+  if [[ $current_window -eq $target_window ]]; then
+    tmux select-pane -t ${target_window}.${target_pane}
+  else
+    tmux select-pane -t ${target_window}.${target_pane} &&
+    tmux select-window -t $target_window
+  fi
+}
+
 # ALIAS
 
 alias ls='ls -Glah --color=always'
@@ -103,7 +142,7 @@ alias vbu='vagrant box update'
 alias cu='composer update --prefer-dist'
 alias ci='composer install --prefer-dist'
 
-# NPM 
+# NPM
 alias ni='npm install'
 alias nig='npm install -g'
 
@@ -111,3 +150,5 @@ alias nig='npm install -g'
 
 alias g='gulp'
 alias gw='gulp watch'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
