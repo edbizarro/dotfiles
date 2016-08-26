@@ -14,7 +14,10 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git laravel5 command-not-found common-aliases composer docker git-extras git-flow gitignore gulp node npm pip ssh-agent tmux vagrant vim-interaction last-working-dir themes)
 
 # User configuration
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/PhpStorm-144.3656/bin:/usr/local/terraform/bin:/home/edbizarro/terraform:$PATH"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
+
+# COMPOSER
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -38,11 +41,11 @@ bindkey '\e.' insert-last-word
 unsetopt CORRECT_ALL
 
 # Make history files large and shared over multiple sessions
-#EXTENDED_HISTORY=ON
+EXTENDED_HISTORY=ON
 #export HISTFILE= ~/.zsh_history
 #export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
-#export HISTSIZE=100000                   # big big history
-#export HISTFILESIZE=100000               # big big history
+#export HISTSIZE=10000                   # big big history
+#export HISTFILESIZE=10000               # big big history
 #setopt HISTAPPEND HIST_IGNORE_SPACE HIST_REDUCE_BLANKS HIST_VERIFY HIST_IGNORE_ALL_DUPS HIST_IGNORE_DUPS SHARE_HISTORY INC_APPEND_HISTORY EXTENDED_HISTORY
 
 # Colors for ls output
