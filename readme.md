@@ -17,7 +17,7 @@ Installation
 
 Clone this repository:
 
-    git clone git@github.com:edbizarro/dotfiles.git ~/.dotfiles
+    git clone https://github.com/edbizarro/dotfiles.git ~/.dotfiles
 
 ### Using [GNU Stow](https://www.gnu.org/software/stow/) _(recommended)_
 Install GNU Stow _(if not already installed)_
@@ -35,6 +35,7 @@ Then simply use stow to install the dotfiles you want to use:
     stow git
     stow zsh
     stow bash
+    stow ssh
     stow base16-shell
 
 Use base16 colors
