@@ -11,7 +11,7 @@ ZSH_THEME="ham"
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git laravel5 command-not-found common-aliases composer docker git-extras git-flow gitignore gulp node npm pip ssh-agent tmux vagrant vim-interaction last-working-dir themes)
+plugins=(git laravel5 command-not-found common-aliases composer docker docker-compose git-extras git-flow gitignore gulp npm pip ssh-agent supervisor tmux vagrant vim-interaction last-working-dir)
 
 # User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
@@ -46,10 +46,6 @@ unsetopt CORRECT_ALL
 # Say how long a command took, if it took more than 30 seconds
 export REPORTTIME=30
 
-# Colors for grep output
-alias grep='grep --color=auto'
-alias egrep='grep --color=auto'
-
 # Ignore duplicate commands when adding to the history and some repeatedly used short commands
 export HISTIGNORE="&:ls:ls *:[bf]g:exit"
 
@@ -64,6 +60,20 @@ fpath=(~/.zsh/completion $fpath)
 #################
 ### FUNCTIONS ###
 #################
+
+# Docker
+
+function docker_build() {
+  sudo docker build -t $1 .
+}
+
+function docker_tag() {
+  sudo docker tag $1 $2
+}
+
+function docker_push() {
+  sudo docker push $1
+}
 
 lsp() {
   lpass show -c --password $(lpass ls  | fzf | awk '{print $(NF)}' | sed 's/\]//g')
@@ -149,6 +159,12 @@ alias nig='npm install -g'
 alias g='gulp'
 alias gw='gulp watch'
 
+# Docker
+
+alias db='docker_build '
+alias dt='docker_tag '
+alias dp='docker_push '
+
 # SYSTEM
 
 alias agi='sudo apt-get install'
@@ -160,6 +176,8 @@ alias dotfiles='cd ~/.dotfiles'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias grep='grep --color=auto'
+alias egrep='grep --color=auto'
 
 
 
