@@ -1,7 +1,7 @@
 [user]
 	name = Eduardo Bizarro
 	email = edbizarro@gmail.com
-	signingkey = E9BA9C4C
+	signingkey = 01BF08B3
 [color "branch"]
   current = yellow reverse
   local = yellow
@@ -14,6 +14,6 @@
 	user = edbizarro
 [core]
 	editor = vim
-
+	excludesfile = ~/.gitignore_global
 [push]
 	default = simple

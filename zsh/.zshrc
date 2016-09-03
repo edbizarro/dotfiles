@@ -1,4 +1,5 @@
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    sudo apt-get install curl -y
     curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 fi
 
@@ -10,16 +11,16 @@ ZSH_THEME="ham"
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git laravel5 command-not-found common-aliases composer docker docker-compose git-extras git-flow gitignore gulp npm pip ssh-agent supervisor tmux vagrant vim-interaction last-working-dir themes)
+plugins=(git laravel5 command-not-found common-aliases composer docker docker-compose git-extras git-flow gitignore gulp npm pip ssh-agent supervisor tmux vagrant vim-interaction last-working-dir)
 
 # User configuration
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/PhpStorm-144.3656/bin:$PATH"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
 
-if [ `uname -o` = "Cygwin" ]; then
-  export VAGRANT_DETECTED_OS=cygwin
-  VAGRANT_HOME=/cygdrive/c/Users/edbiz/
-  export VAGRANT_HOME
-fi
+# COMPOSER
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+
+# AZK
+export PATH="$PATH:$HOME/azk/bin"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -42,23 +43,8 @@ bindkey '\e.' insert-last-word
 # Turn off annoying autocorrect
 unsetopt CORRECT_ALL
 
-# Make history files large and shared over multiple sessions
-EXTENDED_HISTORY=ON
-#export HISTFILE= ~/.zsh_history
-#export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
-#export HISTSIZE=100000                   # big big history
-#export HISTFILESIZE=100000               # big big history
-#setopt HISTAPPEND HIST_IGNORE_SPACE HIST_REDUCE_BLANKS HIST_VERIFY HIST_IGNORE_ALL_DUPS HIST_IGNORE_DUPS SHARE_HISTORY INC_APPEND_HISTORY EXTENDED_HISTORY
-
-# Colors for ls output
-export CLICOLOR=1
-
 # Say how long a command took, if it took more than 30 seconds
 export REPORTTIME=30
-
-# Colors for grep output
-alias grep='grep --color=auto'
-alias egrep='grep --color=auto'
 
 # Ignore duplicate commands when adding to the history and some repeatedly used short commands
 export HISTIGNORE="&:ls:ls *:[bf]g:exit"
@@ -69,16 +55,7 @@ export TERM=xterm-256color
 BASE16_SHELL="$HOME/.base16-shell/base16-ocean.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
-# Set the url that Rancher is on
-export RANCHER_URL=http://45.32.1.73:8080/
-# Set the access key, i.e. username
-export RANCHER_ACCESS_KEY=16103F25FC3562C5B75C
-# Set the secret key, i.e. password
-export RANCHER_SECRET_KEY=wrc5Bx76MRphYdfSxXPFv7ZPcrCd7oFxnWB1p6Ki
-
-export IBUS_ENABLE_SYNC_MODE=1
-
-
+fpath=(~/.zsh/completion $fpath)
 
 #################
 ### FUNCTIONS ###
@@ -98,6 +75,47 @@ function docker_push() {
   sudo docker push $1
 }
 
+lsp() {
+  lpass show -c --password $(lpass ls  | fzf | awk '{print $(NF)}' | sed 's/\]//g')
+}
+
+# fbr - checkout git branch (including remote branches)
+fbr() {
+  local branches branch
+  branches=$(git branch --all | grep -v HEAD) &&
+  branch=$(echo "$branches" |
+           fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+  git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+}
+
+fkill() {
+  pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
+
+  if [ "x$pid" != "x" ]
+  then
+    kill -${1:-9} $pid
+  fi
+}
+
+ftpane() {
+  local panes current_window current_pane target target_window target_pane
+  panes=$(tmux list-panes -s -F '#I:#P - #{pane_current_path} #{pane_current_command}')
+  current_pane=$(tmux display-message -p '#I:#P')
+  current_window=$(tmux display-message -p '#I')
+
+  target=$(echo "$panes" | grep -v "$current_pane" | fzf +m --reverse) || return
+
+  target_window=$(echo $target | awk 'BEGIN{FS=":|-"} {print$1}')
+  target_pane=$(echo $target | awk 'BEGIN{FS=":|-"} {print$2}' | cut -c 1)
+
+  if [[ $current_window -eq $target_window ]]; then
+    tmux select-pane -t ${target_window}.${target_pane}
+  else
+    tmux select-pane -t ${target_window}.${target_pane} &&
+    tmux select-window -t $target_window
+  fi
+}
+
 # ALIAS
 
 alias ls='ls -Glah --color=always'
@@ -109,8 +127,11 @@ alias l='ls -CF'
 alias gt='git status'
 alias ga='git add --all'
 alias gc='git commit'
-alias gfs='git flow feature start'
-alias gff='git flow feature finish'
+
+# GIT FLOW
+
+alias gffs='git flow feature start'
+alias gfff='git flow feature finish'
 alias gfrs='git flow release start'
 alias gfrf='git flow release finish'
 
@@ -143,3 +164,21 @@ alias gw='gulp watch'
 alias db='docker_build '
 alias dt='docker_tag '
 alias dp='docker_push '
+
+# SYSTEM
+
+alias agi='sudo apt-get install'
+alias agu='sudo apt-get update'
+alias agg='sudo apt-get upgrade'
+alias workspace='cd ~/workspace'
+alias downloads='cd ~/Downloads'
+alias dotfiles='cd ~/.dotfiles'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias grep='grep --color=auto'
+alias egrep='grep --color=auto'
+
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
