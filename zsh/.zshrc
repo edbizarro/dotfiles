@@ -19,6 +19,9 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # COMPOSER
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 
+# AZK
+export PATH="$PATH:$HOME/azk/bin"
+
 source $ZSH/oh-my-zsh.sh
 
 export LANG=pt_BR.UTF-8
@@ -39,17 +42,6 @@ bindkey '\e.' insert-last-word
 
 # Turn off annoying autocorrect
 unsetopt CORRECT_ALL
-
-# Make history files large and shared over multiple sessions
-EXTENDED_HISTORY=ON
-#export HISTFILE= ~/.zsh_history
-#export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
-#export HISTSIZE=10000                   # big big history
-#export HISTFILESIZE=10000               # big big history
-#setopt HISTAPPEND HIST_IGNORE_SPACE HIST_REDUCE_BLANKS HIST_VERIFY HIST_IGNORE_ALL_DUPS HIST_IGNORE_DUPS SHARE_HISTORY INC_APPEND_HISTORY EXTENDED_HISTORY
-
-# Colors for ls output
-export CLICOLOR=1
 
 # Say how long a command took, if it took more than 30 seconds
 export REPORTTIME=30
@@ -125,8 +117,11 @@ alias l='ls -CF'
 alias gt='git status'
 alias ga='git add --all'
 alias gc='git commit'
-alias gfs='git flow feature start'
-alias gff='git flow feature finish'
+
+# GIT FLOW
+
+alias gffs='git flow feature start'
+alias gfff='git flow feature finish'
 alias gfrs='git flow release start'
 alias gfrf='git flow release finish'
 
@@ -153,5 +148,19 @@ alias nig='npm install -g'
 
 alias g='gulp'
 alias gw='gulp watch'
+
+# SYSTEM
+
+alias agi='sudo apt-get install'
+alias agu='sudo apt-get update'
+alias agg='sudo apt-get upgrade'
+alias workspace='cd ~/workspace'
+alias downloads='cd ~/Downloads'
+alias dotfiles='cd ~/.dotfiles'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

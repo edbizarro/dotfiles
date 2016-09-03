@@ -4,3 +4,7 @@ chef/
 private
 tmux/.tmux/resurrect/
 tmux/.tmux/plugins/*
+ssh/.ssh/id_rsa
+ssh/.ssh/id_rsa.pub
+ssh/.ssh/environment-grayskull
+ssh/.ssh/known_hosts
