@@ -6,12 +6,12 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="ham"
+ZSH_THEME="bullet-train"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git laravel5 command-not-found common-aliases composer docker docker-compose git-extras git-flow gitignore gulp npm pip ssh-agent supervisor tmux vagrant vim-interaction last-working-dir)
+plugins=(bower ubuntu git laravel5 command-not-found common-aliases composer docker docker-compose git-extras git-flow gitignore gulp npm pip ssh-agent supervisor tmux vagrant vim-interaction last-working-dir yarn)
 
 # User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
@@ -52,7 +52,7 @@ export HISTIGNORE="&:ls:ls *:[bf]g:exit"
 export TERM=xterm-256color
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.base16-shell/base16-ocean.dark.sh"
+BASE16_SHELL="$HOME/.base16-shell/base16-grayscale-dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 fpath=(~/.zsh/completion $fpath)
@@ -60,6 +60,39 @@ fpath=(~/.zsh/completion $fpath)
 #################
 ### FUNCTIONS ###
 #################
+
+# GIT
+
+# Commit all the current changes with a message
+function comme {
+  git add --all
+  if (($# > 1)); then
+    params=''
+    for i in $*;
+    do
+        params=" $params $i"
+    done
+    git commit -m "$params"
+  else
+    git commit -m "$1"
+  fi
+}
+# Commit the current changes and push to the current branch
+function pushme {
+  br=`git branch | grep "*"`
+  git add --all
+  if (($# > 1)); then
+    params=''
+    for i in $*;
+    do
+        params=" $params $i"
+    done
+    git commit -m "$params"
+  else
+    git commit -m "$1"
+  fi
+  git push origin ${br/* /}
+}
 
 # Docker
 
@@ -179,6 +212,7 @@ alias ....='cd ../../..'
 alias grep='grep --color=auto'
 alias egrep='grep --color=auto'
 
-
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+BULLETTRAIN_TIME_SHOW=false
+BULLETTRAIN_GIT_PROMPT_CMD=\${\$(git_prompt_info)//\\//\ \ }
