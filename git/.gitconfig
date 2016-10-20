@@ -1,7 +1,7 @@
 [user]
 	name = Eduardo Bizarro
 	email = edbizarro@gmail.com
-	signingkey = 01BF08B3
+	signingkey = DD93F5561609217410C538543A5F29D71AA3C4C73
 [color "branch"]
   current = yellow reverse
   local = yellow

@@ -6,12 +6,12 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="bullet-train"
+ZSH_THEME="avit"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(bower ubuntu git laravel5 command-not-found common-aliases composer docker docker-compose git-extras git-flow gitignore gulp npm pip ssh-agent supervisor tmux vagrant vim-interaction last-working-dir yarn)
+plugins=(bower ubuntu git laravel5 command-not-found common-aliases composer docker docker-compose git-extras git-flow gitignore gulp npm pip ssh-agent supervisor tmux vagrant vim-interaction last-working-dir yarn zsh-syntax-highlighting)
 
 # User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
@@ -52,7 +52,7 @@ export HISTIGNORE="&:ls:ls *:[bf]g:exit"
 export TERM=xterm-256color
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.base16-shell/base16-grayscale-dark.sh"
+BASE16_SHELL="$HOME/.base16-shell/base16-ocean.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 fpath=(~/.zsh/completion $fpath)
