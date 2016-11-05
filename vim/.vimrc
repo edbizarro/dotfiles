@@ -22,6 +22,7 @@ Plugin 'chriskempson/base16-vim'
 " Ctrl-p
 Plugin 'kien/ctrlp.vim'
 
+Plugin 'dracula/vim'
 
 " Keep Plugin commands between vundle#begin/end.
 
@@ -98,7 +99,7 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 let base16colorspace=256
-colorscheme atom-dark
+colorscheme dracula
 set background=dark
 
 set cursorline	" highlight current active line
