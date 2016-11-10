@@ -24,6 +24,9 @@ Plugin 'kien/ctrlp.vim'
 
 Plugin 'dracula/vim'
 
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 " Keep Plugin commands between vundle#begin/end.
 
 " All of your Plugins must be added before the following line
@@ -99,7 +102,7 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 let base16colorspace=256
-colorscheme dracula
+colorscheme base16-default-dark
 set background=dark
 
 set cursorline	" highlight current active line
@@ -136,3 +139,9 @@ nnoremap k gk
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 'ra'
+
+
+
+" Airline config
+let g:airline_powerline_fonts = 1
+" set laststatus=2
