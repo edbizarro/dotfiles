@@ -108,6 +108,18 @@ function docker_push() {
   sudo docker push $1
 }
 
+function dclean() {
+    processes=`docker ps -q -f status=exited`
+    if [ -n "$processes" ]; then
+      docker rm $processes
+    fi
+
+    images=`docker images -q -f dangling=true`
+    if [ -n "$images" ]; then
+      docker rmi $images
+    fi
+}
+
 lsp() {
   lpass show -c --password $(lpass ls  | fzf | awk '{print $(NF)}' | sed 's/\]//g')
 }
@@ -214,5 +226,4 @@ alias egrep='grep --color=auto'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-BULLETTRAIN_TIME_SHOW=false
-BULLETTRAIN_GIT_PROMPT_CMD=\${\$(git_prompt_info)//\\//\ \ }
+eval "$(thefuck --alias)"
