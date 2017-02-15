@@ -51,9 +51,4 @@ _ide_helper_models.php
 
 # Vagrant
 .vagrant
-
-###
-
-#build/
-
 .php_cs.cache
