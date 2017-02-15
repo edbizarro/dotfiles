@@ -32,9 +32,7 @@ nc='\e[0m'
 # don't overwrite GNU Midnight Commander's setting of `ignorespace'.
 export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 # ... or force ignoredups and ignorespace
-export HISTCONTROL=ignoreboth
 
-##WOOT!
 
 upinfo ()
 {
@@ -47,9 +45,6 @@ upinfo ()
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
-
-# don't put duplicate lines in the history. See bash(1) for more options
-export HISTCONTROL=ignoredups
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
@@ -66,7 +61,7 @@ sh history settings
 export HISTFILESIZE=1000000
 export HISTSIZE=100000
 export HISTCONTROL=ignorespace
-export HISTIGNORE='ls:history:ll'
+export HISTIGNORE="&:ls:ls *:[bf]g:exit"
 export HISTTIMEFORMAT='%F %T '
 
 
@@ -80,3 +75,4 @@ echo -ne "${red}Hoje é:\t\t${cyan}" `date`; echo ""
 echo -e "${red}Kernel: \t${cyan}" `uname -smr`
 echo -ne "${cyan}";upinfo;echo ""
 echo -e "${cyan}"; cal -3
+curl "wttr.in/Sao_Paulo?lang=pt"

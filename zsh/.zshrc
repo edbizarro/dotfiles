@@ -22,6 +22,10 @@ export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 # AZK
 export PATH="$PATH:$HOME/azk/bin"
 
+# GO
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/bin/go:$GOPATH/bin
+
 source $ZSH/oh-my-zsh.sh
 
 export LANG=pt_BR.UTF-8
@@ -161,27 +165,26 @@ ftpane() {
   fi
 }
 
-# ALIAS
+# LARAVEL
+alias as='php artisan'
 
+# ALIAS
 alias ls='ls -Glah --color=always'
 alias ll='ls -lah'
 alias l='ls -CF'
 
 # GIT
-
 alias gt='git status'
 alias ga='git add --all'
 alias gc='git commit'
 
 # GIT FLOW
-
 alias gffs='git flow feature start'
 alias gfff='git flow feature finish'
 alias gfrs='git flow release start'
 alias gfrf='git flow release finish'
 
 # VAGRANT
-
 alias vu='vagrant up'
 alias vh='vagrant halt'
 alias vr='vagrant reload'
@@ -191,7 +194,6 @@ alias vp='vagrant provision'
 alias vbu='vagrant box update'
 
 # COMPOSER
-
 alias cu='composer update --prefer-dist'
 alias ci='composer install --prefer-dist'
 
@@ -200,21 +202,19 @@ alias ni='npm install'
 alias nig='npm install -g'
 
 # GULP
-
 alias g='gulp'
 alias gw='gulp watch'
 
 # Docker
-
 alias db='docker_build '
 alias dt='docker_tag '
 alias dp='docker_push '
 
 # SYSTEM
-
 alias agi='sudo apt-get install'
 alias agu='sudo apt-get update'
 alias agg='sudo apt-get upgrade'
+alias aguu='sudo apt-get update && sudo apt-get upgrade'
 alias workspace='cd ~/workspace'
 alias downloads='cd ~/Downloads'
 alias dotfiles='cd ~/.dotfiles'
@@ -224,6 +224,12 @@ alias ....='cd ../../..'
 alias grep='grep --color=auto'
 alias egrep='grep --color=auto'
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(thefuck --alias)"
+
+export RANCHER_URL="http://163.172.129.177:8080"
+export RANCHER_ACCESS_KEY="41E3CFE70EC8428A2B68"
+export RANCHER_SECRET_KEY="ne5pzZJkx3hGzuPx2XDdroi7Vgh4bp5mnDcaHuCE"
+export RANCHER_CLIENT_DEBUG=false
+
