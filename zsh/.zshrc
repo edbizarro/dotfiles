@@ -50,9 +50,6 @@ unsetopt CORRECT_ALL
 # Say how long a command took, if it took more than 30 seconds
 export REPORTTIME=30
 
-# Ignore duplicate commands when adding to the history and some repeatedly used short commands
-export HISTIGNORE="&:ls:ls *:[bf]g:exit"
-
 export TERM=xterm-256color
 
 # Base16 Shell
@@ -81,6 +78,7 @@ function comme {
     git commit -m "$1"
   fi
 }
+
 # Commit the current changes and push to the current branch
 function pushme {
   br=`git branch | grep "*"`
@@ -176,7 +174,10 @@ alias l='ls -CF'
 # GIT
 alias gt='git status'
 alias ga='git add --all'
-alias gc='git commit'
+alias gc='git commit -m'
+alias guo='git pull origin'
+alias gpo='git push origin'
+
 
 # GIT FLOW
 alias gffs='git flow feature start'
@@ -201,6 +202,10 @@ alias ci='composer install --prefer-dist'
 alias ni='npm install'
 alias nig='npm install -g'
 
+# YARN
+alias y='yarn'
+alias yg='yarn global add'
+
 # GULP
 alias g='gulp'
 alias gw='gulp watch'
@@ -209,6 +214,8 @@ alias gw='gulp watch'
 alias db='docker_build '
 alias dt='docker_tag '
 alias dp='docker_push '
+alias phpstan='docker run -v $PWD:/app --rm phpstan/phpstan'
+
 
 # SYSTEM
 alias agi='sudo apt-get install'
@@ -223,6 +230,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias grep='grep --color=auto'
 alias egrep='grep --color=auto'
+alias fixdns='sudo apt-get install -yqq dnsmasq && sudo /etc/init.d/dnsmasq restart && sudo apt-get remove --purge  dnsmasq -y'
 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

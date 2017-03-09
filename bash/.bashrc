@@ -39,6 +39,11 @@ upinfo ()
   echo -ne "${green}$HOSTNAME ${red}uptime is ${cyan} \t ";uptime | awk /'up/ {print $3,$4,$5,$6,$7,$8,$9,$10}'
 }
 
+wttr()
+{
+    curl -H "Accept-Language: ${LANG%_*}" wttr.in/"${1:-Sao_Paulo}"
+}
+
 #------------------------------------------////
 # Some default .bashrc contents:
 #------------------------------------------////
@@ -75,4 +80,4 @@ echo -ne "${red}Hoje é:\t\t${cyan}" `date`; echo ""
 echo -e "${red}Kernel: \t${cyan}" `uname -smr`
 echo -ne "${cyan}";upinfo;echo ""
 echo -e "${cyan}"; cal -3
-curl "wttr.in/Sao_Paulo?lang=pt"
+wttr
