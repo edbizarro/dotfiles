@@ -6,7 +6,7 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="avit"
+ZSH_THEME="amuse"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -174,7 +174,7 @@ alias l='ls -CF'
 # GIT
 alias gt='git status'
 alias ga='git add --all'
-alias gc='git commit -m'
+alias gc='git commit'
 alias guo='git pull origin'
 alias gpo='git push origin'
 
@@ -215,7 +215,7 @@ alias db='docker_build '
 alias dt='docker_tag '
 alias dp='docker_push '
 alias phpstan='docker run -v $PWD:/app --rm phpstan/phpstan'
-
+alias phpqa='docker run --rm -u $UID -v $PWD:/app eko3alpha/docker-phpqa --report --ignoreDirs vendor,build,migrations,test'
 
 # SYSTEM
 alias agi='sudo apt-get install'
@@ -231,6 +231,10 @@ alias ....='cd ../../..'
 alias grep='grep --color=auto'
 alias egrep='grep --color=auto'
 alias fixdns='sudo apt-get install -yqq dnsmasq && sudo /etc/init.d/dnsmasq restart && sudo apt-get remove --purge  dnsmasq -y'
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
