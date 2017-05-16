@@ -6,21 +6,18 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="amuse"
+ZSH_THEME="ham"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(bower ubuntu git laravel5 command-not-found common-aliases composer docker docker-compose git-extras git-flow gitignore gulp npm pip ssh-agent supervisor tmux vagrant vim-interaction last-working-dir yarn zsh-syntax-highlighting)
+plugins=(ubuntu git laravel5 command-not-found common-aliases composer docker docker-compose git-extras git-flow gitignore gulp npm pip ssh-agent tmux vagrant vim-interaction yarn zsh-syntax-highlighting)
 
 # User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
 
 # COMPOSER
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
-
-# AZK
-export PATH="$PATH:$HOME/azk/bin"
 
 # GO
 export GOPATH=$HOME/go
@@ -29,13 +26,6 @@ export PATH=$PATH:/usr/bin/go:$GOPATH/bin
 source $ZSH/oh-my-zsh.sh
 
 export LANG=pt_BR.UTF-8
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
 
 if [ -f "$HOME/.bashrc" ]; then
   . "$HOME/.bashrc"
@@ -126,43 +116,6 @@ lsp() {
   lpass show -c --password $(lpass ls  | fzf | awk '{print $(NF)}' | sed 's/\]//g')
 }
 
-# fbr - checkout git branch (including remote branches)
-fbr() {
-  local branches branch
-  branches=$(git branch --all | grep -v HEAD) &&
-  branch=$(echo "$branches" |
-           fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
-  git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
-}
-
-fkill() {
-  pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
-
-  if [ "x$pid" != "x" ]
-  then
-    kill -${1:-9} $pid
-  fi
-}
-
-ftpane() {
-  local panes current_window current_pane target target_window target_pane
-  panes=$(tmux list-panes -s -F '#I:#P - #{pane_current_path} #{pane_current_command}')
-  current_pane=$(tmux display-message -p '#I:#P')
-  current_window=$(tmux display-message -p '#I')
-
-  target=$(echo "$panes" | grep -v "$current_pane" | fzf +m --reverse) || return
-
-  target_window=$(echo $target | awk 'BEGIN{FS=":|-"} {print$1}')
-  target_pane=$(echo $target | awk 'BEGIN{FS=":|-"} {print$2}' | cut -c 1)
-
-  if [[ $current_window -eq $target_window ]]; then
-    tmux select-pane -t ${target_window}.${target_pane}
-  else
-    tmux select-pane -t ${target_window}.${target_pane} &&
-    tmux select-window -t $target_window
-  fi
-}
-
 # LARAVEL
 alias as='php artisan'
 
@@ -235,13 +188,9 @@ alias fixdns='sudo apt-get install -yqq dnsmasq && sudo /etc/init.d/dnsmasq rest
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 eval "$(thefuck --alias)"
 
 export RANCHER_URL="http://163.172.129.177:8080"
 export RANCHER_ACCESS_KEY="41E3CFE70EC8428A2B68"
 export RANCHER_SECRET_KEY="ne5pzZJkx3hGzuPx2XDdroi7Vgh4bp5mnDcaHuCE"
 export RANCHER_CLIENT_DEBUG=false
-
