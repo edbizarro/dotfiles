@@ -6,7 +6,7 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="ham"
+ZSH_THEME="avit"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -190,7 +190,10 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 eval "$(thefuck --alias)"
 
-export RANCHER_URL="http://163.172.129.177:8080"
-export RANCHER_ACCESS_KEY="41E3CFE70EC8428A2B68"
-export RANCHER_SECRET_KEY="ne5pzZJkx3hGzuPx2XDdroi7Vgh4bp5mnDcaHuCE"
 export RANCHER_CLIENT_DEBUG=false
+export RANCHER_ACCESS_KEY="1C9B06BA7B7709BCF8A5"
+export RANCHER_SECRET_KEY="LmiZid2Jm7NHKWUMkNHQShVfTCJLPTSC5X7garfX"
+export RANCHER_URL="http://212.47.245.215:8090"
+
+fpath+=($fpath '/usr/lib/node_modules/pure-prompt/functions')
+
