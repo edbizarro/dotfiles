@@ -174,7 +174,7 @@ alias phpqa='docker run --rm -u $UID -v $PWD:/app eko3alpha/docker-phpqa --repor
 alias agi='sudo apt-get install'
 alias agu='sudo apt-get update'
 alias agg='sudo apt-get upgrade'
-alias aguu='sudo apt-get update && sudo apt-get upgrade'
+alias aguu='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt autoremove -y && sudo apt-get autoclean'
 alias workspace='cd ~/workspace'
 alias downloads='cd ~/Downloads'
 alias dotfiles='cd ~/.dotfiles'
@@ -187,6 +187,44 @@ alias fixdns='sudo apt-get install -yqq dnsmasq && sudo /etc/init.d/dnsmasq rest
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+
+taskforcemigrate() { 
+    as taskforce:drop-foreign-keys
+    as taskforce:migrate:benefitcredittypes
+    as taskforce:migrate:annotation-categories 
+    as taskforce:migrate:departments 
+    as taskforce:migrate:cbo 
+    as taskforce:migrate:syndicate 
+    as taskforce:migrate:syndicateextraworkhours 
+    as taskforce:migrate:jobdescriptions 
+    as taskforce:migrate:relationship 
+    as taskforce:migrate:employee 
+    as taskforce:migrate:employee-without-profile 
+    as taskforce:migrate:supervisors 
+    as taskforce:clean-supervisors
+    as taskforce:migrate:employee-config 
+    as taskforce:migrate:employee-documents 
+    as taskforce:migrate:employeeperiod 
+    as taskforce:migrate:employeehours 
+    as taskforce:migrate:syndicatecontribution 
+    as taskforce:migrate:employee-files 
+    as taskforce:migrate:employee-address 
+    as taskforce:migrate:education-types
+    as taskforce:migrate:contracts
+    as taskforce:migrate:employee-contracts
+    as taskforce:migrate:bank-account 
+    as taskforce:migrate:education 
+    as taskforce:migrate:emergency-relations 
+    as taskforce:migrate:working-hours 
+    as taskforce:migrate:customworkinghours 
+    as taskforce:migrate:dependentrelation 
+    as taskforce:migrate:dependents 
+    as taskforce:migrate:admissal
+    as taskforce:remove-admissal-dupes
+    as taskforce:create-foreign-keys
+}
+
 
 eval "$(thefuck --alias)"
 
