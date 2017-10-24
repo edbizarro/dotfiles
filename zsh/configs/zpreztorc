@@ -1,0 +1,32 @@
+zstyle ':prezto:*:*' color 'yes'
+
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'command-not-found' \
+  'terminal' \
+  'history' \
+  'directory' \
+  'utility' \
+  'spectrum' \
+  'git' \
+  'dpkg' \
+  'ssh' \
+  'docker' \
+  'pacman' \
+  'tmux' \
+  'completion' \
+  'syntax-highlighting' \
+  'history-substring-search' \
+  'autosuggestions' \
+  'prompt' \
+  'fasd'
+
+zstyle ':prezto:module:prompt' theme 'sorin'
+zstyle ':prezto:module:prompt' pwd-length 'short'
+zstyle ':prezto:module:ssh:load' identities 'id_rsa'
+zstyle ':prezto:module:tmux:auto-start' local 'yes'
+zstyle ':prezto:module:tmux:auto-start' remote 'no'
+zstyle ':prezto:module:pacman:yaourt' color 'yes'
+zstyle ':prezto:module:autosuggestions' color 'yes'
+zstyle ':prezto:module:autosuggestions:color' found ''
+zstyle ':prezto:module:pacman' frontend 'yaourt'

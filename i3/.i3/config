@@ -1,0 +1,141 @@
+font pango:DejaVuSansMono Nerd Font 13
+
+# Before i3 v4.8, we used to recommend this one as the default:
+# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+# The font above is very space-efficient, that is, it looks good, sharp and
+# clear in small sizes. However, its unicode glyph coverage is limited, the old
+# X core fonts rendering does not support right-to-left and this being a bitmap
+# font, it doesn’t scale on retina/hidpi displays.
+
+# use these keys for focus, movement, and resize directions when reaching for
+# the arrows is not convenient
+set $mod Mod1
+#set $monitor eDP1 # my laptop's internal screen
+set $monitor HDMI1 # external screen, they are set here to make it easier to move to new setups
+
+# i3-gapszz stuff :)
+gaps inner 15
+gaps outer 5
+smart_borders on
+new_window none
+
+# use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+# bindsym $mod+Return exec urxvtc -c "/usr/bin/zsh" -i -t -e sh
+bindsym $mod+Shift+Return exec i3-sensible-terminal
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+bindsym $mod+d exec --no-startup-id rofi -sidebar-mode -lines 5 -monitor -1 -show run
+bindsym $mod+Shift+d exec rofi --no-startup-id rofi -monitor -1 -show window
+
+bindsym $mod+F12 exec xbacklight -inc 20
+bindsym $mod+F11 exec xbacklight -dec 20
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# move the currently focused window to the scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+minus scratchpad show
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+Tab workspace back_and_forth
+
+workspace_auto_back_and_forth yes
+
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # same bindings, but for the arrow keys
+        bindsym Left        resize shrink width 10 px or 10 ppt
+        bindsym Down        resize grow height 10 px or 10 ppt
+        bindsym Up          resize shrink height 10 px or 10 ppt
+        bindsym Right       resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+Shift+s exec "scrot ~/Imagens/Screenshot%Y-%m-%d%H:%M:%S.png"
+
+bindsym $mod+r mode "resize"
+
+bindsym $mod+Ctrl+l exec $HOME/.dotfiles/i3/.i3/scripts/i3lock.sh
+
+# Start-up programs
+exec_always --no-startup-id $HOME/.i3/startup/polybar.sh
+exec --no-startup-id $HOME/.i3/startup/mopidy.sh
+exec_always feh --bg-scale ~/Imagens/wallpapers/background_stripes_lines_light_65886_1920x1080.jpg
+
+
+#Assigns
+assign [class="(?i)chrome"] 2
+assign [class="(?i)atom"] 4
+assign [class="(?i)pstorm"] 4
+assign [class="(?i)ncmpcpp"] 3
+
+for_window [class="^.*"] border pixel 0

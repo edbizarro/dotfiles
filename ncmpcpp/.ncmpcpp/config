@@ -1,0 +1,58 @@
+ncmpcpp_directory = "~/.ncmpcpp"
+mpd_host = "localhost"
+mpd_port = "6600"
+mpd_connection_timeout = 5
+
+# Playlist
+song_columns_list_format = "(6f)[cyan]{l} (30)[default]{t|f} (25)[red]{a} (30)[blue]{b}"
+now_playing_prefix = "$b"
+now_playing_suffix = "$/b"
+playlist_display_mode = "columns"
+autocenter_mode = "yes"
+centered_cursor = "yes"
+
+# Bars
+song_status_format = "$8%t $1• $2%a $1•{ $5%b $1• }$7%y$1"
+progressbar_look = "─╼╌"
+titles_visibility = "yes"
+header_visibility = "yes"
+
+# Browser
+browser_playlist_prefix = "$2plist »$9 "
+browser_display_mode = "columns"
+
+# Colors
+discard_colors_if_item_is_selected = "yes"
+header_window_color = "black"
+volume_color = "cyan"
+state_line_color = "green"
+state_flags_color = "red"
+main_window_color = "default"
+color1 = "red"
+color2 = "black"
+current_item_prefix = "$(red)$r"
+current_item_suffix = "$/r$(end)"
+progressbar_color = "red"
+statusbar_color = "black"
+visualizer_color = "red"
+
+# Others
+song_window_title_format = "MPD: {%a > }{%t}{ [%b{ Disc %d}]}|{%f}"
+search_engine_display_mode = "columns"
+follow_now_playing_lyrics = "yes"
+
+# Visualizer
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "fifo"
+visualizer_type = "spectrum"
+visualizer_look = "+|"
+
+#lyrics
+lyrics_directory = ~/.lyrics
+lyrics_fetchers = lyricwiki, azlyrics, sing365, lyricsmania, metrolyrics, justsomelyrics, jahlyrics, plyrics, tekstowo, internet
+fetch_lyrics_for_current_song_in_background = "yes"
+store_lyrics_in_song_dir = "yes"
+
+screen_switcher_mode = playlist, browser, lyrics, clock
+startup_screen = "playlist"
+startup_slave_screen = "playlist_editor"

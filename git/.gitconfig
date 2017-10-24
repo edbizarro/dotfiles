@@ -1,0 +1,275 @@
+[user]
+	name = Eduardo Bizarro
+	email = edbizarro@gmail.com
+
+[github]
+	user = edbizarro
+
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
+
+[color]
+	ui = auto
+
+[color "branch"]
+	current = green bold
+	local = white
+	remote = white dim
+
+[color "diff"]
+  meta = magenta bold
+	frag = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[color "status"]
+	added = green bold
+	changed = red bold
+	untracked = yellow bold
+
+[push]
+	default = simple
+
+	[alias]
+
+	    # ------------------------------------------------------------
+	    # Status and view files
+	    # ------------------------------------------------------------
+
+		# Default status with all of the untracked files
+		s = status --untracked-files=all
+
+		# Short status with all of the untracked files
+		ss = status --short --branch --untracked-files=all
+
+		# See the short history of a file: $ git fl README.md
+		fl = "!git ls --follow"
+
+		# See the diff history of a file: $ git fll README.md
+		fll = log -u
+
+		# Verbose version of `remote` to show URLs: $ git remotes
+		remotes = remote -v
+
+		# Get the branch name (used in aliases): $ git current-branch-name
+		current-branch-name = "!git rev-parse --abbrev-ref HEAD"
+
+		# Get the current branch remote name (if any)
+		current-remote-name = "!git rev-parse --abbrev-ref --symbolic-full-name @{u}"
+
+		# List local branches verbose: $ git br
+		b = branch --verbose
+
+		# List local + remote branches verbose: $ git bra
+		ba = branch --verbose --all
+
+		# Show all of the ignored files
+		ign = ls-files -o -i --exclude-standard
+
+		# Show tags sorted by creation date
+		tags = "!git for-each-ref --sort=taggerdate --format '%(tag)%09%(taggerdate:raw)%09%(*authorname)%09%(*subject)' refs/tags | awk '{print $1\"\t\t\"strftime(\"%F  %H:%M\", $2)\"\t\"$4\" \"$5\"  \t\t\"$6\" \"$7\" \"$8\" \"$9\" \"$10}'"
+
+	    # ------------------------------------------------------------
+	    # Logs (You may append -4 to see last 4 only to each statement)
+	    # ------------------------------------------------------------
+
+		# Short commit history: $ git ls
+		ls = log --pretty=format:"%C(bold\\ yellow)%h%C(bold\\ green)\\ (%ad)%Cred%d\\ %Creset%s%C(cyan)\\ %Creset[%C(bold\\ blue)%cn%Creset]" --decorate --graph --date=relative --abbrev
+
+		# Commit history showing changed files: $ git ll
+		ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(cyan)\\ (%ad)%Creset[%C(blue)%cn%Creset]" --decorate --graph --numstat --date=relative
+
+		# Same as `ls` but dates are absolute: $ git lsd
+		lsd = log --pretty=format:"%C(yellow)%h%C(cyan)\\ (%ad)%Cred%d\\ %Creset%s%C(cyan)\\ %Creset[%C(blue)%cn%Creset]" --decorate --graph
+
+		# Same as `ll` but dates are absolute: $ git lld
+		lld = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(cyan)\\ (%ad)%Creset[%C(blue)%cn%Creset]" --decorate --graph --numstat
+
+	    # ------------------------------------------------------------
+	    # Diffs
+	    # ------------------------------------------------------------
+
+		# Shortcut for diff: $ git d
+		d = diff
+
+		# Same as `diff` but just names: $ git diff-names
+		diff-names = diff --stat
+
+		# Same as `diff` but for staged (cached) files: $ git diff-cached
+		diff-cached = diff --cached
+
+		# Same as `diffc` but just names: $ git diff-names-cached
+		diff-names-cached = diff --cached --stat
+
+		# Diff with origin/master
+		diff-master = diff origin/master
+
+		# Diff with origin master but only names
+		diff-master-names = diff origin/master --stat
+
+		# Show the diff between the current commit and the last X ones: $ git difflast || $ git difflast 2
+		difflast = "!f() { git diff HEAD~${1-1}; }; f"
+		diffl = "!git difflast"
+		dl = "!git difflast"
+
+		# Same as `difflast` but just names: $ git difflastn || $ git difflastn 2
+		difflastn = "!f() { git diffs HEAD~${1-1}; }; f"
+		diffln = "!git difflastn"
+		dln = "!git difflastn"
+
+	    # ------------------------------------------------------------
+	    # Checkout
+	    # ------------------------------------------------------------
+
+		# Checkout shortcut
+		co = checkout
+
+		# Create a new branch and checkout to it: $ git cob new_branch
+		cob = checkout -b
+
+		# Checkout to the master branch
+		com = checkout master
+
+		# Same as `cob` but first update the current branch: $ git new feature
+		# Depends on alias:update
+		new = "!f() { git update; git cob ${1}; }; f"
+
+	    # ------------------------------------------------------------
+	    # Adding files and commiting
+	    # ------------------------------------------------------------
+
+		# Add all modification and deletions of already versioned files: $ git a
+		a = "!git add -u && git ss"
+
+		# Same as `a` but include new files also: $ git aa
+		aa = "!git add -A && git ss"
+
+		# Commit shortcut with message: $ git cm "Commit message"
+		cm = commit -m
+
+		# Add versioned changes and commit: # git cma "Commit message"
+		cma = "!git a && git cm"
+
+		# Add versioned changes + new files and commit: # git cmaa "Commit message"
+		cmaa = "!git aa && git cm"
+
+		# Work in progress. Add everything and do a temporal commit. Then you
+		# can do `unwip` to keep working: $ git wip
+		wip = "!git cmaa 'Work In Progress - Savepoint'"
+
+		# Reset the previous commit as if it was never commited but keep working files
+		# as they are: $ git unwip
+		unwip = reset HEAD~1 --mixed
+
+		# Fix the last commit message (this will change the commit id): $ git cmfix
+		cmfix = commit --amend
+
+	    # ------------------------------------------------------------
+	    # Fetching
+	    # ------------------------------------------------------------
+
+		# Fetch origin
+		fo = fetch origin
+
+		# Fetch the current branch changes from the origin: $ git fb
+		fc = "!git fetch origin $(git current-branch-name)"
+
+		# Same as `f` but end with a git status: $ git fo
+		fcs = "!git fc && git ss"
+
+	    # ------------------------------------------------------------
+	    # Pulling
+	    # ------------------------------------------------------------
+
+		# Pull the current branch changes from the origin: $ git pl
+		pl = "!git pull origin $(git current-branch-name)"
+
+
+	    # ------------------------------------------------------------
+	    # Pushing
+	    # ------------------------------------------------------------
+
+		# Push the current branch changes to the origin: $ git ps
+		ps = "!git push origin $(git current-branch-name)"
+
+	    # ------------------------------------------------------------
+	    # GIT FLOW - HELPERS
+	    # ------------------------------------------------------------
+
+		# Update current branch with rebase
+		#
+		# 1. Stashes all local commits
+		# 2. Pulls from origin/<branch> to update tree
+		# 3. Puts all stashed local commits on top
+		#
+		# If there are any merge conflicts then for each conflict file do:
+		# 	a. Correct the conflicts
+		#	b. git add . <file_name>
+		#
+		# Then do `$ git rebase --continue`
+		#
+		update = "!git pull --rebase --prune origin $(git current-branch-name)"
+
+		# Checkout to another branch
+		# Update that branch
+		# Return to your current branch
+		#
+		# $ git co-up master
+		#
+		update-branch = "!f() { CBRANCH=$(git current-branch-name) && git co ${1} && git update && git co $CBRANCH; }; f"
+
+		# Update your branch and the push your changes. This will only
+		# affect your current branch
+		publish = "!git update && git ps"
+
+		# 1. Update the parent branch
+		# 2. Rebase your branch with the parent branch
+		#
+		#	$ git sync <parent_branch>		// (master or your parent branch)
+		#
+		# NOTE: It will fail if your branch is tracking a remote branch
+		#
+		# What it does
+		# 	1. It will checkout to <parent_branch> and do update (to fetch for recent changes)
+		# 	2. It will return to <branch> and rebase <parent_branch> (put parent commits before branch commits)
+		#
+		sync = "!f() { git sync-check-no-remote-present && CBRANCH=$(git current-branch-name) && git co ${1} && git update && git co $CBRANCH && git rebase ${1}; }; f"
+
+		# Return the amount of lines that do not contain a 'fatal' error.
+		# If the branch has a remote it will return 1.
+		# If the branch has no remotes then it will return 0.
+		sync-current-has-remote = "!git current-remote-name | grep -v fatal: | wc -l"
+
+		# Exit as failure if the branch has a remote
+		sync-check-no-remote-present = "!f() { exit $(git sync-current-has-remote); }; f"
+
+		#
+		# Proper reset
+		#
+		# There will be times when you explore a promising idea in code and it turns out to be
+		# crap. You just want to throw your hands up in disgust and burn all the work in your
+		# working directory to the ground and start over.
+		#
+		# In an attempt to be helpful, people might recommend: git reset HEAD --hard.
+		#
+		# Slap those people in the face. It’s a bad idea. Don’t do it!
+		#
+		# That’s basically a delete of your current changes without any undo. As soon as you run
+		# that command, Murphy’s Law dictates you’ll suddenly remember there was that one gem among
+		# the refuse you don’t want to rewrite.
+		#
+		# Too bad. If you reset work that you never committed it is gone for good. Hence, the wipe alias.
+		#
+		# This commits everything in my working directory and then does a hard reset to remove that commit.
+		# The nice thing is, the commit is still there, but it’s just unreachable. Unreachable commits are a
+		# bit inconvenient to restore, but at least they are still there. You can run the git reflog command
+		# and find the SHA of the commit if you realize later that you made a mistake with the reset. The
+		# commit message will be “WIPE SAVEPOINT” in this case
+		#
+		# Usage: $ git wipe
+		#
+		wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+[credential]
+	helper = cache
