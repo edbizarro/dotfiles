@@ -17,10 +17,11 @@ fixed-center = true
 
 
 [bar/bottom]
+monitor = HDMI1
 margin-top = 5
 width = 100%
 height = 32
-font-0 = mplus Nerd Font:size=12
+font-0 = TerminessTTF Nerd Font:size=12
 font-1 = icomoon :size=12
 bottom = true
 background = ${colors.background}
@@ -28,32 +29,26 @@ foreground = ${colors.foreground}
 modules-center = mpd
 
 [bar/top]
-margin-top = 5
-margin-bottom = 0
+monitor = HDMI1
+
 width = 100%
-font-0 = mplus Nerd Font:size=14
+font-0 = TerminessTTF Nerd Font:size=14
 font-1 = icomoon:size=12
 height = 32
 offset-x = 0
 offset-y = 0
 background = ${colors.background}
 foreground = ${colors.foreground}
-overline-size = 1
-overline-color = #840094
-underline-size = 1
-underline-color = #840094
 border-bottom-size = 0
 padding-left = 0
 padding-right = 2
-padding-top = 2
+padding-top = 5
 module-margin-left = 1
-module-margin-right = 1
+module-margin-right = 0
 modules-left = i3
 modules-center = date
-modules-right = xbacklight volume memory wlan battery powermenu
-tray-position = right
-tray-padding = 2
-tray-transparent = true
+modules-right = volume wlan battery powermenu
+tray-position =
 
 [module/memory]
 type = internal/memory
@@ -94,7 +89,6 @@ label-focused-padding = 2
 
 label-unfocused = %icon%
 label-unfocused-background = ${colors.background}
-label-unfocused-foreground = ${colors.foreground}
 label-unfocused-padding = 2
 
 label-urgent = %icon%
@@ -105,10 +99,10 @@ label-visible = %icon%
 label-visible-background = ${colors.background}
 label-visible-padding = 2
 
-ws-icon-0 = 1;
+ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
-ws-icon-3 = 4;
+ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-default = 
 
@@ -159,10 +153,6 @@ bar-fill-foreground = #9f78e1
 bar-empty = ─
 bar-empty-foreground = ${colors.foreground}
 
-[module/backlight-acpi]
-inherit = module/xbacklight
-type = internal/backlight
-card = intel_backlight
 
 [module/cpu]
 type = internal/cpu
@@ -285,23 +275,23 @@ type = custom/menu
 format-spacing = 1
 
 label-open = 
-label-close =  cancel
-label-close-foreground = ${colors.secondary}
+label-close = cancel
+label-close-foreground = ${colors.foreground-alt}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
 menu-0-0 = reboot
 menu-0-0-exec = menu-open-1
-menu-0-1 = power off
+menu-0-1 = 
 menu-0-1-exec = menu-open-2
 
 menu-1-0 = cancel
 menu-1-0-exec = menu-open-0
 menu-1-1 = reboot
-menu-1-1-exec = sudo shutdown -r now
+menu-1-1-exec = systemctl reboot
 
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
+menu-2-0 = 
+menu-2-0-exec = systemctl poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 

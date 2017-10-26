@@ -118,9 +118,11 @@ bindsym $mod+Ctrl+l exec $HOME/.dotfiles/i3/.i3/scripts/i3lock.sh
 
 # Start-up programs
 # exec --no-startup-id xrandr --output eDP1 --off
+exec --no-startup-id xrandr --output HDMI1 --primary --preferred --left-of eDP1
 exec_always --no-startup-id $HOME/.i3/startup/polybar.sh
 exec_always --no-startup-id $HOME/.i3/startup/compton.sh
 exec --no-startup-id $HOME/.i3/startup/mopidy.sh
+exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
 exec_always feh --bg-scale ~/Imagens/wallpapers/background_stripes_lines_light_65886_1920x1080.jpg
 exec_always wal -i ~/Imagens/wallpapers/background_stripes_lines_light_65886_1920x1080.jpg
 
