@@ -1,14 +1,6 @@
-font pango:DejaVuSansMono Nerd Font 13
+font pango:Hack Nerd Font 13
 
-# Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
-
-# use these keys for focus, movement, and resize directions when reaching for
-# the arrows is not convenient
+# Alt key
 set $mod Mod1
 #set $monitor eDP1 # my laptop's internal screen
 set $monitor HDMI1 # external screen, they are set here to make it easier to move to new setups
@@ -120,17 +112,25 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+Shift+s exec "scrot ~/Imagens/Screenshot%Y-%m-%d%H:%M:%S.png"
-
 bindsym $mod+r mode "resize"
 
 bindsym $mod+Ctrl+l exec $HOME/.dotfiles/i3/.i3/scripts/i3lock.sh
 
 # Start-up programs
+# exec --no-startup-id xrandr --output eDP1 --off
 exec_always --no-startup-id $HOME/.i3/startup/polybar.sh
+exec_always --no-startup-id $HOME/.i3/startup/compton.sh
 exec --no-startup-id $HOME/.i3/startup/mopidy.sh
 exec_always feh --bg-scale ~/Imagens/wallpapers/background_stripes_lines_light_65886_1920x1080.jpg
+exec_always wal -i ~/Imagens/wallpapers/background_stripes_lines_light_65886_1920x1080.jpg
 
+
+#Screenshot
+bindsym $mod+Shift+s exec "scrot ~/Imagens/Screenshot%Y-%m-%d%H:%M:%S.png"
+
+# Volume controls
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +10%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -10%
 
 #Assigns
 assign [class="(?i)chrome"] 2

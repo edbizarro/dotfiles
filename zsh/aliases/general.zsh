@@ -27,3 +27,5 @@ function pushme {
   fi
   git push origin ${br/* /}
 }
+
+alias show-fonts="fc-list | cut -d ' ' -f2 | sort -u"

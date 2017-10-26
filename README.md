@@ -20,6 +20,7 @@ Installation
 * [tpm](https://github.com/tmux-plugins/tpm) (for tmux)
 * [i3gaps](https://github.com/Airblader/i3)
 * [polybar](https://github.com/jaagr/polybar)
+* [compton](https://github.com/chjj/compton)
 
 
 Clone this repository:
@@ -41,5 +42,6 @@ Then simply use stow to install the dotfiles you want to use:
       stow ncmpcpp && \
       stow git && \
       stow ssh && \
+      stow compton && \
       cd ~/.dotfiles/zsh && \
       stow config -t ~/

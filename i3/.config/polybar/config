@@ -1,15 +1,9 @@
-;=====================================================
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/jaagr/polybar
-;
-;   The README contains alot of information
-;
-;=====================================================
+[settings]
+compositing-foreground = source
 
 [colors]
-background = ${xrdb:background}
-background-alt = ${xrdb:color0}
+background = #300d0d0d
+background-alt = #300fdfdfd
 foreground = ${xrdb:foreground}
 foreground-alt = #55
 primary = ${xrdb:color5}
@@ -17,51 +11,56 @@ secondary = #840094
 alert = ${xrdb:color1}
 
 [global/wm]
+margin-top = 0
+margin-bottom = 0
+fixed-center = true
+
+
+[bar/bottom]
 margin-top = 5
-margin-bottom = 7
-
-[bar/top]
 width = 100%
-height = 25
-offset-x = 0
-offset-y = 0
-
+height = 32
+font-0 = mplus Nerd Font:size=12
+font-1 = icomoon :size=12
+bottom = true
 background = ${colors.background}
 foreground = ${colors.foreground}
+modules-center = mpd
 
+[bar/top]
+margin-top = 5
+margin-bottom = 0
+width = 100%
+font-0 = mplus Nerd Font:size=14
+font-1 = icomoon:size=12
+height = 32
+offset-x = 0
+offset-y = 0
+background = ${colors.background}
+foreground = ${colors.foreground}
 overline-size = 1
 overline-color = #840094
 underline-size = 1
 underline-color = #840094
-
-border-bottom-size = 1
-border-bottom-color = #a71cb0
-
+border-bottom-size = 0
 padding-left = 0
 padding-right = 2
+padding-top = 2
 module-margin-left = 1
-module-margin-right = 2
-
-font-0 = DejaVuSansMono Nerd Font:pixelsize=12
-font-1 = DejaVuSansMono Nerd Font:pixelsize=10
-font-2 = DejaVuSansMono Nerd Font:pixelsize=16
-font-3 = DejaVuSansMono Nerd Font:pixelsize=12
-modules-left = i3 mpd
-modules-center =
-modules-right = xbacklight volume memory wlan eth battery date powermenu
-
+module-margin-right = 1
+modules-left = i3
+modules-center = date
+modules-right = xbacklight volume memory wlan battery powermenu
 tray-position = right
 tray-padding = 2
-;tray-transparent = true
-;tray-background = #0063ff
+tray-transparent = true
 
-wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+label = %percentage_used%%
 
 [module/xwindow]
 type = internal/xwindow
@@ -79,9 +78,9 @@ label-unmounted = %mountpoint%: not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/i3]
-
 type = internal/i3
-format = <label-state> <label-mode>
+
+format = <label-state>
 index-sort = true
 enable-click = true
 fuzzy-match = true
@@ -89,12 +88,8 @@ wrapping-scroll = false
 strip-wsnumbers = true
 pin-workspaces = true
 
-label-mode-padding = 2
-label-mode-foreground = ${colors.foreground}
-
-label-focused = %icon%
-label-focused-background = ${colors.background}
-label-focused-underline = ${colors.background-alt}
+label-focused = " %icon% "
+label-focused-background = #90878990
 label-focused-padding = 2
 
 label-unfocused = %icon%
@@ -104,18 +99,18 @@ label-unfocused-padding = 2
 
 label-urgent = %icon%
 label-urgent-background = ${colors.background}
+label-urgent-padding = 2
 
 label-visible = %icon%
 label-visible-background = ${colors.background}
-label-visible-underline = ${colors.background-alt}
 label-visible-padding = 2
 
 ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
 ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-default = 
+ws-icon-4 = 5;
+ws-icon-default = 
 
 [module/mpd]
 type = internal/mpd
@@ -129,16 +124,14 @@ format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <icon-repeat> <ico
 label-song = %artist% - %title%
 label-offline = ---
 format-offline =
-icon-prev = 
-icon-seekb = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-icon-seekf = 
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
 
-icon-random = 
-icon-repeat = 
+icon-random = 
+icon-repeat = 
 
 toggle-on-foreground = ${colors.foreground}
 toggle-off-foreground = ${colors.foreground-alt}
@@ -147,7 +140,6 @@ bar-progress-width = 30
 bar-progress-format = %{A4:mpdseek+2: A5:mpdseek-2:}%fill%%indicator%%empty%%{A A}
 bar-progress-indicator = |
 bar-progress-indicator-foreground = ${colors.foreground}
-bar-progress-indicator-font = 3
 bar-progress-fill = ─
 bar-progress-fill-foreground = ${colors.foreground}
 bar-progress-empty = ─
@@ -160,14 +152,11 @@ format = <label> <bar>
 label = ""
 
 bar-width = 10
-bar-indicator = │
+bar-indicator = |
 bar-indicator-foreground = #ff
-bar-indicator-font = 2
 bar-fill = ─
-bar-fill-font = 2
 bar-fill-foreground = #9f78e1
 bar-empty = ─
-bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground}
 
 [module/backlight-acpi]
@@ -180,16 +169,7 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
-format-underline = #f90000
 label = %percentage%%
-
-[module/memory]
-type = internal/memory
-interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
-format-underline = #4bffdc
-label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
@@ -197,10 +177,8 @@ interface = wlp2s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
-format-disconnected-underline = ${self.format-connected-underline}
 
-label-connected = %essid%
+label-connected =  %essid%
 label-disconnected = %ifname% disconnected
 label-disconnected-foreground = ${colors.foreground}
 
@@ -216,12 +194,10 @@ type = internal/network
 interface = sit0
 interval = 3.0
 
-format-connected-underline = #55aa55
 format-connected-prefix = " "
 format-connected-foreground-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
-format-disconnected-underline = ${self.format-connected-underline}
 label-disconnected = %ifname% disconnected
 label-disconnected-foreground = ${colors.foreground-alt}
 
@@ -237,18 +213,21 @@ time-alt = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
 
 label = %date% %time%
 
 [module/volume]
 type = internal/volume
 
-format-volume = <label-volume> <bar-volume>
-label-volume = ""
+format-volume = <ramp-volume><label-volume>
+label-volume = "%percentage%"
+ramp-volume-0 =" "
+ramp-volume-1 =" "
+ramp-volume-2 =" "
+ramp-volume-3 =" "
 label-volume-foreground = ${colors.foreground}
 
-format-muted-prefix = " "
+format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground}
 label-muted = muted
 label-muted-foreground = ${colors.foreground}
@@ -263,42 +242,49 @@ bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 
 bar-volume-gradient = false
-bar-volume-indicator = │
-bar-volume-indicator-font = 2
+bar-volume-indicator = |
 bar-volume-indicator-foreground = ${colors.foreground}
 bar-volume-fill = ─
-bar-volume-fill-font = 2
 bar-volume-empty = ─
-bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground}
 
 [module/battery]
 type = internal/battery
 battery = BAT0
-adapter = AC0
+adapter = AT0
 full-at = 98
-time-format = %H:%M
 
-format-charging = <label-charging>
-format-charging-underline = #ffb52a
-format-charging-prefix = " "
+poll-interval = 5
 
-format-discharging = <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
-format-discharging-prefix = " "
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full = %percentage%%
+format-charging-padding = 3
+format-discharging-padding = 3
+format-full-padding = 3
 
-format-full = <label-full>
-format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 650
 
 [module/powermenu]
 type = custom/menu
 
 format-spacing = 1
 
-label-open =  power
-label-open-foreground = ${colors.secondary}
+label-open = 
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |

@@ -36,10 +36,6 @@ URxvt.iso14755_52:          false
 URxvt.perl-ext:
 URxvt.perl-ext-common:
 
-! clickable urls
-URxvt.url-launcher:         google-chrome
-URxvt.matcher.button:       1
-
 ! Fonts
 URxvt.allow_bold:           false
 URxvt*font:                 xft:DejaVu Sans Mono Nerd Font:size=16
