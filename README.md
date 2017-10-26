@@ -21,6 +21,7 @@ Installation
 * [i3gaps](https://github.com/Airblader/i3)
 * [polybar](https://github.com/jaagr/polybar)
 * [compton](https://github.com/chjj/compton)
+* [dunst](https://github.com/dunst-project/dunst)
 
 
 Clone this repository:
@@ -43,5 +44,6 @@ Then simply use stow to install the dotfiles you want to use:
       stow git && \
       stow ssh && \
       stow compton && \
+      stow dunst && \
       cd ~/.dotfiles/zsh && \
       stow config -t ~/
