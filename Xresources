@@ -6,8 +6,8 @@ Xft.dpi:        96
 Xft.antialias:  true
 Xft.rgba:       rgb
 Xft.hinting:    true
-Xft.hintstyle:  hintslight
 Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
 
 !-------------------------------------------------------------------------------
 ! URxvt settings
