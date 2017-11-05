@@ -16,6 +16,9 @@ Installation
 #### Requirements
 
 * zsh
+* tmux
+* NerdFonts
+* icomoon
 * [prezto](https://github.com/sorin-ionescu/prezto) (for zsh)
 * [tpm](https://github.com/tmux-plugins/tpm) (for tmux)
 * [i3gaps](https://github.com/Airblader/i3)
