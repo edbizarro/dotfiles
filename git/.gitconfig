@@ -273,3 +273,7 @@
 		wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
 [credential]
 	helper = cache
+[init]
+	templatedir = .git-templates
+[pull]
+	rebase = true

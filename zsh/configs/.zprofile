@@ -21,5 +21,3 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
-
-export PATH="$PATH:$HOME/.composer/vendor/bin"

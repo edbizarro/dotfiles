@@ -16,13 +16,10 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec urxvtc -c "/usr/bin/zsh" -i -t -e sh
-bindsym $mod+Shift+Return exec i3-sensible-terminal
+bindsym $mod+Shift+Return exec urxvt -e /usr/bin/zsh
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
-bindsym $mod+d exec --no-startup-id rofi -sidebar-mode -lines 5 -monitor -1 -show run
-bindsym $mod+Shift+d exec rofi --no-startup-id rofi -monitor -1 -show window
 
 bindsym $mod+F12 exec xbacklight -inc 20
 bindsym $mod+F11 exec xbacklight -dec 20
@@ -78,6 +75,7 @@ bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
 bindsym $mod+Tab workspace back_and_forth
 
 workspace_auto_back_and_forth yes
@@ -89,6 +87,7 @@ bindsym $mod+Shift+2 move container to workspace 2
 bindsym $mod+Shift+3 move container to workspace 3
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -103,9 +102,9 @@ mode "resize" {
 
         # same bindings, but for the arrow keys
         bindsym Left        resize shrink width 10 px or 10 ppt
+        bindsym Right       resize grow width 10 px or 10 ppt
         bindsym Down        resize grow height 10 px or 10 ppt
         bindsym Up          resize shrink height 10 px or 10 ppt
-        bindsym Right       resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -117,15 +116,19 @@ bindsym $mod+r mode "resize"
 bindsym $mod+Ctrl+l exec $HOME/.dotfiles/i3/.i3/scripts/i3lock.sh
 
 # Start-up programs
-# exec --no-startup-id xrandr --output eDP1 --off
-exec --no-startup-id xrandr --output HDMI1 --primary --preferred --left-of eDP1
+exec_always --no-startup-id xrandr --output eDP-1 --off
+exec_always --no-startup-id xrandr --output HDMI-1 --primary --preferred --left-of eDP-1
 exec_always --no-startup-id $HOME/.i3/startup/polybar.sh
 exec_always --no-startup-id $HOME/.i3/startup/compton.sh
 exec --no-startup-id $HOME/.i3/startup/mopidy.sh
 exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
-exec_always feh --bg-scale ~/Imagens/wallpapers/background_stripes_lines_light_65886_1920x1080.jpg
-exec_always wal -i ~/Imagens/wallpapers/background_stripes_lines_light_65886_1920x1080.jpg
+# exec_always --no-startup-id feh --bg-scale ~/Imagens/wallpapers/background_stripes_lines_light_65886_1920x1080.jpg
+exec_always --no-startup-id wal -i ~/Imagens/wallpapers -q
 
+# Rofi
+exec_always xrdb ~/.Xresources
+bindsym $mod+d exec --no-startup-id rofi -opacity 50 -monitor -1 -show run -display-run " "
+bindsym $mod+Shift+d exec rofi --no-startup-id rofi -opacity 50 -monitor -1 -show window -display-window " "
 
 #Screenshot
 bindsym $mod+Shift+s exec "scrot ~/Imagens/Screenshot%Y-%m-%d%H:%M:%S.png"
@@ -139,5 +142,6 @@ assign [class="(?i)chrome"] 2
 assign [class="(?i)atom"] 4
 assign [class="(?i)pstorm"] 4
 assign [class="(?i)ncmpcpp"] 3
+assign [class="(?i)slack"] 5
 
 for_window [class="^.*"] border pixel 0

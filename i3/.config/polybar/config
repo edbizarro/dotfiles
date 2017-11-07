@@ -2,7 +2,7 @@
 compositing-foreground = source
 
 [colors]
-background = #300d0d0d
+background = #500d0d0d
 background-alt = #300fdfdfd
 foreground = ${xrdb:foreground}
 foreground-alt = #55
@@ -17,7 +17,7 @@ fixed-center = true
 
 
 [bar/bottom]
-monitor = HDMI1
+/*monitor = HDMI1*/
 margin-top = 5
 width = 100%
 height = 32
@@ -29,7 +29,7 @@ foreground = ${colors.foreground}
 modules-center = mpd
 
 [bar/top]
-monitor = HDMI1
+/*monitor = HDMI1*/
 
 width = 100%
 font-0 = TerminessTTF Nerd Font:size=14
@@ -104,6 +104,7 @@ ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
 ws-icon-4 = 5;
+ws-icon-5 = 5;
 ws-icon-default = 
 
 [module/mpd]
