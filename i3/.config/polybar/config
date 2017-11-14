@@ -1,5 +1,10 @@
 [settings]
+compositing-background = source
 compositing-foreground = source
+compositing-overline = source
+compositing-underline = source
+compositing-border = source
+screenchange-reload = true
 
 [colors]
 background = #500d0d0d
@@ -14,10 +19,13 @@ alert = ${xrdb:color1}
 margin-top = 0
 margin-bottom = 0
 fixed-center = true
+override-redirect = true
 
 
 [bar/bottom]
-/*monitor = HDMI1*/
+; Use  xrandr -q | grep " connected" | cut -d ' ' -f1
+; for a list of connected monitors
+; monitor = eDP-1
 margin-top = 5
 width = 100%
 height = 32
@@ -29,20 +37,28 @@ foreground = ${colors.foreground}
 modules-center = mpd
 
 [bar/top]
-/*monitor = HDMI1*/
-
+; Use  xrandr -q | grep " connected" | cut -d ' ' -f1
+; for a list of connected monitors
+; monitor = eDP-1
 width = 100%
-font-0 = TerminessTTF Nerd Font:size=14
-font-1 = icomoon:size=12
 height = 32
+border-size = 0
+border-top-size = 0
+border-left-size = 0
+border-right-size = 0
+border-bottom-size = 0
+radius = 0
+line-size = 0
+spacing = 1
 offset-x = 0
 offset-y = 0
-background = ${colors.background}
-foreground = ${colors.foreground}
-border-bottom-size = 0
 padding-left = 0
 padding-right = 2
-padding-top = 5
+
+font-0 = TerminessTTF Nerd Font:size=14
+font-1 = icomoon:size=12
+background = ${colors.background}
+foreground = ${colors.foreground}
 module-margin-left = 1
 module-margin-right = 0
 modules-left = i3
@@ -101,11 +117,12 @@ label-visible-padding = 2
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
 ws-icon-4 = 5;
-ws-icon-5 = 5;
-ws-icon-default = 
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-default =
 
 [module/mpd]
 type = internal/mpd
@@ -114,7 +131,7 @@ host = localhost
 port = 6600
 interval = 1
 
-format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-song>
+format-online = <icon-prev> <toggle> <icon-next> <bar-progress> <label-song>
 
 label-song = %artist% - %title%
 label-offline = ---
@@ -212,10 +229,10 @@ type = internal/volume
 
 format-volume = <ramp-volume><label-volume>
 label-volume = "%percentage%"
-ramp-volume-0 =" "
-ramp-volume-1 =" "
-ramp-volume-2 =" "
-ramp-volume-3 =" "
+ramp-volume-0 =" "
+ramp-volume-1 =" "
+ramp-volume-2 =" "
+ramp-volume-3 =" "
 label-volume-foreground = ${colors.foreground}
 
 format-muted-prefix = " "

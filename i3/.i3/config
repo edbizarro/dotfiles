@@ -16,13 +16,13 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec urxvtc -c "/usr/bin/zsh" -i -t -e sh
-bindsym $mod+Shift+Return exec urxvt -e /usr/bin/zsh
+bindsym $mod+Shift+Return exec --no-startup-id urxvt -e /usr/bin/zsh
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
-bindsym $mod+F12 exec xbacklight -inc 20
-bindsym $mod+F11 exec xbacklight -dec 20
+bindsym $mod+F12 exec --no-startup-id xbacklight -inc 20
+bindsym $mod+F11 exec --no-startup-id xbacklight -dec 20
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -76,6 +76,7 @@ bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
 bindsym $mod+Tab workspace back_and_forth
 
 workspace_auto_back_and_forth yes
@@ -88,13 +89,14 @@ bindsym $mod+Shift+3 move container to workspace 3
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -113,35 +115,35 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bindsym $mod+Ctrl+l exec $HOME/.dotfiles/i3/.i3/scripts/i3lock.sh
+bindsym $mod+Ctrl+l exec --no-startup-id $HOME/.dotfiles/i3/.i3/scripts/i3lock.sh
 
 # Start-up programs
-exec_always --no-startup-id xrandr --output eDP-1 --off
-exec_always --no-startup-id xrandr --output HDMI-1 --primary --preferred --left-of eDP-1
+# exec_always --no-startup-id xrandr --output eDP-1 --primary --preferred
+# exec_always --no-startup-id xrandr --output HDMI-1 --primary --preferred --left-of eDP-1
 exec_always --no-startup-id $HOME/.i3/startup/polybar.sh
 exec_always --no-startup-id $HOME/.i3/startup/compton.sh
 exec --no-startup-id $HOME/.i3/startup/mopidy.sh
 exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
 # exec_always --no-startup-id feh --bg-scale ~/Imagens/wallpapers/background_stripes_lines_light_65886_1920x1080.jpg
-exec_always --no-startup-id wal -i ~/Imagens/wallpapers -q
+exec_always --no-startup-id xrdb ~/.Xresources
+exec_always --no-startup-id wal -i ~/Imagens/wallpapers -q -a "95"
 
 # Rofi
-exec_always xrdb ~/.Xresources
-bindsym $mod+d exec --no-startup-id rofi -opacity 50 -monitor -1 -show run -display-run " "
-bindsym $mod+Shift+d exec rofi --no-startup-id rofi -opacity 50 -monitor -1 -show window -display-window " "
+bindsym $mod+d exec --no-startup-id rofi -monitor -1 -show run -display-run " "
+bindsym $mod+Shift+d exec --no-startup-id rofi -monitor -1 -show window -display-window " "
 
 #Screenshot
-bindsym $mod+Shift+s exec "scrot ~/Imagens/Screenshot%Y-%m-%d%H:%M:%S.png"
+bindsym $mod+Shift+s exec --no-startup-id "scrot ~/Imagens/Screenshot%Y-%m-%d%H:%M:%S.png"
 
 # Volume controls
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +10%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -10%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +10%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -10%
 
 #Assigns
 assign [class="(?i)chrome"] 2
-assign [class="(?i)atom"] 4
-assign [class="(?i)pstorm"] 4
-assign [class="(?i)ncmpcpp"] 3
+assign [class="(?i)atom"] 3
+assign [class="(?i)pstorm"] 3
+assign [class="(?i)ncmpcpp"] 4
 assign [class="(?i)slack"] 5
 
 for_window [class="^.*"] border pixel 0

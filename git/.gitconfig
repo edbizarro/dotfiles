@@ -275,5 +275,3 @@
 	helper = cache
 [init]
 	templatedir = .git-templates
-[pull]
-	rebase = true
