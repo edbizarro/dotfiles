@@ -17,13 +17,15 @@ Installation
 * [zsh](http://www.zsh.org)
 * [tmux](https://github.com/tmux/tmux)
 * [NerdFonts](https://github.com/ryanoasis/nerd-fonts)
-* [icomoon](https://icomoon.io/app/#/select)
+* [icomoon](https://icomoon.io)
 * [prezto](https://github.com/sorin-ionescu/prezto) (for zsh)
 * [tpm](https://github.com/tmux-plugins/tpm) (for tmux)
 * [i3-gaps](https://github.com/Airblader/i3)
 * [polybar](https://github.com/jaagr/polybar)
 * [compton](https://github.com/chjj/compton)
 * [dunst](https://github.com/dunst-project/dunst)
+* [feh](https://feh.finalrewind.org) (change wallpaper)
+* [pywal](https://github.com/dylanaraps/pywal) (generate colourschemes)
 
 
 Clone this repository:
@@ -42,9 +44,11 @@ Then simply use stow to install the dotfiles you want to use:
 
     cd ~/.dotfiles && \
       stow mopidy && \
+      stow cava && \
       stow ncmpcpp && \
       stow git && \
       stow ssh && \
+      stow tmux && \
       stow compton && \
       stow dunst && \
       cd ~/.dotfiles/zsh && \
