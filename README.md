@@ -21,7 +21,7 @@ Installation
 * icomoon
 * [prezto](https://github.com/sorin-ionescu/prezto) (for zsh)
 * [tpm](https://github.com/tmux-plugins/tpm) (for tmux)
-* [i3gaps](https://github.com/Airblader/i3)
+* [i3-gaps](https://github.com/Airblader/i3)
 * [polybar](https://github.com/jaagr/polybar)
 * [compton](https://github.com/chjj/compton)
 * [dunst](https://github.com/dunst-project/dunst)
