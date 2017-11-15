@@ -39,6 +39,21 @@ Install GNU Stow _(if not already installed)_
     Ubuntu:   apt-get install stow
     Fedora:   yum install stow
     Arch:     pacman -S stow
+    
+    
+We may get some warning messages like the following one.
+
+    cd ~/Dotfiles
+    stow git
+    WARNING! stowing git would cause conflicts:
+      * existing target is neither a link nor a directory: .gitconfig
+    All operations aborted.
+    
+This means that the file `.gitconfig` exists before the symlinking. We need to
+manually change its name so GNU Stow can create the symlink. My recommendation is
+to rename it:
+
+    mv ~/.gitconfig ~/.gitconfig.old
 
 Then simply use stow to install the dotfiles you want to use:
 
