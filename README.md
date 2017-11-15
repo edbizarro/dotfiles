@@ -71,7 +71,7 @@ Or
       * existing target is not owned by stow: .gitconfig
     All operations aborted.
     
-This means that the file `.gitconfig` exists before the symlinking. We need to
+This means that the file `.gitconfig` (or any other file name that appear in the warning) exists before the symlinking. We need to
 manually change its name so GNU Stow can create the symlink. My recommendation is
 to rename it:
 
