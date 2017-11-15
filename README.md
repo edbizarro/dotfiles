@@ -67,4 +67,4 @@ Then simply use stow to install the dotfiles you want to use:
       stow compton && \
       stow dunst && \
       cd ~/.dotfiles/zsh && \
-      stow config -t ~/
+      stow configs -t ~/
