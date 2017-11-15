@@ -66,7 +66,7 @@ We may get some warning messages like the following one:
 Or
 
     cd ~/Dotfiles
-    stow -n git
+    stow git
     WARNING! stowing git would cause conflicts:
       * existing target is not owned by stow: .gitconfig
     All operations aborted.
