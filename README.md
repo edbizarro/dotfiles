@@ -6,7 +6,6 @@ A collection of my personal dotfiles. Here's a little preview of what it can loo
 ![screenshot](screenshot.png)
 
 ![ncmpcpp](ncmpcpp.png)
-ncmpcpp
 
 Installation
 ------------
@@ -15,10 +14,10 @@ Installation
 
 #### Requirements
 
-* zsh
-* tmux
-* NerdFonts
-* icomoon
+* [zsh](http://www.zsh.org)
+* [tmux](https://github.com/tmux/tmux)
+* [NerdFonts](https://github.com/ryanoasis/nerd-fonts)
+* [icomoon](https://icomoon.io/app/#/select)
 * [prezto](https://github.com/sorin-ionescu/prezto) (for zsh)
 * [tpm](https://github.com/tmux-plugins/tpm) (for tmux)
 * [i3-gaps](https://github.com/Airblader/i3)
