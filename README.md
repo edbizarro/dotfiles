@@ -52,6 +52,7 @@ Then simply use stow to install the dotfiles you want to use:
       stow tmux && \
       stow compton && \
       stow dunst && \
+      stow xresources && \
       cd ~/.dotfiles/zsh && \
       stow configs -t ~/
       
