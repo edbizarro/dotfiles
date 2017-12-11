@@ -44,6 +44,7 @@ Install GNU Stow _(if not already installed)_
 Then simply use stow to install the dotfiles you want to use:
 
     cd ~/.dotfiles && \
+      stow i3 && \
       stow mopidy && \
       stow cava && \
       stow ncmpcpp && \
