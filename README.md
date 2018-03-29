@@ -15,9 +15,12 @@ Installation
 #### Requirements
 
 * [zsh](http://www.zsh.org)
+* [rxvt-unicode](https://wiki.archlinux.org/index.php/rxvt-unicode)
 * [tmux](https://github.com/tmux/tmux)
 * [NerdFonts](https://github.com/ryanoasis/nerd-fonts)
 * [icomoon](https://icomoon.io)
+* Terminus font
+* Ohsnap font
 * [tewi-font](https://github.com/lucy/tewi-font)
 * [siji-font](https://github.com/stark/siji)
 * [Iosevka-font](https://github.com/be5invis/Iosevka)
@@ -25,11 +28,14 @@ Installation
 * [tpm](https://github.com/tmux-plugins/tpm) (for tmux)
 * [i3-gaps](https://github.com/Airblader/i3)
 * [polybar](https://github.com/jaagr/polybar)
+
+#### Optional
+
 * [compton](https://github.com/chjj/compton)
 * [dunst](https://github.com/dunst-project/dunst)
 * [feh](https://feh.finalrewind.org) (change wallpaper)
 * [pywal](https://github.com/dylanaraps/pywal) (generate colourschemes)
-
+* [cava](https://github.com/karlstav/cava)
 
 Clone this repository:
 
@@ -42,8 +48,8 @@ Install GNU Stow _(if not already installed)_
     Ubuntu:   apt-get install stow
     Fedora:   yum install stow
     Arch:     pacman -S stow
-    
-        
+
+
 Then simply use stow to install the dotfiles you want to use:
 
     cd ~/.dotfiles && \
@@ -59,7 +65,7 @@ Then simply use stow to install the dotfiles you want to use:
       stow xresources && \
       cd ~/.dotfiles/zsh && \
       stow configs -t ~/
-      
+
 We may get some warning messages like the following one:
 
     cd ~/Dotfiles
@@ -67,13 +73,13 @@ We may get some warning messages like the following one:
     WARNING! stowing git would cause conflicts:
       * existing target is neither a link nor a directory: .gitconfig
     All operations aborted.
-    
+
 Or
 
     WARNING! stowing git would cause conflicts:
       * existing target is not owned by stow: .gitconfig
     All operations aborted.
-    
+
 This means that the file `.gitconfig` (or any other file name that appear in the warning) exists before the symlinking. We need to
 manually change its name so GNU Stow can create the symlink. My recommendation is
 to rename it:

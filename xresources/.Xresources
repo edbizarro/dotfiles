@@ -9,12 +9,11 @@ rofi.line-margin: 31
 rofi.fullscreen: true
 rofi.color-enabled: true
 rofi.color-window: argb:DA222222, argb:DA222222, argb:00222222
-rofi.color-normal: argb:00000000, #e8e8e8, argb:00000000, argb:00000000, #e56aef
-rofi.color-urgent: argb:00000000, #f43753, argb:00000000, argb:00000000, #e56aef
-rofi.color-active: argb:00000000, #49bbfb, argb:00000000, argb:00000000, #e56aef
-rofi.font: DejaVu Sans Mono Nerd Font 20
+rofi.color-normal: argb:00000000, #e8e8e8, argb:00000000, argb:00000000, #e29a49
+rofi.color-urgent: argb:00000000, #f43753, argb:00000000, argb:00000000, #e29a49
+rofi.color-active: argb:00000000, #49bbfb, argb:00000000, argb:00000000, #e29a49
+rofi.font: Misc Ohsnap 18
 rofi.eh: 1
-rofi.line-margin: 20
 rofi.separator-style: solid
 rofi.hide-scrollbar: true
 rofi.lines: 7
