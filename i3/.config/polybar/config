@@ -23,23 +23,24 @@ override-redirect = true
 
 
 [bar/bottom]
-; Use  xrandr -q | grep " connected" | cut -d ' ' -f1
-; for a list of connected monitors
-monitor = eDP-1
+#monitor = HDMI-1
 margin-top = 5
+padding-right = 2
+padding-left = 2
 width = 100%
 height = 32
-font-0 = TerminessTTF Nerd Font:size=12
-font-1 = icomoon :size=12
+font-0 = Misc Ohsnap:size=14
+font-1 = icomoon:size=12
+font-2 = cryptocoins:style=Regular:size=12
+font-3 = Wuncon Siji:style=Regular:size=12
 bottom = true
 background = ${colors.background}
 foreground = ${colors.foreground}
-modules-center = mpd
+modules-right = mpd
+modules-left = crypto
 
 [bar/top]
-; Use  xrandr -q | grep " connected" | cut -d ' ' -f1
-; for a list of connected monitors
-monitor = eDP-1
+#monitor = HDMI-1
 width = 100%
 height = 32
 border-size = 0
@@ -55,8 +56,11 @@ offset-y = 0
 padding-left = 0
 padding-right = 2
 
-font-0 = TerminessTTF Nerd Font:size=14
+font-0 = Misc Ohsnap:size=14
 font-1 = icomoon:size=12
+font-2 = cryptocoins:style=Regular:size=12
+font-3 = Wuncon Siji:style=Regular:size=12
+
 background = ${colors.background}
 foreground = ${colors.foreground}
 module-margin-left = 1
@@ -65,6 +69,11 @@ modules-left = i3
 modules-center = date
 modules-right = volume wlan battery powermenu
 tray-position =
+
+[module/crypto]
+type = custom/script
+interval = 300
+exec = ~/.config/polybar/crypto.py
 
 [module/memory]
 type = internal/memory
@@ -122,6 +131,7 @@ ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
 ws-icon-6 = 7;
+ws-icon-7 = 8;
 ws-icon-default =
 
 [module/mpd]
@@ -214,13 +224,10 @@ type = internal/date
 interval = 5
 
 date =
-date-alt = " %d/%m/%Y"
+date-alt = "%d/%m/%Y"
 
 time = %H:%M
-time-alt = %H:%M:%S
-
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
+time-alt = %H:%M
 
 label = %date% %time%
 

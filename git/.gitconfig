@@ -1,6 +1,7 @@
 [user]
 	name = Eduardo Bizarro
 	email = edbizarro@gmail.com
+	signingkey = 8B1401096E8BB28E
 
 [github]
 	user = edbizarro
@@ -275,3 +276,5 @@
 	helper = cache
 [init]
 	templatedir = .git-templates
+[commit]
+	gpgsign = true

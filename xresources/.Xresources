@@ -49,10 +49,9 @@ URxvt.internalBorder: 3
 URxvt.lineSpace: 1
 URxvt.loginShell: true
 URxvt.saveLines: 0
-URxvt*termName: rxvt-256color
+URxvt*termName: xterm-256color
 URxvt.transparent: false
 URxvt.visualBell: false
-URxvt.iconFile: /usr/share/icons/Papirus/48x48@2x/apps/terminal.svg
 
 ! disable ctrl+shift binding
 URxvt.iso14755:             false
@@ -64,10 +63,20 @@ URxvt.iso14755_52:          false
 URxvt.perl-ext:
 URxvt.perl-ext-common:
 
+
+!! Fonts
+#define fonts xft:xos4 Terminus:size=16,\
+              xft:xos4 Terminus:size=16,\
+              xft:DejaVu Sans Mono Nerd Font:size=16,\
+              xft:lucy tewi:size=16,\
+              xft:Wuncon Siji:size=16
+
 ! Fonts
 URxvt.allow_bold:           false
-URxvt*font:                 xft:DejaVu Sans Mono Nerd Font:size=16
-URxvt*boldFont:             xft:DejaVu Sans Mono Nerd Font:size=16:weight=bold
+URxvt*font:                 fonts
+URxvt*boldMode:             true
+URxvt*boldFont:             fonts
+
 
 ! Fix font space
 URxvt*letterSpace:          -1

@@ -1,11 +1,14 @@
 [global]
-    alignment = center
+    font = TerminessTTF Nerd Font 15
+    transparency = 30
+    geometry = "300x5-30+20"
+    alignment = left
     follow = none
     format = "%s\n%b"
     horizontal_padding = 8
     indicate_hidden = yes
-    line_height = 5
-    markup = no
+    line_height = 10
+    markup = yes
     monitor = 0
     notification_height = 30
     padding = 8
