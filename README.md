@@ -35,6 +35,7 @@ Installation
 * [dunst](https://github.com/dunst-project/dunst)
 * [feh](https://feh.finalrewind.org) (change wallpaper)
 * [pywal](https://github.com/dylanaraps/pywal) (generate colourschemes)
+* [mons](https://github.com/Ventto/mons)
 * [cava](https://github.com/karlstav/cava)
 
 Clone this repository:
