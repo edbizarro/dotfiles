@@ -3,9 +3,9 @@ dotfiles
 
 A collection of my personal dotfiles. Here's a little preview of what it can look like:
 
-![screenshot](2newEnG.jpg)
+![screenshot](https://raw.githubusercontent.com/edbizarro/dotfiles/master/2newEnG.jpg)
 
-![ncmpcpp](mCIAr9Y.jpg)
+![ncmpcpp](https://github.com/edbizarro/dotfiles/blob/master/mCIAr9Y.jpg)
 
 Installation
 ------------
