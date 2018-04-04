@@ -17,13 +17,11 @@ Installation
 * [zsh](http://www.zsh.org)
 * [rxvt-unicode](https://wiki.archlinux.org/index.php/rxvt-unicode)
 * [tmux](https://github.com/tmux/tmux)
-* [NerdFonts](https://github.com/ryanoasis/nerd-fonts)
 * [icomoon](https://icomoon.io)
-* Terminus font
 * Ohsnap font
+* [NerdFonts](https://github.com/ryanoasis/nerd-fonts)
 * [tewi-font](https://github.com/lucy/tewi-font)
 * [siji-font](https://github.com/stark/siji)
-* [Iosevka-font](https://github.com/be5invis/Iosevka)
 * [prezto](https://github.com/sorin-ionescu/prezto) (for zsh)
 * [tpm](https://github.com/tmux-plugins/tpm) (for tmux)
 * [i3-gaps](https://github.com/Airblader/i3)
@@ -37,6 +35,7 @@ Installation
 * [pywal](https://github.com/dylanaraps/pywal) (generate colourschemes)
 * [mons](https://github.com/Ventto/mons)
 * [cava](https://github.com/karlstav/cava)
+* [Iosevka-font](https://github.com/be5invis/Iosevka)
 
 Clone this repository:
 
