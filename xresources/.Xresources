@@ -12,7 +12,7 @@ rofi.color-window: argb:DA222222, argb:DA222222, argb:00222222
 rofi.color-normal: argb:00000000, #e8e8e8, argb:00000000, argb:00000000, #e29a49
 rofi.color-urgent: argb:00000000, #f43753, argb:00000000, argb:00000000, #e29a49
 rofi.color-active: argb:00000000, #49bbfb, argb:00000000, argb:00000000, #e29a49
-rofi.font: Misc Ohsnap 18
+rofi.font: mplus Nerd Font 18
 rofi.eh: 1
 rofi.separator-style: solid
 rofi.hide-scrollbar: true
@@ -41,7 +41,7 @@ Xft.hintstyle:  hintfull
 !-------------------------------------------------------------------------------
 URxvt.modifier: mod1
 URxvt*loginShell: true
-URxvt.borderless: false
+URxvt.borderless: true
 URxvt*dynamicColors: on
 URxvt.geometry: 90x20
 URxvt.internalBorder: 3
@@ -64,19 +64,10 @@ URxvt.perl-ext-common:
 
 
 !! Fonts
-#define fonts xft:xos4 Terminus:size=16,\
-              xft:xos4 Terminus:size=16,\
-              xft:DejaVu Sans Mono Nerd Font:size=16,\
-              xft:lucy tewi:size=16,\
-              xft:Wuncon Siji:size=16
-
-! Fonts
+URxvt.font: xft:xos4 Terminus:size=16
+URxvt*boldFont: xft:xos4 Terminus:size=16
 URxvt.allow_bold:           false
-URxvt*font:                 fonts
 URxvt*boldMode:             true
-URxvt*boldFont:             fonts
-
-
 ! Fix font space
 URxvt*letterSpace:          -1
 

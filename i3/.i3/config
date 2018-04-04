@@ -1,11 +1,17 @@
-font pango:Hack Nerd Font 13
+font pango:Misc Ohsnap 14
 
 # Alt key
 set $mod Mod1
 #set $monitor eDP1 # my laptop's internal screen
 set $monitor HDMI1 # external screen, they are set here to make it easier to move to new setups
 
-# i3-gapszz stuff :)
+########## i3-gaps integration ##########
+
+for_window [class="^.*"] border pixel 0
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [title="Preferences$"] floating enable
+
 gaps inner 15
 gaps outer 5
 smart_borders on
@@ -119,19 +125,43 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+########## Styling ##########
+###--- i3 coloring ---###
+# Make it clear when failed using red - otherwise set i3 colors with wal from xresources
+set_from_resource $bg           i3wm.color3 #ff0000
+set_from_resource $bg-alt       i3wm.color0 #ff0000
+set_from_resource $fg           i3wm.color15 #ff0000
+set_from_resource $fg-alt       i3wm.color2 #ff0000
+set_from_resource $hl           i3wm.color4 #ff0000
+
+# class                 border  backgr. text indicator      child_border
+client.focused          $fg-alt $bg     $fg  $fg-alt        $hl
+client.focused_inactive $bg     $bg-alt $fg  $bg            $bg
+client.unfocused        $bg     $bg-alt $fg  $bg            $bg
+client.urgent           $bg     $bg-alt $fg  $bg            $bg
+client.placeholder      $bg     $bg-alt $fg  $bg            $bg
+
+client.background $bg
+
+
+
 bindsym $mod+Ctrl+l exec --no-startup-id $HOME/.dotfiles/i3/.i3/scripts/i3lock.sh
 
 # Start-up programs
 # exec_always --no-startup-id xrandr --output eDP-1 --primary --preferred
 # exec_always --no-startup-id xrandr --output HDMI-1 --primary --preferred --left-of eDP-1
+
+exec --no-startup-id $HOME/.i3/startup/mons.sh
 exec_always --no-startup-id $HOME/.i3/startup/polybar.sh
 exec_always --no-startup-id $HOME/.i3/startup/compton.sh
-exec --no-startup-id $HOME/.i3/startup/mopidy.sh
-exec --no-startup-id $HOME/.i3/startup/mons.sh
 exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
-# exec_always --no-startup-id feh --bg-scale ~/Imagens/wallpapers/fon_polosy_linii_svet_1920x1080.jpg
+exec --no-startup-id $HOME/.i3/startup/mopidy.sh
+exec_always --no-startup-id wal -i ~/Imagens/Wallpapers -q -a "95" -g
 exec_always --no-startup-id xrdb ~/.Xresources
-exec_always --no-startup-id wal -i ~/Imagens/Wallpapers -q -a "95"
+exec --no-startup-id xset -dpms
+exec --no-startup-id xset s off
+bindsym $mod+Shift+a exec --no-startup-id wal -i ~/Imagens/Wallpapers -q -a "95" -g
+
 
 # Rofi
 bindsym $mod+d exec --no-startup-id rofi -monitor -1 -show run -display-run " "
@@ -139,6 +169,7 @@ bindsym $mod+Shift+d exec --no-startup-id rofi -monitor -1 -show window -display
 
 #Screenshot
 bindsym $mod+Shift+s exec --no-startup-id "scrot -q 90 ~/Imagens/Screenshot%Y-%m-%d%H:%M:%S.png"
+bindsym Print exec --no-startup-id "scrot -q 90 ~/Imagens/Screenshot%Y-%m-%d%H:%M:%S.png"
 
 # Volume controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +10%
