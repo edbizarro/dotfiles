@@ -18,7 +18,7 @@ Installation
 * [rxvt-unicode](https://wiki.archlinux.org/index.php/rxvt-unicode)
 * [tmux](https://github.com/tmux/tmux)
 * [icomoon](https://icomoon.io)
-* Ohsnap font
+* [Ohsnap font](https://aur.archlinux.org/packages/ohsnap/)
 * [NerdFonts](https://github.com/ryanoasis/nerd-fonts)
 * [tewi-font](https://github.com/lucy/tewi-font)
 * [siji-font](https://github.com/stark/siji)
