@@ -18,6 +18,7 @@ Installation
 * [rxvt-unicode](https://wiki.archlinux.org/index.php/rxvt-unicode)
 * [tmux](https://github.com/tmux/tmux)
 * [NerdFonts](https://github.com/ryanoasis/nerd-fonts)
+* [Input Font](http://input.fontbureau.com/download/)
 * [prezto](https://github.com/sorin-ionescu/prezto) (for zsh)
 * [tpm](https://github.com/tmux-plugins/tpm) (for tmux)
 * [i3-gaps](https://github.com/Airblader/i3)
