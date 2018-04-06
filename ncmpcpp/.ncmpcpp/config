@@ -55,4 +55,3 @@ store_lyrics_in_song_dir = "yes"
 
 screen_switcher_mode = playlist, browser, lyrics, clock
 startup_screen = "playlist"
-startup_slave_screen = "playlist_editor"

@@ -64,8 +64,8 @@ URxvt.perl-ext-common:
 
 
 !! Fonts
-URxvt.font: xft:xos4 Terminus:size=16
-URxvt*boldFont: xft:xos4 Terminus:size=16
+URxvt.font: xft:Input:size=14
+URxvt*boldFont: xft:Input:size=14
 URxvt.allow_bold:           false
 URxvt*boldMode:             true
 ! Fix font space

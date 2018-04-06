@@ -1,4 +1,4 @@
-font pango:Misc Ohsnap 14
+font pango:Iosevka Nerd Font 12
 
 # Alt key
 set $mod Mod1
@@ -10,7 +10,9 @@ set $monitor HDMI1 # external screen, they are set here to make it easier to mov
 for_window [class="^.*"] border pixel 0
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
-for_window [title="Preferences$"] floating enable
+for_window [class="(?i)pavucontrol"] floating enable
+for_window [class="(?i)gucharmap"] floating enable
+for_window [class="(?i)dde-file-manager"] floating enable
 
 gaps inner 15
 gaps outer 5
