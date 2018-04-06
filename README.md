@@ -22,14 +22,16 @@ Installation
 * [tpm](https://github.com/tmux-plugins/tpm) (for tmux)
 * [i3-gaps](https://github.com/Airblader/i3)
 * [polybar](https://github.com/jaagr/polybar)
+* [mopidy](https://www.mopidy.com/)
+* [mons](https://github.com/Ventto/mons)
+* [compton](https://github.com/chjj/compton)
+* [dunst](https://github.com/dunst-project/dunst)
 
 #### Optional
 
-* [compton](https://github.com/chjj/compton)
-* [dunst](https://github.com/dunst-project/dunst)
+* [ncmpcpp](http://rybczak.net/ncmpcpp/)
 * [feh](https://feh.finalrewind.org) (change wallpaper)
 * [pywal](https://github.com/dylanaraps/pywal) (generate colourschemes)
-* [mons](https://github.com/Ventto/mons)
 * [cava](https://github.com/karlstav/cava)
 
 ##### Cool fonts
