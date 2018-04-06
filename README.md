@@ -94,3 +94,5 @@ to rename it:
 ## More images
 
 ![screenshot](https://raw.githubusercontent.com/edbizarro/dotfiles/master/images/eJ0rq95.jpg)
+
+![screenshot](https://raw.githubusercontent.com/edbizarro/dotfiles/master/images/another-theme.jpg)
