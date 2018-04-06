@@ -3,9 +3,9 @@ dotfiles
 
 A collection of my personal dotfiles. Here's a little preview of what it can look like:
 
-![screenshot](https://raw.githubusercontent.com/edbizarro/dotfiles/master/2newEnG.jpg)
+![screenshot](https://raw.githubusercontent.com/edbizarro/dotfiles/master/images/2newEnG.jpg)
 
-![ncmpcpp](https://github.com/edbizarro/dotfiles/blob/master/mCIAr9Y.jpg)
+![ncmpcpp](https://raw.githubusercontent.com/edbizarro/dotfiles/master/images/mCIAr9Y.jpg)
 
 Installation
 ------------
@@ -90,3 +90,7 @@ manually change its name so GNU Stow can create the symlink. My recommendation i
 to rename it:
 
     mv ~/.gitconfig ~/.gitconfig.old
+
+## More images
+
+![screenshot](https://raw.githubusercontent.com/edbizarro/dotfiles/master/images/eJ0rq95.jpg)
