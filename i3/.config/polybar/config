@@ -34,15 +34,15 @@ border-right-size = 0
 border-bottom-size = 0
 radius = 0
 line-size = 2
-spacing = 0
+spacing = 1
 offset-x = 0
 offset-y = 0
 padding-left = 0
 padding-right = 2
 
-font-0 = "TamzenForPowerline:pixelsize=14;1"
-font-1 = "Iosevka Nerd Font:antialias=false:size=10;1"
-font-2 = "Iosevka Nerd Font:antialias=false:size=14;1"
+font-0 = "TamzenForPowerline:pixelsize=14;3"
+font-1 = "Iosevka Nerd Font:antialias=false:size=10;3"
+font-2 = "Iosevka Nerd Font:antialias=false:size=14;3"
 dpi = 96
 
 background = ${colors.background}
@@ -62,9 +62,9 @@ padding-left = 2
 width = 100%
 height = 32
 
-font-0 = "TamzenForPowerline:pixelsize=14;1"
-font-1 = "Iosevka Nerd Font:antialias=false:size=10;1"
-font-2 = "Iosevka Nerd Font:antialias=false:size=14;1"
+font-0 = "TamzenForPowerline:pixelsize=14;3"
+font-1 = "Iosevka Nerd Font:antialias=false:size=10;3"
+font-2 = "Iosevka Nerd Font:antialias=false:size=14;3"
 dpi = 96
 
 bottom = true
@@ -102,14 +102,14 @@ strip-wsnumbers = true
 pin-workspaces = true
 
 label-focused = %icon%
-label-focused-background = ${colors.background-alt}
+label-focused-background = ${colors.background}
 label-focused-foreground = ${colors.foreground}
 label-focused-padding = 3
-label-focused-underline = ${colors.foreground}
+label-focused-underline = ${colors.foreground-alt}
 
 label-unfocused = %icon%
 label-unfocused-background = ${colors.background}
-label-unfocused-foreground = ${colors.foreground-alt}
+label-unfocused-foreground = ${colors.background-alt}
 label-unfocused-padding = 3
 label-unfocused-underline = ${colors.background}
 
@@ -121,7 +121,7 @@ label-urgent-underline = ${colors.background}
 
 label-visible = %icon%
 label-visible-background = ${colors.background}
-label-visible-foreground = ${colors.foreground-alt}
+label-visible-foreground = ${colors.foreground}
 label-visible-padding = 3
 label-visible-underline = ${colors.background}
 
@@ -144,7 +144,7 @@ interval = 1
 
 format-online = <label-song>
 
-label-song =  %artist% - %title%
+label-song = "  %artist% - %title%"
 label-offline = mopidy is offline
 
 icon-prev = 
@@ -200,7 +200,7 @@ label-disconnected-foreground = ${colors.foreground-alt}
 type = internal/date
 interval = 5
 
-date = "  %a %d %b,"
+date = "%a %d %b,"
 date-alt = "%d/%m/%y"
 time = "%H:%M"
 time-alt = %H:%M
@@ -283,9 +283,9 @@ menu-2-1-exec = menu-open-0
 [module/ip]
 type = custom/script
 interval = 2
-format = " <label>"
-format-prefix-foreground = ${colors.foreground-alt}
-format-background = ${colors.background}
+format = <label>
+format-prefix-foreground = ${colors.foreground}
+format-prefix-background = ${colors.background}
 exec = echo "$(dig +short myip.opendns.com @resolver1.opendns.com)"
 exec-if = ping -c 1 gentoo.org
 
