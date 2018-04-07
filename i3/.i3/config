@@ -1,5 +1,3 @@
-font pango:Iosevka Nerd Font 12
-
 # Alt key
 set $mod Mod1
 #set $monitor eDP1 # my laptop's internal screen

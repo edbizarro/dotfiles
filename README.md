@@ -20,7 +20,7 @@ Installation
 * [prezto](https://github.com/sorin-ionescu/prezto) (for zsh)
 * [i3-gaps](https://github.com/Airblader/i3)
 * [polybar](https://github.com/jaagr/polybar)
-* [tamsyn](http://www.fial.com/~scott/tamsyn-font/) (font for polybar text)
+* [tamzen](https://github.com/sunaku/tamzen-font) (font for polybar text)
 * [NerdFonts](https://github.com/ryanoasis/nerd-fonts) (font polybar icons)
 * [mopidy](https://www.mopidy.com/)
 * [mons](https://github.com/Ventto/mons)
@@ -40,9 +40,11 @@ Installation
 * [Ohsnap font](https://aur.archlinux.org/packages/ohsnap/)
 * [tewi-font](https://github.com/lucy/tewi-font)
 * [siji-font](https://github.com/stark/siji)
+* [tamsyn](http://www.fial.com/~scott/tamsyn-font/)
 * [Input Font](http://input.fontbureau.com/download/)
 * [proggyfonts](https://proggyfonts.net/download/) (Monospaced Bitmap Fonts)
-
+* [scientifica](https://github.com/NerdyPepper/scientifica)
+* [bitmap fonts](https://github.com/Tecate/bitmap-fonts) (A collection of monospaced bitmap fonts)
 
 Clone this repository:
 
