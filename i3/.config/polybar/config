@@ -10,10 +10,11 @@ screenchange-reload = true
 background = #000d0d0d
 background-alt = #300fdfdfd
 foreground = ${xrdb:foreground}
-foreground-alt = #55
+foreground-alt = ${xrdb:foreground}
 primary = ${xrdb:color5}
-secondary = #840094
+secondary = ${xrdb:color12}
 alert = ${xrdb:color1}
+border = ${xrdb:color2}
 
 [global/wm]
 margin-top = 0
@@ -70,7 +71,7 @@ bottom = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 modules-right = mpd
-modules-left = filesystem
+modules-left = hostname
 modules-center =
 
 [module/crypto]
@@ -174,7 +175,7 @@ interval = 3.0
 
 format-connected = <label-connected>
 
-label-connected = "  %essid%   %signal%% "
+label-connected = "  %essid%   %signal%% "
 label-disconnected = " %ifname% off "
 
 ramp-signal-0 =" "
@@ -199,7 +200,7 @@ label-disconnected-foreground = ${colors.foreground-alt}
 type = internal/date
 interval = 5
 
-date = "%a %d %b,"
+date = "  %a %d %b,"
 date-alt = "%d/%m/%y"
 time = "%H:%M"
 time-alt = %H:%M
@@ -213,11 +214,11 @@ format-volume = <ramp-volume><label-volume>
 label-volume = "%percentage%"
 ramp-volume-0 =" "
 ramp-volume-1 =" "
-ramp-volume-2 =" "
+ramp-volume-2 =" "
 ramp-volume-3 =" "
 label-volume-foreground = ${colors.foreground}
 
-format-muted-prefix = " "
+format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground}
 label-muted = muted
 label-muted-foreground = ${colors.foreground}
@@ -258,7 +259,7 @@ type = custom/menu
 
 format-spacing = 1
 
-label-open = 
+label-open = 
 label-close = cancel
 label-close-foreground = ${colors.foreground-alt}
 label-separator = |
@@ -288,4 +289,13 @@ format-background = ${colors.background}
 exec = echo "$(dig +short myip.opendns.com @resolver1.opendns.com)"
 exec-if = ping -c 1 gentoo.org
 
+[module/hostname]
+type = custom/script
+interval = 256
+format = "<label> "
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground-alt}
+format-padding = 0
+format-background = ${colors.background}
+exec = echo "$(uname -n)"
 ; vim:ft=dosini
