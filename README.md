@@ -17,12 +17,12 @@ Installation
 * [zsh](http://www.zsh.org)
 * [rxvt-unicode](https://wiki.archlinux.org/index.php/rxvt-unicode)
 * [tmux](https://github.com/tmux/tmux)
-* [NerdFonts](https://github.com/ryanoasis/nerd-fonts)
-* [Input Font](http://input.fontbureau.com/download/)
 * [prezto](https://github.com/sorin-ionescu/prezto) (for zsh)
 * [tpm](https://github.com/tmux-plugins/tpm) (for tmux)
 * [i3-gaps](https://github.com/Airblader/i3)
 * [polybar](https://github.com/jaagr/polybar)
+* [tamsyn](http://www.fial.com/~scott/tamsyn-font/) font for polybar texts
+* [NerdFonts](https://github.com/ryanoasis/nerd-fonts) font polybar icons
 * [mopidy](https://www.mopidy.com/)
 * [mons](https://github.com/Ventto/mons)
 * [compton](https://github.com/chjj/compton)
@@ -32,7 +32,7 @@ Installation
 
 * [ncmpcpp](http://rybczak.net/ncmpcpp/)
 * [feh](https://feh.finalrewind.org) (change wallpaper)
-* [pywal](https://github.com/dylanaraps/pywal) (generate colourschemes)
+* [pywal](https://github.com/dylanaraps/pywal) (generate colourschemes based on wallpaper)
 * [cava](https://github.com/karlstav/cava)
 
 ##### Cool fonts
@@ -41,6 +41,7 @@ Installation
 * [Ohsnap font](https://aur.archlinux.org/packages/ohsnap/)
 * [tewi-font](https://github.com/lucy/tewi-font)
 * [siji-font](https://github.com/stark/siji)
+* [Input Font](http://input.fontbureau.com/download/)
 
 Clone this repository:
 

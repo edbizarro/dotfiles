@@ -158,7 +158,7 @@ exec_always --no-startup-id $HOME/.i3/startup/polybar.sh
 exec_always --no-startup-id $HOME/.i3/startup/compton.sh
 exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
 exec --no-startup-id $HOME/.i3/startup/mopidy.sh
-exec_always --no-startup-id wal -i ~/Imagens/Wallpapers -q -a "95" -g
+# exec_always --no-startup-id wal -i ~/Imagens/Wallpapers -q -a "95" -g
 exec_always --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id xset -dpms
 exec --no-startup-id xset s off

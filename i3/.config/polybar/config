@@ -1,9 +1,9 @@
 [settings]
-compositing-background = source
-compositing-foreground = source
-compositing-overline = source
-compositing-underline = source
-compositing-border = source
+compositing-background = over
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
 screenchange-reload = true
 
 [colors]
@@ -22,24 +22,8 @@ fixed-center = true
 override-redirect = true
 
 
-[bar/bottom]
-margin-top = 5
-padding-right = 2
-padding-left = 2
-width = 100%
-height = 32
-font-0 = Noto Mono:size=9
-font-1 = Iosevka Nerd Font:size=9
-dpi = 96
-
-bottom = true
-background = ${colors.background}
-foreground = ${colors.foreground}
-modules-right = mpd
-modules-left = filesystem
-modules-center =
-
 [bar/top]
+locale = pt_BR.utf8
 width = 100%
 height = 30
 border-size = 0
@@ -55,8 +39,9 @@ offset-y = 0
 padding-left = 0
 padding-right = 2
 
-font-0 = Noto Mono:size=9
-font-1 = Iosevka Nerd Font:size=9
+font-0 = "Misc Tamsyn:pixelsize=14;1"
+font-1 = "Iosevka Nerd Font:antialias=false:size=10;1"
+font-2 = "Iosevka Nerd Font:antialias=false:size=14;1"
 dpi = 96
 
 background = ${colors.background}
@@ -66,6 +51,27 @@ module-margin-right = 0
 modules-left = i3
 modules-center = date
 modules-right = volume wlan ip battery powermenu
+
+
+[bar/bottom]
+locale = pt_BR.utf8
+margin-top = 5
+padding-right = 2
+padding-left = 2
+width = 100%
+height = 32
+
+font-0 = "Misc Tamsyn:pixelsize=14;1"
+font-1 = "Iosevka Nerd Font:antialias=false:size=10;1"
+font-2 = "Iosevka Nerd Font:antialias=false:size=14;1"
+dpi = 96
+
+bottom = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+modules-right = mpd
+modules-left = filesystem
+modules-center =
 
 [module/crypto]
 type = custom/script
@@ -97,25 +103,25 @@ pin-workspaces = true
 label-focused = %icon%
 label-focused-background = ${colors.background-alt}
 label-focused-foreground = ${colors.foreground}
-label-focused-padding = 2
+label-focused-padding = 3
 label-focused-underline = ${colors.foreground}
 
 label-unfocused = %icon%
 label-unfocused-background = ${colors.background}
 label-unfocused-foreground = ${colors.foreground-alt}
-label-unfocused-padding = 2
+label-unfocused-padding = 3
 label-unfocused-underline = ${colors.background}
 
 label-urgent = %icon%
 label-urgent-background = ${colors.background}
 label-urgent-foreground = ${colors.foreground-alt}
-label-urgent-padding = 2
+label-urgent-padding = 3
 label-urgent-underline = ${colors.background}
 
 label-visible = %icon%
 label-visible-background = ${colors.background}
 label-visible-foreground = ${colors.foreground-alt}
-label-visible-padding = 2
+label-visible-padding = 3
 label-visible-underline = ${colors.background}
 
 ws-icon-0 = 1;
@@ -137,7 +143,7 @@ interval = 1
 
 format-online = <label-song>
 
-label-song = %artist% - %title%
+label-song =  %artist% - %title%
 label-offline = mopidy is offline
 
 icon-prev = 
@@ -168,14 +174,14 @@ interval = 3.0
 
 format-connected = <label-connected>
 
-label-connected = "  %essid% "
-label-disconnected = " %ifname% off "
+label-connected = "  %essid%   %signal%% "
+label-disconnected = " %ifname% off "
 
-ramp-signal-0 =" "
-ramp-signal-1 =" "
-ramp-signal-2 =" "
-ramp-signal-3 =" "
-ramp-signal-4 =" "
+ramp-signal-0 =" "
+ramp-signal-1 =" "
+ramp-signal-2 =" "
+ramp-signal-3 =" "
+ramp-signal-4 =" "
 
 [module/eth]
 type = internal/network
@@ -193,9 +199,9 @@ label-disconnected-foreground = ${colors.foreground-alt}
 type = internal/date
 interval = 5
 
-date = " %a %d %b"
+date = "%a %d %b,"
 date-alt = "%d/%m/%y"
-time = "  %H:%M"
+time = "%H:%M"
 time-alt = %H:%M
 
 label = %date% %time%
