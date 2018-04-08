@@ -124,28 +124,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-########## Styling ##########
-###--- i3 coloring ---###
-# Make it clear when failed using red - otherwise set i3 colors with wal from xresources
-set_from_resource $bg           i3wm.color3 #ff0000
-set_from_resource $bg-alt       i3wm.color0 #ff0000
-set_from_resource $fg           i3wm.color15 #ff0000
-set_from_resource $fg-alt       i3wm.color2 #ff0000
-set_from_resource $hl           i3wm.color4 #ff0000
-
-# class                 border  backgr. text indicator      child_border
-client.focused          $fg-alt $bg     $fg  $fg-alt        $hl
-client.focused_inactive $bg     $bg-alt $fg  $bg            $bg
-client.unfocused        $bg     $bg-alt $fg  $bg            $bg
-client.urgent           $bg     $bg-alt $fg  $bg            $bg
-client.placeholder      $bg     $bg-alt $fg  $bg            $bg
-
-client.background $bg
-
-
-
 bindsym $mod+Ctrl+l exec --no-startup-id $HOME/.dotfiles/i3/.i3/scripts/i3lock.sh
-bindsym $mod+Shift+a exec --no-startup-id wal -i ~/Imagens/Wallpapers -q -a "95" -g
+bindsym $mod+Shift+a exec --no-startup-id wal -i ~/Imagens/Wallpapers -q
 
 # Start-up programs
 # exec_always --no-startup-id xrandr --output eDP-1 --primary --preferred

@@ -30,7 +30,7 @@ rofi.window-format: {t}
 !-------------------------------------------------------------------------------
 Xft.autohint:   0
 Xft.dpi:        96
-Xft.antialias:  true
+Xft.antialias:  false
 Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.lcdfilter:  lcddefault
@@ -111,8 +111,6 @@ URxvt.pointerBlank:         false
 *.foreground:   nord4
 *.background:   nord0
 *.cursorColor:  nord4
-*fading: 35
-*fadeColor: nord3
 
 *.color0: nord1
 *.color1: nord11
