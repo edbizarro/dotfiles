@@ -1,7 +1,6 @@
 # Alt key
 set $mod Mod1
-#set $monitor eDP1 # my laptop's internal screen
-set $monitor HDMI1 # external screen, they are set here to make it easier to move to new setups
+# set $monitor HDMI1 # external screen, they are set here to make it easier to move to new setups
 
 ########## i3-gaps integration ##########
 
@@ -146,21 +145,21 @@ client.background $bg
 
 
 bindsym $mod+Ctrl+l exec --no-startup-id $HOME/.dotfiles/i3/.i3/scripts/i3lock.sh
+bindsym $mod+Shift+a exec --no-startup-id wal -i ~/Imagens/Wallpapers -q -a "95" -g
 
 # Start-up programs
 # exec_always --no-startup-id xrandr --output eDP-1 --primary --preferred
 # exec_always --no-startup-id xrandr --output HDMI-1 --primary --preferred --left-of eDP-1
 
 exec --no-startup-id $HOME/.i3/startup/mons.sh
+exec --no-startup-id rmmod pcspkr
 exec_always --no-startup-id $HOME/.i3/startup/polybar.sh
 exec_always --no-startup-id $HOME/.i3/startup/compton.sh
 exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
 exec --no-startup-id $HOME/.i3/startup/mopidy.sh
-# exec_always --no-startup-id wal -i ~/Imagens/Wallpapers -q -a "95" -g
 exec_always --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id xset -dpms
 exec --no-startup-id xset s off
-bindsym $mod+Shift+a exec --no-startup-id wal -i ~/Imagens/Wallpapers -q -a "95" -g
 
 
 # Rofi
@@ -168,8 +167,8 @@ bindsym $mod+d exec --no-startup-id rofi -monitor -1 -show run -display-run "
 bindsym $mod+Shift+d exec --no-startup-id rofi -monitor -1 -show window -display-window " "
 
 #Screenshot
-bindsym $mod+Shift+s exec --no-startup-id "scrot -q 90 ~/Imagens/Screenshot%Y-%m-%d%H:%M:%S.png"
-bindsym Print exec --no-startup-id "scrot -q 90 ~/Imagens/Screenshot%Y-%m-%d%H:%M:%S.png"
+bindsym $mod+Shift+s exec --no-startup-id "scrot -q 95 ~/Imagens/Screenshot-%Y-%m-%d%H:%M:%S.png"
+bindsym Print exec --no-startup-id "scrot -q 95 ~/Imagens/Screenshot-%Y-%m-%d%H:%M:%S.png"
 
 # Volume controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +10%
@@ -181,5 +180,3 @@ assign [class="(?i)atom"] 3
 assign [class="(?i)pstorm"] 3
 assign [class="(?i)ncmpcpp"] 4
 assign [class="(?i)slack"] 5
-
-for_window [class="^.*"] border pixel 0

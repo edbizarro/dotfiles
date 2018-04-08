@@ -5,7 +5,7 @@ A collection of my personal dotfiles. Here's a little preview of what it can loo
 
 ![screenshot](https://raw.githubusercontent.com/edbizarro/dotfiles/master/images/2newEnG.jpg)
 
-![ncmpcpp](https://raw.githubusercontent.com/edbizarro/dotfiles/master/images/mCIAr9Y.jpg)
+![calm your mind](https://raw.githubusercontent.com/edbizarro/dotfiles/master/images/calm_your_mind.png)
 
 Installation
 ------------
