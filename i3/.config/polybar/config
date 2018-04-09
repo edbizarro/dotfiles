@@ -50,7 +50,7 @@ foreground = ${colors.foreground}
 module-margin-left = 2
 module-margin-right = 0
 modules-left = i3
-modules-center = date
+modules-center = date weather
 modules-right = volume wlan ip battery powermenu
 
 
@@ -298,4 +298,15 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-padding = 0
 format-background = ${colors.background}
 exec = echo "$(uname -n)"
+
+[module/weather]
+type = custom/script
+interval = 1800
+format = <label>
+format-padding = 1
+format-suffix = "°C"
+format-prefix-foreground = ${colors.foreground-alt}
+format-background = ${colors.background}
+exec = ~/.dotfiles/i3/.i3/scripts/weather.sh -i
+
 ; vim:ft=dosini
