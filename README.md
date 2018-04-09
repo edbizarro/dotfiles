@@ -58,7 +58,11 @@ Install GNU Stow _(if not already installed)_
     Arch:     pacman -S stow
 
 
-Then simply use stow to install the dotfiles you want to use:
+Then simply use stow to install the dotfiles you want to use Ex:
+
+      stow ssh
+
+Or to install all my dotfiles config:
 
     cd ~/.dotfiles && \
       stow i3 && \
