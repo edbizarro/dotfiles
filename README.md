@@ -7,12 +7,7 @@ A collection of my personal dotfiles. Here's a little preview of what it can loo
 
 ![screenshot](https://raw.githubusercontent.com/edbizarro/dotfiles/master/images/2newEnG.jpg)
 
-Installation
-------------
-
-
-
-#### Requirements
+### Requirements
 
 * [zsh](http://www.zsh.org)
 * [rxvt-unicode](https://wiki.archlinux.org/index.php/rxvt-unicode)
@@ -23,7 +18,7 @@ Installation
 * [tamzen](https://github.com/sunaku/tamzen-font) (font for polybar text)
 * [NerdFonts](https://github.com/ryanoasis/nerd-fonts) (font polybar icons)
 
-#### Optional
+### Optional
 
 * [mopidy](https://www.mopidy.com/)
 * [mons](https://github.com/Ventto/mons)
@@ -45,6 +40,10 @@ Installation
 * [proggyfonts](https://proggyfonts.net/download/) (Monospaced Bitmap Fonts)
 * [scientifica](https://github.com/NerdyPepper/scientifica)
 * [bitmap fonts](https://github.com/Tecate/bitmap-fonts) (A collection of monospaced bitmap fonts)
+
+
+Installation
+------------
 
 Clone this repository:
 
