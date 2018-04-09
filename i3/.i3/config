@@ -143,8 +143,9 @@ exec --no-startup-id xset -dpms
 exec --no-startup-id xset s off
 
 # Ncmpcpp
-bindsym $mod+Shift+n exec --no-startup-id urxvt -name 'ncmpcpp' -e zsh -c 'ncmpcpp'
-bindsym $mod+Shift+v exec --no-startup-id urxvt -name 'lyvi' -e zsh -c 'lyvi'
+bindsym $mod+Shift+n exec --no-startup-id urxvt -name 'ncmpcpp' -e ncmpcpp
+bindsym $mod+Shift+v exec --no-startup-id urxvt -name 'lyvi' -e lyvi
+bindsym $mod+Shift+b exec --no-startup-id urxvt -name 'cava' -e cava
 
 # Rofi
 bindsym $mod+d exec --no-startup-id rofi -monitor -1 -show run -display-run " "

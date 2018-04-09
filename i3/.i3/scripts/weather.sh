@@ -37,7 +37,7 @@ TEXT_STORM="Storm"
 TEXT_SNOW="Snow"
 TEXT_FOG="Fog"
 
-SYMBOL_CELSIUS="˚C"
+SYMBOL_CELSIUS=" °C"
 
 WEATHER_URL="http://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&appid=${API_KEY}&units=metric"
 #WEATHER_URL="http://api.openweathermap.org/data/2.5/weather?id=${CITY_ID}&appid=${API_KEY}&units=metric"
