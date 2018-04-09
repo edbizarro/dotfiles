@@ -22,13 +22,13 @@ Installation
 * [polybar](https://github.com/jaagr/polybar)
 * [tamzen](https://github.com/sunaku/tamzen-font) (font for polybar text)
 * [NerdFonts](https://github.com/ryanoasis/nerd-fonts) (font polybar icons)
+
+#### Optional
+
 * [mopidy](https://www.mopidy.com/)
 * [mons](https://github.com/Ventto/mons)
 * [compton](https://github.com/chjj/compton)
 * [dunst](https://github.com/dunst-project/dunst)
-
-#### Optional
-
 * [ncmpcpp](http://rybczak.net/ncmpcpp/) + [lyvi](http://ok100.github.io/lyvi/) for lyrics and artwork
 * [feh](https://feh.finalrewind.org) (change wallpaper)
 * [pywal](https://github.com/dylanaraps/pywal) (generate colourschemes based on wallpaper)
