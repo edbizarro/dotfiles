@@ -97,8 +97,8 @@ to rename it:
 
 ## More images
 
-![screenshot](https://raw.githubusercontent.com/edbizarro/dotfiles/master/images/wow.png)
+![screenshot](https://i.imgur.com/py8z9vu.jpg?1)
 
 ![screenshot](https://raw.githubusercontent.com/edbizarro/dotfiles/master/images/eJ0rq95.jpg)
 
-![screenshot](https://raw.githubusercontent.com/edbizarro/dotfiles/master/images/another-theme.png)
+![screenshot](https://i.imgur.com/DTsYBOs.jpg?1)
