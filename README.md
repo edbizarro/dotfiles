@@ -29,7 +29,7 @@ Installation
 
 #### Optional
 
-* [ncmpcpp](http://rybczak.net/ncmpcpp/)
+* [ncmpcpp](http://rybczak.net/ncmpcpp/) + [lyvi](http://ok100.github.io/lyvi/) for lyrics and artwork
 * [feh](https://feh.finalrewind.org) (change wallpaper)
 * [pywal](https://github.com/dylanaraps/pywal) (generate colourschemes based on wallpaper)
 * [cava](https://github.com/karlstav/cava)

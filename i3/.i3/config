@@ -10,6 +10,7 @@ for_window [window_role="task_dialog"] floating enable
 for_window [class="(?i)pavucontrol"] floating enable
 for_window [class="(?i)gucharmap"] floating enable
 for_window [class="(?i)dde-file-manager"] floating enable
+for_window [class="(?i)gitk"] floating enable
 
 gaps inner 15
 gaps outer 5
@@ -51,9 +52,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+# bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
+# bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -141,6 +142,9 @@ exec_always --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id xset -dpms
 exec --no-startup-id xset s off
 
+# Ncmpcpp
+bindsym $mod+Shift+n exec --no-startup-id urxvt -name 'ncmpcpp' -e zsh -c 'ncmpcpp'
+bindsym $mod+Shift+v exec --no-startup-id urxvt -name 'lyvi' -e zsh -c 'lyvi'
 
 # Rofi
 bindsym $mod+d exec --no-startup-id rofi -monitor -1 -show run -display-run " "
