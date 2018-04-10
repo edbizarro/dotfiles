@@ -11,6 +11,10 @@ bind - split-window -v -c '#{pane_current_path}'
 
 # Use Alt-arrow keys without prefix key to switch panes
 bind -n M-Left select-pane -L
+bind -n C-Left select-pane -L
 bind -n M-Right select-pane -R
+bind -n C-Right select-pane -R
 bind -n M-Up select-pane -U
+bind -n C-Up select-pane -U
 bind -n M-Down select-pane -D
+bind -n C-Down select-pane -D
