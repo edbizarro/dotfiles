@@ -7,6 +7,8 @@ A collection of my personal dotfiles. Here's a little preview of what it can loo
 
 ![neofetch](https://i.imgur.com/jDNX1R2.jpg?1)
 
+![ncmpcpp + cava + lyvi + bum](https://i.imgur.com/DfYOiQj.jpg?1)
+
 ![ncmpcpp + cava + lyvi](https://i.imgur.com/m0vQhJY.jpg?1)
 
 ### Requirements
