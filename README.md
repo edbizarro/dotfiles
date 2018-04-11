@@ -26,7 +26,7 @@ A collection of my personal dotfiles. Here's a little preview of what it can loo
 * [mons](https://github.com/Ventto/mons)
 * [compton](https://github.com/chjj/compton)
 * [dunst](https://github.com/dunst-project/dunst)
-* [ncmpcpp](http://rybczak.net/ncmpcpp/) + [lyvi](http://ok100.github.io/lyvi/) for lyrics and artwork
+* [ncmpcpp](http://rybczak.net/ncmpcpp/) + [lyvi](http://ok100.github.io/lyvi/) for lyrics + [bum](https://github.com/dylanaraps/bum) for artwork
 * [feh](https://feh.finalrewind.org) (change wallpaper)
 * [pywal](https://github.com/dylanaraps/pywal) (generate colourschemes based on wallpaper)
 * [cava](https://github.com/karlstav/cava)
