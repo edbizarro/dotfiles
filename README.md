@@ -38,6 +38,7 @@ A collection of my personal dotfiles. Here's a little preview of what it can loo
 * [icomoon](https://icomoon.io)
 * [Ohsnap font](https://aur.archlinux.org/packages/ohsnap/)
 * [Input Font](http://input.fontbureau.com/download/)
+* [Pragmata](https://github.com/fabrizioschiavi/pragmatapro)
     * Bitmap fonts
       * [tewi-font](https://github.com/lucy/tewi-font)
       * [siji-font](https://github.com/stark/siji)
