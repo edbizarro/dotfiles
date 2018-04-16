@@ -9,8 +9,6 @@ A collection of my personal dotfiles. Here's a little preview of what it can loo
 
 ![ncmpcpp + cava + lyvi + bum](https://i.imgur.com/DfYOiQj.jpg?1)
 
-![ncmpcpp + cava + lyvi](https://i.imgur.com/m0vQhJY.jpg?1)
-
 ### Requirements
 
 * [zsh](http://www.zsh.org)
@@ -39,14 +37,14 @@ A collection of my personal dotfiles. Here's a little preview of what it can loo
 * [Ohsnap font](https://aur.archlinux.org/packages/ohsnap/)
 * [Input Font](http://input.fontbureau.com/download/)
 * [Pragmata](https://github.com/fabrizioschiavi/pragmatapro)
-    * Bitmap fonts
-      * [tewi-font](https://github.com/lucy/tewi-font)
-      * [siji-font](https://github.com/stark/siji)
-      * [tamsyn](http://www.fial.com/~scott/tamsyn-font/)
-      * [cherry](https://github.com/MarinHoc/cherry-font)
-      * [proggyfonts](https://proggyfonts.net/download/) (Monospaced Bitmap Fonts)
-      * [scientifica](https://github.com/NerdyPepper/scientifica)
-      * [bitmap fonts](https://github.com/Tecate/bitmap-fonts) (A collection of monospaced bitmap fonts)
+* Bitmap fonts
+   * [tewi-font](https://github.com/lucy/tewi-font)
+   * [siji-font](https://github.com/stark/siji)
+   * [tamsyn](http://www.fial.com/~scott/tamsyn-font/)
+   * [cherry](https://github.com/MarinHoc/cherry-font)
+   * [proggyfonts](https://proggyfonts.net/download/) (Monospaced Bitmap Fonts)
+   * [scientifica](https://github.com/NerdyPepper/scientifica)
+   * [bitmap fonts](https://github.com/Tecate/bitmap-fonts) (A collection of monospaced bitmap fonts)
  
 
 Installation
@@ -110,3 +108,7 @@ to rename it:
 ![screenshot](https://i.imgur.com/py8z9vu.jpg?1)
 
 ![ncmpcpp + cava + lyvi](https://i.imgur.com/qnFUcZf.jpg?1)
+
+![ncmpcpp + cava + lyvi](https://i.imgur.com/bkBdLBy.jpg?1)
+
+![ncmpcpp + cava + lyvi](https://i.imgur.com/m0vQhJY.jpg?1)
