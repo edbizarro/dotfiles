@@ -1,0 +1,5 @@
+DS_Store
+.gitignore
+.stow-local-ignore
+.*.example
+README.*
