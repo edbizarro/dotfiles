@@ -5,15 +5,16 @@
 ! a6 = 65% amount of black needed over white for white to be a 7 contrast score
 ! b3 = 70%
 ! 80 = 50%
-rofi.line-margin: 31
+
+rofi.line-margin: 20
 rofi.fullscreen: true
 rofi.color-enabled: true
 rofi.color-window: argb:DA222222, argb:DA222222, argb:00222222
 rofi.color-normal: argb:00000000, #e8e8e8, argb:00000000, argb:00000000, #e29a49
 rofi.color-urgent: argb:00000000, #f43753, argb:00000000, argb:00000000, #e29a49
 rofi.color-active: argb:00000000, #49bbfb, argb:00000000, argb:00000000, #e29a49
-rofi.font: TamzenForPowerline 16
-rofi.eh: 1
+rofi.font: TamzenForPowerline 14
+rofi.eh: 2
 rofi.separator-style: solid
 rofi.hide-scrollbar: true
 rofi.lines: 7
