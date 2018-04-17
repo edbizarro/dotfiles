@@ -3,9 +3,7 @@ dotfiles
 
 A collection of my personal dotfiles. Here's a little preview of what it can look like:
 
-![calm your mind](https://raw.githubusercontent.com/edbizarro/dotfiles/master/images/hpU8llo%20-%20Imgur.jpg)
-
-![neofetch](https://i.imgur.com/OkTpGJQ.jpg?1)
+![fantasy](https://i.imgur.com/OkTpGJQ.jpg?1)
 
 ![ncmpcpp + cava + lyvi](https://i.imgur.com/d65yd0s.jpg?1)
 
