@@ -5,9 +5,9 @@ A collection of my personal dotfiles. Here's a little preview of what it can loo
 
 ![calm your mind](https://raw.githubusercontent.com/edbizarro/dotfiles/master/images/hpU8llo%20-%20Imgur.jpg)
 
-![neofetch](https://i.imgur.com/jDNX1R2.jpg?1)
+![neofetch](https://i.imgur.com/OkTpGJQ.jpg?1)
 
-![ncmpcpp + cava + lyvi + bum](https://i.imgur.com/DfYOiQj.jpg?1)
+![ncmpcpp + cava + lyvi](https://i.imgur.com/d65yd0s.jpg?1)
 
 ### Requirements
 
@@ -105,10 +105,3 @@ to rename it:
 
 ## More images
 
-![screenshot](https://i.imgur.com/py8z9vu.jpg?1)
-
-![ncmpcpp + cava + lyvi](https://i.imgur.com/qnFUcZf.jpg?1)
-
-![ncmpcpp + cava + lyvi](https://i.imgur.com/bkBdLBy.jpg?1)
-
-![ncmpcpp + cava + lyvi](https://i.imgur.com/m0vQhJY.jpg?1)
