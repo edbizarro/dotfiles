@@ -24,7 +24,7 @@ A collection of my personal dotfiles. Here's a little preview of what it can loo
 * [NerdFonts](https://github.com/ryanoasis/nerd-fonts) (font polybar icons)
 
 ### Optional
-
+* [betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen) fancy lockscreen
 * [mopidy](https://www.mopidy.com/)
 * [mons](https://github.com/Ventto/mons)
 * [compton](https://github.com/chjj/compton)
