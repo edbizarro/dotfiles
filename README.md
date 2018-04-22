@@ -3,10 +3,13 @@ dotfiles
 
 A collection of my personal dotfiles. Here's a little preview of what it can look like:
 
+#### Current desktop
 ![calm your mind](https://raw.githubusercontent.com/edbizarro/dotfiles/master/images/hpU8llo%20-%20Imgur.jpg)
 
+#### Another colorscheme, generated with [pywal](https://github.com/dylanaraps/pywal)
 ![neofetch](https://i.imgur.com/jDNX1R2.jpg?1)
 
+#### ncmpcpp + cava + lyvi + bum
 ![ncmpcpp + cava + lyvi + bum](https://i.imgur.com/DfYOiQj.jpg?1)
 
 ### Requirements
@@ -21,12 +24,12 @@ A collection of my personal dotfiles. Here's a little preview of what it can loo
 * [NerdFonts](https://github.com/ryanoasis/nerd-fonts) (font polybar icons)
 
 ### Optional
-
+* [betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen) (fancy lockscreen)
 * [mopidy](https://www.mopidy.com/)
 * [mons](https://github.com/Ventto/mons)
 * [compton](https://github.com/chjj/compton)
 * [dunst](https://github.com/dunst-project/dunst)
-* [ncmpcpp](http://rybczak.net/ncmpcpp/) + [lyvi](http://ok100.github.io/lyvi/) for lyrics + [bum](https://github.com/dylanaraps/bum) for artwork
+* [ncmpcpp](http://rybczak.net/ncmpcpp/) + [lyvi](http://ok100.github.io/lyvi/) for lyrics + [bum](https://github.com/dylanaraps/bum) (album artwork)
 * [feh](https://feh.finalrewind.org) (change wallpaper)
 * [pywal](https://github.com/dylanaraps/pywal) (generate colourschemes based on wallpaper)
 * [cava](https://github.com/karlstav/cava)
