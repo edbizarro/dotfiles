@@ -29,9 +29,9 @@ rofi.window-format: {t}
 !-------------------------------------------------------------------------------
 ! Xft settings
 !-------------------------------------------------------------------------------
-Xft.autohint:   0
+Xft.autohint:   1
 Xft.dpi:        96
-Xft.antialias:  false
+Xft.antialias:  true
 Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.lcdfilter:  lcddefault
