@@ -3,14 +3,13 @@ dotfiles
 
 A collection of my personal dotfiles. Here's a little preview of what it can look like:
 
-#### Current desktop
-![calm your mind](https://raw.githubusercontent.com/edbizarro/dotfiles/master/images/hpU8llo%20-%20Imgur.jpg)
+### Current desktop
 
-#### Another colorscheme, generated with [pywal](https://github.com/dylanaraps/pywal)
-![neofetch](https://i.imgur.com/jDNX1R2.jpg?1)
+![fantasy](https://i.imgur.com/6uj1Jvu.jpg?1)
 
-#### ncmpcpp + cava + lyvi + bum
-![ncmpcpp + cava + lyvi + bum](https://i.imgur.com/DfYOiQj.jpg?1)
+### ncmpcpp + cava + lyvi
+
+![ncmpcpp + cava + lyvi](https://i.imgur.com/NMQfpGx.jpg?1)
 
 ### Requirements
 
@@ -48,7 +47,7 @@ A collection of my personal dotfiles. Here's a little preview of what it can loo
    * [proggyfonts](https://proggyfonts.net/download/) (Monospaced Bitmap Fonts)
    * [scientifica](https://github.com/NerdyPepper/scientifica)
    * [bitmap fonts](https://github.com/Tecate/bitmap-fonts) (A collection of monospaced bitmap fonts)
- 
+
 
 Installation
 ------------
@@ -108,10 +107,5 @@ to rename it:
 
 ## More images
 
-![screenshot](https://i.imgur.com/py8z9vu.jpg?1)
-
-![ncmpcpp + cava + lyvi](https://i.imgur.com/qnFUcZf.jpg?1)
-
-![ncmpcpp + cava + lyvi](https://i.imgur.com/bkBdLBy.jpg?1)
-
-![ncmpcpp + cava + lyvi](https://i.imgur.com/m0vQhJY.jpg?1)
+![fantasy](https://i.imgur.com/x4PsBli.jpg?1)
+![rofi](https://i.imgur.com/iyTeGbx.jpg?1)

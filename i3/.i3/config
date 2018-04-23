@@ -21,7 +21,6 @@ new_window none
 floating_modifier $mod
 
 # start a terminal
-# bindsym $mod+Return exec urxvtc -c "/usr/bin/zsh" -i -t -e sh
 bindsym $mod+Shift+Return exec --no-startup-id urxvt -e /usr/bin/zsh
 
 # kill focused window
@@ -134,7 +133,6 @@ bindsym $mod+Shift+a exec --no-startup-id wal -i ~/Imagens/Wallpapers -q
 
 exec_always --no-startup-id betterlockscreen -u ~/Imagens/Wallpapers/vaporware
 exec_always --no-startup-id $HOME/.i3/startup/mons.sh
-exec --no-startup-id rmmod pcspkr
 exec_always --no-startup-id $HOME/.i3/startup/compton.sh
 exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
 exec_always --no-startup-id $HOME/.i3/startup/mopidy.sh
@@ -142,6 +140,7 @@ exec_always --no-startup-id xrdb ~/.Xresources
 exec_always --no-startup-id $HOME/.i3/startup/polybar.sh
 exec --no-startup-id xset -dpms
 exec --no-startup-id xset s off
+exec --no-startup-id rmmod pcspkr
 
 # Ncmpcpp
 bindsym $mod+Shift+n exec --no-startup-id urxvt -name 'ncmpcpp' -e ncmpcpp
