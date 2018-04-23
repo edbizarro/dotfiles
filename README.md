@@ -3,7 +3,11 @@ dotfiles
 
 A collection of my personal dotfiles. Here's a little preview of what it can look like:
 
+### Current desktop
+
 ![fantasy](https://i.imgur.com/6uj1Jvu.jpg?1)
+
+### ncmpcpp + cava + lyvi
 
 ![ncmpcpp + cava + lyvi](https://i.imgur.com/NMQfpGx.jpg?1)
 
