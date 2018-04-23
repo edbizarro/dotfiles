@@ -3,9 +3,9 @@ dotfiles
 
 A collection of my personal dotfiles. Here's a little preview of what it can look like:
 
-![fantasy](https://i.imgur.com/OkTpGJQ.jpg?1)
+![fantasy](https://i.imgur.com/6uj1Jvu.jpg?1)
 
-![ncmpcpp + cava + lyvi](https://i.imgur.com/d65yd0s.jpg?1)
+![ncmpcpp + cava + lyvi](https://i.imgur.com/NMQfpGx.jpg?1)
 
 ### Requirements
 
@@ -102,3 +102,6 @@ to rename it:
     mv ~/.gitconfig ~/.gitconfig.old
 
 ## More images
+
+![fantasy](https://i.imgur.com/x4PsBli.jpg?1)
+![rofi](https://i.imgur.com/iyTeGbx.jpg?1)
