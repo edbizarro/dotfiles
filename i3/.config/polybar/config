@@ -1,6 +1,5 @@
 include-file = /home/edbizarro/.config/polybar/global.conf
-include-file = /home/edbizarro/.config/polybar/bars/top-left.conf
-include-file = /home/edbizarro/.config/polybar/bars/top-right.conf
+include-file = /home/edbizarro/.config/polybar/bars/top.conf
 include-file = /home/edbizarro/.config/polybar/bars/bottom.conf
 
 [module/crypto]
@@ -28,31 +27,27 @@ enable-click = true
 fuzzy-match = true
 wrapping-scroll = false
 strip-wsnumbers = true
-pin-workspaces = true
+pin-workspaces = false
 
 label-focused = 
 label-focused-background = ${colors.foreground}
 label-focused-foreground = ${colors.background}
 label-focused-padding = 2
-label-focused-underline = ${colors.foreground-alt}
 
 label-unfocused = %icon%
 label-unfocused-background = ${colors.background}
 label-unfocused-foreground = ${colors.background-alt}
 label-unfocused-padding = 2
-label-unfocused-underline = ${colors.background}
 
 label-urgent = %icon%
 label-urgent-background = ${colors.background}
 label-urgent-foreground = ${colors.foreground-alt}
 label-urgent-padding = 2
-label-urgent-underline = ${colors.background}
 
 label-visible = %icon%
 label-visible-background = ${colors.background}
 label-visible-foreground = ${colors.foreground}
 label-visible-padding = 2
-label-visible-underline = ${colors.background}
 
 ws-icon-default = 
 
