@@ -11,6 +11,9 @@ A collection of my personal dotfiles. Here's a little preview of what it can loo
 
 ![ncmpcpp + cava + lyvi](https://i.imgur.com/NMQfpGx.jpg?1)
 
+#### Previous themes
+
+Previous themes can be found on [reddit](https://www.reddit.com/r/unixporn/search?q=author:edbizarro&sort=new&restrict_sr=on&t=all) and [releases](https://github.com/edbizarro/dotfiles/releases) page
 ### Requirements
 
 * [zsh](http://www.zsh.org)
