@@ -1,3 +1,6 @@
+alias dkc=docker-compose
+
+
 A_BASE=$HOME/.cache/gitlab-ci-pipeline-php
 
 # define specific cache directories
