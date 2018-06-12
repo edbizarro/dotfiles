@@ -7,3 +7,5 @@ alias vim="nvim"
 
 alias reboot='sudo systemctl reboot'
 alias shutdown='sudo systemctl poweroff'
+
+alias monitor_disk='sudo iotop -Pao'
