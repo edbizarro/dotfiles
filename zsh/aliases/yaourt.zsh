@@ -1,1 +1,1 @@
-alias update-shit='yaourt -Syyua --noconfirm'
+alias update-shit='pacman -Syu && yaourt -Syyua --noconfirm'
