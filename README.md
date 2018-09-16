@@ -5,11 +5,7 @@ A collection of my personal dotfiles. Here's a little preview of what it can loo
 
 ### Current desktop
 
-![fantasy](https://i.imgur.com/6uj1Jvu.jpg?1)
-
-### ncmpcpp + cava + lyvi
-
-![ncmpcpp + cava + lyvi](https://i.imgur.com/NMQfpGx.jpg?1)
+![vaporwave / A E S T H E T I C](https://i.imgur.com/PSNlFjO.jpg?1)
 
 #### Previous themes
 
@@ -107,9 +103,3 @@ manually change its name so GNU Stow can create the symlink. My recommendation i
 to rename it:
 
     mv ~/.gitconfig ~/.gitconfig.old
-
-## More images
-
-![fantasy](https://i.imgur.com/x4PsBli.jpg?1)
-![rofi](https://i.imgur.com/iyTeGbx.jpg?1)
-![betterlockscreen](https://i.imgur.com/TPRfiOu.jpg)

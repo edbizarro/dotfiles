@@ -1,0 +1,1 @@
+export AIRFLOW_GPL_UNIDECODE=yes

@@ -10,9 +10,9 @@ rofi.line-margin: 20
 rofi.fullscreen: true
 rofi.color-enabled: true
 rofi.color-window: argb:DA222222, argb:DA222222, argb:00222222
-rofi.color-normal: argb:00000000, #e8e8e8, argb:00000000, argb:00000000, #e29a49
-rofi.color-urgent: argb:00000000, #f43753, argb:00000000, argb:00000000, #e29a49
-rofi.color-active: argb:00000000, #49bbfb, argb:00000000, argb:00000000, #e29a49
+rofi.color-normal: argb:00000000, #e8e8e8, argb:00000000, argb:00000000, #E918D8
+rofi.color-urgent: argb:00000000, #E918D8, argb:00000000, argb:00000000, #e29a49
+rofi.color-active: argb:00000000, #E918D8, argb:00000000, argb:00000000, #e29a49
 rofi.font: TamzenForPowerline 14
 rofi.eh: 2
 rofi.separator-style: solid
@@ -64,8 +64,8 @@ URxvt.perl-ext-common:
 
 
 !! Fonts
-URxvt.font: xft:TamzenForPowerline:size=14
-URxvt*boldFont: xft:TamzenForPowerline:size=14
+URxvt.font: xft:Tamzen:size=16
+URxvt*boldFont: xft:Tamzen:size=16
 URxvt.allow_bold:           false
 URxvt*boldMode:             true
 ! Fix font space
@@ -82,15 +82,6 @@ URxvt.cursorUnderline:      false
 ! Pointer
 URxvt.pointerBlank:         false
 
-! +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-! title      Nord XResources                                    +
-! project    nord-xresources                                    +
-! version    0.1.0                                              +
-! repository https://github.com/arcticicestudio/nord-xresources +
-! author     Arctic Ice Studio                                  +
-! email      development@arcticicestudio.com                    +
-! copyright  Copyright (C) 2016                                 +
-! +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #define nord0 #2E3440
 #define nord1 #3B4252
 #define nord2 #434C5E
@@ -109,15 +100,15 @@ URxvt.pointerBlank:         false
 #define nord15 #B48EAD
 
 *.foreground:   nord4
-*.background:   nord0
-*.cursorColor:  nord4
+*.background:   #ff71ce
+*.cursorColor:  #01cdfe
 
-*.color0: nord1
-*.color1: nord11
-*.color2: nord14
-*.color3: nord13
-*.color4: nord9
-*.color5: nord15
+*.color0: nord0
+*.color1: #ff71ce
+*.color2: #01cdfe
+*.color3: #05ffa1
+*.color4: #b967ff
+*.color5: #fffb96
 *.color6: nord8
 *.color7: nord5
 *.color8: nord3
