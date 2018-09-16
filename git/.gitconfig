@@ -272,6 +272,8 @@
 		# Usage: $ git wipe
 		#
 		wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+	clippy = !sh -c 'git $1 | cowsay -n -f ~/.config/cows/clippit.cow' -
+	clippit = !sh -c 'git $1 | cowsay -n -f ~/.config/cows/clippit.cow' -
 [credential]
 	helper = cache
 [init]
