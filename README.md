@@ -7,10 +7,6 @@ A collection of my personal dotfiles. Here's a little preview of what it can loo
 
 ![vaporwave / A E S T H E T I C](https://i.imgur.com/PSNlFjO.jpg?1)
 
-### ncmpcpp + cava + lyvi
-
-![ncmpcpp + cava + lyvi](https://i.imgur.com/NMQfpGx.jpg?1)
-
 #### Previous themes
 
 Previous themes can be found on [reddit](https://www.reddit.com/r/unixporn/search?q=author:edbizarro&sort=new&restrict_sr=on&t=all) and [releases](https://github.com/edbizarro/dotfiles/releases) page
