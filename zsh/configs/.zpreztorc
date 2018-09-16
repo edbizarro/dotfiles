@@ -13,6 +13,7 @@ zstyle ':prezto:load' pmodule \
   'ssh' \
   'docker' \
   'pacman' \
+  'python' \
   'tmux' \
   'completion' \
   'syntax-highlighting' \
@@ -21,6 +22,7 @@ zstyle ':prezto:load' pmodule \
   'prompt' \
   'fasd'
 
+zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
 zstyle ':prezto:module:prompt' theme 'pure'
 zstyle ':prezto:module:prompt' pwd-length 'short'
 zstyle ':prezto:module:ssh:load' identities 'id_rsa'
