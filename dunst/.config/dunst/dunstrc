@@ -4,7 +4,7 @@
 #
 
 [global]
-    font = TamzenForPowerline 12
+    font = Tamzen 12
 
     # Allow a small subset of html markup:
     #   <b>bold</b>
