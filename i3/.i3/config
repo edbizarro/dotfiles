@@ -156,12 +156,12 @@ exec_always --no-startup-id wal -i ~/Imagens/Wallpapers/vaporwave/car-02.jpg -a 
 exec_always --no-startup-id $HOME/.i3/startup/mons.sh
 exec_always --no-startup-id $HOME/.i3/startup/compton.sh
 exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
-exec_always --no-startup-id $HOME/.i3/startup/mopidy.sh
+# exec_always --no-startup-id $HOME/.i3/startup/mopidy.sh
 exec_always --no-startup-id xrdb ~/.Xresources
 exec_always --no-startup-id $HOME/.i3/startup/polybar.sh
 exec --no-startup-id xset -dpms
 exec --no-startup-id xset s off
-exec --no-startup-id rmmod pcspkr
+# exec --no-startup-id rmmod pcspkr
 
 # Ncmpcpp
 bindsym $mod+Shift+n exec --no-startup-id urxvt -name 'ncmpcpp' -e ncmpcpp
