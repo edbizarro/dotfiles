@@ -48,7 +48,7 @@ URxvt.geometry: 90x20
 URxvt.internalBorder: 30
 URxvt.lineSpace: 1
 URxvt.saveLines: 0
-URxvt*termName: xterm-256color
+URxvt*termName: rxvt-unicode-256color
 URxvt.transparent: false
 URxvt.visualBell: false
 
