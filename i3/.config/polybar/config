@@ -225,4 +225,13 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-background = ${colors.background}
 exec = ~/.dotfiles/i3/.i3/scripts/weather.sh -i
 
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+exec = python ~/.config/polybar/spotify_status.py -f '{artist}: {song}'
+format-underline = #1db954
+
 ; vim:ft=dosini

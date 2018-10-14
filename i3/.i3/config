@@ -151,8 +151,8 @@ bindsym $mod+Shift+a exec --no-startup-id wal -i ~/Imagens/Wallpapers -q
 # exec_always --no-startup-id xrandr --output HDMI-1 --primary --preferred --left-of eDP-1
 
 exec_always --no-startup-id xrdb -merge ~/.Xresources
-exec --no-startup-id betterlockscreen -u ~/Imagens/Wallpapers/vaporwave/car-02.jpg
-exec_always --no-startup-id wal -i ~/Imagens/Wallpapers/vaporwave/car-02.jpg -a "98"
+exec --no-startup-id betterlockscreen -u ~/Imagens/Wallpapers/himanshu-gangwar-624256-unsplash.jpg
+exec_always --no-startup-id wal -i ~/Imagens/Wallpapers/himanshu-gangwar-624256-unsplash.jpg  -a "94"
 exec_always --no-startup-id $HOME/.i3/startup/mons.sh
 exec_always --no-startup-id $HOME/.i3/startup/compton.sh
 exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
