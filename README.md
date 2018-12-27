@@ -35,7 +35,6 @@ Previous themes can be found on [reddit](https://www.reddit.com/r/unixporn/searc
 ##### Cool fonts
 
 * [icomoon](https://icomoon.io)
-* [Ohsnap font](https://aur.archlinux.org/packages/ohsnap/)
 * [Input Font](http://input.fontbureau.com/download/)
 * [Pragmata](https://github.com/fabrizioschiavi/pragmatapro)
 * Bitmap fonts
