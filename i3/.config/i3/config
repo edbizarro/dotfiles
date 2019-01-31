@@ -180,6 +180,10 @@ bindsym Print exec --no-startup-id "scrot -q 95 ~/Imagens/Screenshot-%Y-%m-%d%H:
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +10%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -10%
 
+# Brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+
 #Assigns
 assign [class="URxvt"] 1
 assign [class="(?i)chrome"] 2
