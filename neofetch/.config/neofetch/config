@@ -32,7 +32,7 @@ print_info() {
 
     # info "Disk" disk
     # info "Battery" battery
-    # info "Font" font
+    info "Font" font
 
     # info "Local IP" local_ip
     # info "Public IP" public_ip
@@ -83,7 +83,7 @@ distro_shorthand="off"
 # Example:
 # on:  'Arch Linux x86_64'
 # off: 'Arch Linux'
-os_arch="on"
+os_arch="off"
 
 
 # Uptime
@@ -99,7 +99,7 @@ os_arch="on"
 # on:   '2 days, 10 hours, 3 mins'
 # off:  '2 days, 10 hours, 3 minutes'
 # tiny: '2d 10h 3m'
-uptime_shorthand="on"
+uptime_shorthand="tiny"
 
 
 # Shell
@@ -150,7 +150,7 @@ speed_type="bios_limit"
 # Example:
 # on:    'i7-6500U (4) @ 3.1GHz'
 # off:   'i7-6500U (4) @ 3.100GHz'
-speed_shorthand="off"
+speed_shorthand="on"
 
 # Enable/Disable CPU brand in output.
 #
@@ -187,7 +187,7 @@ cpu_speed="on"
 # logical:  'Intel i7-6500U (4) @ 3.1GHz' (All virtual cores)
 # physical: 'Intel i7-6500U (2) @ 3.1GHz' (All physical cores)
 # off:      'Intel i7-6500U @ 3.1GHz'
-cpu_cores="logical"
+cpu_cores="off"
 
 # CPU Temperature
 # Hide/Show CPU temperature.
@@ -204,7 +204,7 @@ cpu_cores="logical"
 # C:   'Intel i7-6500U (4) @ 3.1GHz [27.2°C]'
 # F:   'Intel i7-6500U (4) @ 3.1GHz [82.0°F]'
 # off: 'Intel i7-6500U (4) @ 3.1GHz'
-cpu_temp="off"
+cpu_temp="C"
 
 
 # GPU
@@ -238,7 +238,7 @@ gpu_brand="on"
 #
 # integrated:
 #   GPU1: Intel Integrated Graphics
-gpu_type="all"
+gpu_type="dedicated"
 
 
 # Resolution
@@ -280,7 +280,7 @@ gtk_shorthand="off"
 # Example:
 # on:  'Numix [GTK2], Adwaita [GTK3]'
 # off: 'Adwaita [GTK3]'
-gtk2="on"
+gtk2="off"
 
 # Enable/Disable gtk3 Theme / Icons / Font
 #
@@ -291,7 +291,7 @@ gtk2="on"
 # Example:
 # on:  'Numix [GTK2], Adwaita [GTK3]'
 # off: 'Numix [GTK2]'
-gtk3="on"
+gtk3="off"
 
 
 # IP Address
@@ -503,7 +503,7 @@ color_blocks="on"
 # Default:  '3'
 # Values:   'num'
 # Flag:     --block_width
-block_width=3
+block_width=4
 
 # Color block height in lines
 #
@@ -618,7 +618,7 @@ image_source="auto"
 #       Change this to 'Lubuntu', 'Xubuntu', 'Ubuntu-GNOME' or 'Ubuntu-Budgie' to use the flavors.
 # NOTE: Arch, Crux and Gentoo have a smaller logo variant.
 #       Change this to 'arch_small', 'crux_small' or 'gentoo_small' to use the small logos.
-ascii_distro="auto"
+ascii_distro="arch"
 
 # Ascii Colors
 #
@@ -754,7 +754,7 @@ scrot_name="neofetch-$(date +%F-%I-%M-%S-${RANDOM}).png"
 #
 # NOTE: If you'd like another image host to be added to Neofetch.
 #       Open an issue on github.
-image_host="teknik"
+image_host="imgur"
 
 
 # Misc Options
