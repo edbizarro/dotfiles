@@ -27,29 +27,41 @@ enable-click = true
 fuzzy-match = true
 wrapping-scroll = false
 strip-wsnumbers = true
-pin-workspaces = false
+pin-workspaces = true
 
-label-focused = 
-label-focused-background = ${colors.foreground}
-label-focused-foreground = ${colors.background}
-label-focused-padding = 2
+label-focused = %icon%
+label-focused-background = ${colors.background}
+label-focused-foreground = ${colors.foreground}
+label-focused-padding = 3
+label-focused-underline = ${colors.foreground-alt}
 
 label-unfocused = %icon%
 label-unfocused-background = ${colors.background}
 label-unfocused-foreground = ${colors.background-alt}
-label-unfocused-padding = 2
+label-unfocused-padding = 3
+label-unfocused-underline = ${colors.background}
 
 label-urgent = %icon%
 label-urgent-background = ${colors.background}
 label-urgent-foreground = ${colors.foreground-alt}
-label-urgent-padding = 2
+label-urgent-padding = 3
+label-urgent-underline = ${colors.background}
 
 label-visible = %icon%
 label-visible-background = ${colors.background}
 label-visible-foreground = ${colors.foreground}
-label-visible-padding = 2
+label-visible-padding = 3
+label-visible-underline = ${colors.background}
 
-ws-icon-default = 
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-default =
 
 [module/mpd]
 type = internal/mpd
@@ -121,7 +133,7 @@ date-alt = "%d/%m/%y"
 time = "%H:%M"
 time-alt = %H:%M
 
-label = "  %date% %time%"
+label = %date% %time%
 
 [module/volume]
 type = internal/volume

@@ -151,8 +151,8 @@ bindsym $mod+Shift+a exec --no-startup-id wal -i ~/Imagens/Wallpapers -q
 # exec_always --no-startup-id xrandr --output HDMI-1 --primary --preferred --left-of eDP-1
 
 exec_always --no-startup-id xrdb -merge ~/.Xresources
-exec --no-startup-id betterlockscreen -u ~/Imagens/Wallpapers/himanshu-gangwar-624256-unsplash.jpg
-exec_always --no-startup-id wal -i ~/Imagens/Wallpapers/himanshu-gangwar-624256-unsplash.jpg  -a "94"
+exec --no-startup-id betterlockscreen -u ~/Imagens/Wallpapers/vaporwave/OXfpW8l.png
+exec_always --no-startup-id wal -i ~/Imagens/Wallpapers/vaporwave/OXfpW8l.png  -a "94"
 exec_always --no-startup-id $HOME/.i3/startup/mons.sh
 exec_always --no-startup-id $HOME/.i3/startup/compton.sh
 exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
@@ -189,6 +189,7 @@ assign [class="URxvt"] 1
 assign [class="(?i)chrome"] 2
 assign [class="(?i)atom"] 3
 assign [class="(?i)pstorm"] 3
+assign [class="(?i)pycharm"] 3
 assign [class="(?i)ncmpcpp"] 4
 assign [class="(?i)cava"] 4
 assign [class="(?i)bum"] 4
