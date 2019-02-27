@@ -20,6 +20,7 @@ Previous themes can be found on [reddit](https://www.reddit.com/r/unixporn/searc
 * [polybar](https://github.com/jaagr/polybar)
 * [tamzen](https://github.com/sunaku/tamzen-font) (font for polybar text)
 * [NerdFonts](https://github.com/ryanoasis/nerd-fonts) (font polybar icons)
+* [Undefined Medium Fonts](https://github.com/andirueckel/undefined-medium)
 
 ### Optional
 * [betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen) (fancy lockscreen)
