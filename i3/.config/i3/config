@@ -44,8 +44,8 @@ bindsym $mod+Shift+Return exec --no-startup-id urxvt -e /usr/bin/zsh
 # kill focused window
 bindsym $mod+Shift+q kill
 
-bindsym $mod+F12 exec --no-startup-id xbacklight -inc 20
-bindsym $mod+F11 exec --no-startup-id xbacklight -dec 20
+bindsym $mod+F12 exec --no-startup-id light -A 20
+bindsym $mod+F11 exec --no-startup-id light -U 20
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
