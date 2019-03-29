@@ -135,8 +135,8 @@ time-alt = %H:%M
 
 label = %date% %time%
 
-[module/volume]
-type = internal/volume
+[module/alsa]
+type = internal/alsa
 
 format-volume = <ramp-volume><label-volume>
 label-volume = "%percentage%"
