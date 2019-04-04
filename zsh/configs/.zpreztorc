@@ -1,7 +1,6 @@
 zstyle ':prezto:*:*' color 'yes'
 
 zstyle ':prezto:load' pmodule \
-  'environment' \
   'command-not-found' \
   'terminal' \
   'history' \
@@ -9,7 +8,6 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'spectrum' \
   'git' \
-  'dpkg' \
   'ssh' \
   'docker' \
   'pacman' \
@@ -19,16 +17,13 @@ zstyle ':prezto:load' pmodule \
   'syntax-highlighting' \
   'history-substring-search' \
   'autosuggestions' \
-  'prompt' \
-  'fasd'
-
-zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
+  'prompt'
+  
 zstyle ':prezto:module:prompt' theme 'pure'
-zstyle ':prezto:module:prompt' pwd-length 'short'
+zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
 zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'aur'
 zstyle ':prezto:module:tmux:auto-start' local 'yes'
 zstyle ':prezto:module:tmux:auto-start' remote 'no'
-zstyle ':prezto:module:pacman:yaourt' color 'yes'
-zstyle ':prezto:module:autosuggestions' color 'yes'
 zstyle ':prezto:module:autosuggestions:color' found ''
 zstyle ':prezto:module:pacman' frontend 'yaourt'
+zstyle ':prezto:module:pacman:yaourt' color 'yes'

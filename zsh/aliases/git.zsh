@@ -1,7 +1,7 @@
 # GIT
 alias gt='git status'
 alias ga='git add --all'
-alias gc='git commit -m'
+alias gc='git commit'
 alias gfs='git flow feature start'
 alias gff='git flow feature finish'
 alias gfrs='git flow release start'
@@ -15,7 +15,7 @@ function pushme {
     params=''
     for i in $*;
     do
-        params=" $params $i"
+      params=" $params $i"
     done
     git commit -m "$params"
   else

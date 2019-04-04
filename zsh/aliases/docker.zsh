@@ -1,4 +1,3 @@
-alias dkc=docker-compose
 alias dcartizan="dkc exec web php artisan"
 
 
