@@ -1,11 +1,12 @@
 # GIT
 alias gt='git status'
 alias ga='git add --all'
-alias gc='git commit'
+alias gc='git commit -m'
 alias gfs='git flow feature start'
 alias gff='git flow feature finish'
 alias gfrs='git flow release start'
 alias gfrf='git flow release finish'
+
 # Commit the current changes and push to the current branch
 function pushme {
   br=`git branch | grep "*"`
