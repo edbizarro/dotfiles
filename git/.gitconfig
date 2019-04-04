@@ -35,9 +35,9 @@
 
 	[alias]
 
-	    # ------------------------------------------------------------
-	    # Status and view files
-	    # ------------------------------------------------------------
+    # ------------------------------------------------------------
+    # Status and view files
+    # ------------------------------------------------------------
 
 		# Default status with all of the untracked files
 		s = status --untracked-files=all
@@ -271,9 +271,7 @@
 		#
 		# Usage: $ git wipe
 		#
-		wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
-	clippy = !sh -c 'git $1 | cowsay -n -f ~/.config/cows/clippit.cow' -
-	clippit = !sh -c 'git $1 | cowsay -n -f ~/.config/cows/clippit.cow' -
+		wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard		
 [credential]
 	helper = cache
 [init]
