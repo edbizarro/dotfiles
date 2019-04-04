@@ -27,3 +27,5 @@ zstyle ':prezto:module:tmux:auto-start' remote 'no'
 zstyle ':prezto:module:autosuggestions:color' found ''
 zstyle ':prezto:module:pacman' frontend 'yaourt'
 zstyle ':prezto:module:pacman:yaourt' color 'yes'
+zstyle ':prezto:module:prompt' pwd-length 'long'
+
