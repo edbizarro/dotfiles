@@ -43,17 +43,17 @@
 	cap = "!f() { git add .; git commit -m \"$@\"; git push; }; f"
 
 	# NEW.
-	new = "!f() { git cap \"📦 NEW: $@\"; }; f"
+	new = "!f() { git cap \"📦 $@\"; }; f"
 	# IMPROVE.
-	imp = "!f() { git cap \"👌 IMPROVE: $@\"; }; f"
+	imp = "!f() { git cap \"👌 $@\"; }; f"
 	# FIX.
-	fix = "!f() { git cap \"🐛 FIX: $@\"; }; f"
+	fix = "!f() { git cap \"🐛 $@\"; }; f"
 	# RELEASE.
-	rlz = "!f() { git cap \"🚀 RELEASE: $@\"; }; f"
+	rlz = "!f() { git cap \"🚀 $@\"; }; f"
 	# DOC.
-	doc = "!f() { git cap \"📖 DOC: $@\"; }; f"
+	doc = "!f() { git cap \"📖 $@\"; }; f"
 	# TEST.
-	tst = "!f() { git cap \"✅ TEST: $@\"; }; f"
+	tst = "!f() { git cap \"✅ $@\"; }; f"
 
   # ------------------------------------------------------------
   # Status and view files
