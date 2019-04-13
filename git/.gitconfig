@@ -43,7 +43,7 @@
 	cap = "!f() { git add .; git commit -m \"$@\"; git push; }; f"
 
 	# NEW.
-	new = "!f() { git cap \"📦 $@\"; }; f"
+	new1 = "!f() { git cap \"📦 $@\"; }; f"
 	# IMPROVE.
 	imp = "!f() { git cap \"👌 $@\"; }; f"
 	# FIX.
