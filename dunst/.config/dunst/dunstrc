@@ -219,16 +219,6 @@
 #    summary = "*script*"
 #    script = dunst_test.sh
 
-#[script-test]
-#summary = "*script*"
-#script =/home/balbooaaa/.config/i3/blocks/spotify.py
-
-[Go For It!]
-appname=Go For It!
-format = "<b>%s</b>\n%b"
-timeout =50
-new_icon=Mocp
-
 #[VLC media player]
 #appname = VLC media player
 #format = "<b>Now Playing:</b>\n%s\n%b"
@@ -238,10 +228,10 @@ new_icon=Mocp
 
 
 [Spotify]
-appname= Mpc
-format = "<b>Now Playing:</b>\n%s\n%b"
-ew_icon = Spotify
-timeout = 10
+    appname= Mpc
+    format = "<b>Now Playing:</b>\n%s\n%b"
+    ew_icon = Spotify
+    timeout = 10
 
 
 
