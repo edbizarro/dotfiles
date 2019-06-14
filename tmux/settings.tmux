@@ -20,6 +20,6 @@ set-window-option -g automatic-rename on
 set-option -g set-titles on
 
 # Set the default terminal mode to 256color mode
-set -ga terminal-overrides ",xterm-rxvt-unicode-pixbuf:Tc"
+set -ga terminal-overrides ",xterm-rxvt-unicode:Tc"
 
 
