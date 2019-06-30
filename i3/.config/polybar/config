@@ -246,7 +246,7 @@ hwmon-path = /sys/class/hwmon/hwmon1/temp1_input
 
 ; Threshold temperature to display warning label (in degrees celsius)
 ; Default: 80
-warn-temperature = 70
+warn-temperature = 80
 
 ; Whether or not to show units next to the temperature tokens (°C, °F)
 ; Default: true
@@ -272,7 +272,7 @@ label = " %temperature-c%"
 ;   %temperature% (deprecated)
 ;   %temperature-c%   (default, temperature in °C)
 ;   %temperature-f%   (temperature in °F)
-label-warn = %temperature-c%
+label-warn = " %temperature-c%"
 label-warn-foreground = #f00
 
 ; Requires the <ramp> tag
