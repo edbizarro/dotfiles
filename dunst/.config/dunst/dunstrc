@@ -4,7 +4,7 @@
 #
 
 [global]
-    font = Tamzen 12
+    font = TamzenForPowerline:antialias=true 10
 
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -29,10 +29,10 @@
     format = "<b>%s</b>\n%b"
 
     # Sort messages by urgency.
-    sort = yes
+    sort = no
 
     # Show how many messages are currently hidden (because of geometry).
-    indicate_hidden = yes
+    indicate_hidden = no
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -73,17 +73,17 @@
 
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
-    shrink = no
+    shrink = yes
 
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing windowmanager is
     # present (e.g. xcompmgr, compiz, etc.).
-    transparency = 20
+    transparency = 30
 
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
     # Set to 0 to disable.
-    idle_threshold = 120
+    idle_threshold = 200
 
     # Which monitor should the notifications be displayed on.
     monitor = 0
@@ -103,10 +103,10 @@
 
     # Should a notification popped up from history be sticky or timeout
     # as if it would normally do.
-    sticky_history = yes
+    sticky_history = no
 
     # Maximum amount of notifications kept in history
-    history_length = 20
+    history_length = 5
 
     # Display indicators for URLs (U) and actions (A).
     show_indicators = yes
@@ -147,7 +147,7 @@
     icon_position = right
 
     # Paths to default icons.
-   icon_folders =  /usr/share/icons/Numix-Square/16@2x/
+    icon_path = /usr/share/icons/Numix-Square/16@2x/panel/
 
 [frame]
     width = 1
@@ -232,9 +232,6 @@
     format = "<b>Now Playing:</b>\n%s\n%b"
     ew_icon = Spotify
     timeout = 10
-
-
-
 
 
 #[ignore]
