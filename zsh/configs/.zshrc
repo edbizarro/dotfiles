@@ -16,3 +16,5 @@ for file in ${ZDOTDIR:-$HOME}/.dotfiles/zsh/plugins/*.zsh; do
 done
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# eval "$(starship init zsh)"
