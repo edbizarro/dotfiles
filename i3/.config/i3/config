@@ -180,8 +180,8 @@ assign [class="(?i)slack"] 5
 
 # Start-up programs
 exec --no-startup-id dunst -config ${HOME}/.config/dunst/dunstrc
-exec --no-startup-id betterlockscreen -u ${HOME}/Imagens/Wallpapers/aleks-dahlberg-258314-unsplash.jpg
-exec_always --no-startup-id wal -i ${HOME}/Imagens/Wallpapers/aleks-dahlberg-258314-unsplash.jpg  -a "94"
+exec --no-startup-id betterlockscreen -u ${HOME}/Pictures/Wallpapers/what.jpg
+exec_always --no-startup-id wal -i ${HOME}/Pictures/Wallpapers/what.jpg -a "94"
 exec_always --no-startup-id ${HOME}/.i3/startup/compton.sh
 exec_always --no-startup-id ${HOME}/.i3/startup/mons.sh
 exec_always --no-startup-id ${HOME}/.i3/startup/mopidy.sh

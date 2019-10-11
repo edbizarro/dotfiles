@@ -98,7 +98,7 @@ bar-progress-empty-foreground = ${colors.foreground}
 
 [module/wlan]
 type = internal/network
-interface = wlp2s0
+interface = wlp3s0
 interval = 3.0
 
 format-connected = <label-connected>
@@ -232,7 +232,7 @@ type = internal/temperature
 interval = 1
 
 ; Thermal zone to use
-; To list all the zone types, run 
+; To list all the zone types, run
 ; $ for i in /sys/class/thermal/thermal_zone*; do echo "$i: $(<$i/type)"; done
 ; Default: 0
 thermal-zone = 0

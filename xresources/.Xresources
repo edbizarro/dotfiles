@@ -64,8 +64,8 @@ URxvt.perl-ext-common:
 
 
 !! Fonts
-URxvt.font: xft:TamzenForPowerline:size=16
-URxvt*boldFont: xft:TamzenForPowerline:size=16
+URxvt.font: xft:Iosevka:size=16
+URxvt*boldFont: xft:Iosevka:size=16
 URxvt.allow_bold:           false
 URxvt*boldMode:             true
 ! Fix font space
@@ -83,7 +83,7 @@ URxvt.cursorUnderline:      false
 ! Pointer
 URxvt.pointerBlank:         false
 
-#define nord0 #2E3440
+define nord0 #2E3440
 #define nord1 #3B4252
 #define nord2 #434C5E
 #define nord3 #4C566A
@@ -101,15 +101,17 @@ URxvt.pointerBlank:         false
 #define nord15 #B48EAD
 
 *.foreground:   nord4
-*.background:   #ff71ce
-*.cursorColor:  #01cdfe
+*.background:   nord0
+*.cursorColor:  nord4
+*fading: 35
+*fadeColor: nord3
 
-*.color0: nord0
-*.color1: #ff71ce
-*.color2: #01cdfe
-*.color3: #05ffa1
-*.color4: #b967ff
-*.color5: #fffb96
+*.color0: nord1
+*.color1: nord11
+*.color2: nord14
+*.color3: nord13
+*.color4: nord9
+*.color5: nord15
 *.color6: nord8
 *.color7: nord5
 *.color8: nord3
