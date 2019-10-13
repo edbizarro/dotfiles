@@ -211,7 +211,7 @@ interval = 2
 format = "<label>"
 format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-background = ${colors.background-alt}
-exec = echo "$(dig +short myip.opendns.com @resolver1.opendns.com)"
+exec = curl -sf4 ifconfig.co
 exec-if = ping -c 1 gentoo.org
 
 [module/hostname]
