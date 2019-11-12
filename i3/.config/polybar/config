@@ -235,14 +235,14 @@ interval = 1
 ; To list all the zone types, run
 ; $ for i in /sys/class/thermal/thermal_zone*; do echo "$i: $(<$i/type)"; done
 ; Default: 0
-thermal-zone = 0
+thermal-zone = 1
 
 ; Full path of temperature sysfs path
 ; Use `sensors` to find preferred temperature source, then run
 ; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
 ; to find path to desired file
 ; Default reverts to thermal zone setting
-hwmon-path = /sys/class/hwmon/hwmon1/temp1_input
+hwmon-path = /sys/devices/virtual/hwmon/hwmon2/temp1_input
 
 ; Threshold temperature to display warning label (in degrees celsius)
 ; Default: 80
@@ -250,7 +250,7 @@ warn-temperature = 80
 
 ; Whether or not to show units next to the temperature tokens (°C, °F)
 ; Default: true
-units = false
+units = true
 
 ; Available tags:
 ;   <label> (default)
