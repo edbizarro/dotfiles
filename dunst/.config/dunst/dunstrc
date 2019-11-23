@@ -4,7 +4,7 @@
 #
 
 [global]
-    font = TamzenForPowerline:antialias=true 10
+    font = TamzenForPowerline:antialias=true 12
 
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -138,7 +138,7 @@
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
     # automatically after a crash.
-    startup_notification = true
+    startup_notification = false
 
     # Browser for opening urls in context menu.
     browser = /usr/bin/google-chrome-stable
@@ -169,7 +169,7 @@
     # Redisplay last message(s).
     # On the US keyboard layout "grave" is normally above TAB and left
     # of "1".
-    history = ctrl+grave
+    
 
     # Context menu.
     context = ctrl+shift+p
@@ -177,18 +177,18 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#ffffff"
-    foreground = "#595959"
+    background = "#040410"
+    foreground = "#9D5F4B"
     timeout = 10
 
 [urgency_normal]
-    background = "#79acac"
-    foreground = "#ffffff"
+    background = "#040410"
+    foreground = "#9D5F4B"
     timeout = 16
 
 [urgency_critical]
-    background = "#de8484"
-    foreground = "#ffffff"
+    background = "#040410"
+    foreground = "#9D5F4B"
     timeout = 0
 
 
