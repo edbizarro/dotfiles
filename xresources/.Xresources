@@ -62,10 +62,9 @@ URxvt.iso14755_52:          false
 URxvt.perl-ext:
 URxvt.perl-ext-common:
 
-
 !! Fonts
-URxvt.font: xft:TamzenForPowerline:antialias=true:size=14
-URxvt*boldFont: xft:TamzenForPowerline:antialias=true:size=14
+URxvt.font: xft:DejaVu Sans Mono:antialias=true:size=14
+URxvt*boldFont: xft:DejaVu Sans Mono:antialias=true:size=14
 URxvt.allow_bold:           false
 URxvt*boldMode:             true
 ! Fix font space

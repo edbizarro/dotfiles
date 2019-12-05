@@ -1,7 +1,7 @@
 [user]
 	name = Eduardo Bizarro
 	email = edbizarro@gmail.com
-	signingkey = 8B1401096E8BB28E
+	signingkey = 0E812B0405CF9F7C
 
 [github]
 	user = edbizarro
@@ -291,8 +291,8 @@
 	#
 	# Usage: $ git wipe
 	#
-	wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard	
-		
+	wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+
 [credential]
 	helper = cache
 [init]
