@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Setting this, so the repo does not need to be given on the commandline:
-export BORG_REPO=/home/edbizarro/workspace/arc-reactor-backup
+export BORG_REPO=/storage/arc-reactor-backup
 
 # Setting this, so you won't be asked for your repository passphrase:
 # export BORG_PASSPHRASE=''
@@ -29,6 +29,7 @@ borg create                         \
     --exclude '/var/cache/*'        \
     --exclude '/var/tmp/*'          \
     --exclude '/home/edbizarro/workspace/*'          \
+    --exclude '/home/edbizarro/storage/*' \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \
