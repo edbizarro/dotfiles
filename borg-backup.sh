@@ -50,8 +50,8 @@ borg prune                          \
     --list                          \
     --prefix '{hostname}-'          \
     --show-rc                       \
-    --keep-daily    1               \
-    --keep-weekly   1               \
+    --keep-daily    7               \
+    --keep-weekly   2               \
     --keep-monthly  1               \
 
 prune_exit=$?
