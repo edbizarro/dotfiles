@@ -23,7 +23,7 @@ borg create                         \
     --list                          \
     --stats                         \
     --show-rc                       \
-    --compression lz4               \
+    --compression zstd              \
     --exclude-caches                \
     --exclude '/home/*/.cache/*'    \
     --exclude '/var/cache/*'        \
@@ -51,7 +51,7 @@ borg prune                          \
     --show-rc                       \
     --keep-daily    7               \
     --keep-weekly   4               \
-    --keep-monthly  6               \
+    --keep-monthly  2               \
 
 prune_exit=$?
 

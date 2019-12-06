@@ -11,4 +11,5 @@ alias shutdown='sudo systemctl poweroff'
 alias monitor_disk='sudo iotop -Pao'
 
 alias hdmi='xrandr --dpi 96 --output HDMI-1  --primary && mons -o'
-alias sudo="sudo " 
+
+alias sudo="sudo "
