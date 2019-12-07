@@ -63,8 +63,20 @@ URxvt.perl-ext:
 URxvt.perl-ext-common:
 
 !! Fonts
-URxvt.font: xft:DejaVu Sans Mono:antialias=true:size=14
-URxvt*boldFont: xft:DejaVu Sans Mono:antialias=true:size=14
+URxvt.font: xft:Iosevka Nerd Font:size=16
+URxvt.boldFont: xft:Iosevka Nerd Font:bold:size=16
+
+!URxvt.font:     -*-terminus-medium-*-*-*-20-*-*-*-*-*-iso10646-*
+!URxvt.boldFont: -*-terminus-bold-*-*-*-20-*-*-*-*-*-iso10646-*
+
+!Tamzen
+!URxvt.font: -misc-tamzen-medium-r-normal--22-*-*-*-*-*-iso8859-1
+!URxvt.boldFont: -misc-tamzen-bold-r-normal--22-*-*-*-*-*-iso8859-1
+
+! Source Sans
+!URxvt.font: xft:Source Code Pro:size=14
+!URxvt.boldFont: xft:Source Code Pro:bold:size=14
+
 URxvt.allow_bold:           false
 URxvt*boldMode:             true
 ! Fix font space
@@ -82,42 +94,26 @@ URxvt.cursorUnderline:      false
 ! Pointer
 URxvt.pointerBlank:         false
 
-define nord0 #2E3440
-#define nord1 #3B4252
-#define nord2 #434C5E
-#define nord3 #4C566A
-#define nord4 #D8DEE9
-#define nord5 #E5E9F0
-#define nord6 #ECEFF4
-#define nord7 #8FBCBB
-#define nord8 #88C0D0
-#define nord9 #81A1C1
-#define nord10 #5E81AC
-#define nord11 #BF616A
-#define nord12 #D08770
-#define nord13 #EBCB8B
-#define nord14 #A3BE8C
-#define nord15 #B48EAD
+URxvt.foreground: #ffffff
+URxvt.scrollBar: false
+URxvt.background: #0E0E0E
+!URxvt.background: #201615
+! Colorz
 
-*.foreground:   nord4
-*.background:   nord0
-*.cursorColor:  nord4
-*fading: 35
-*fadeColor: nord3
-
-*.color0: nord1
-*.color1: nord11
-*.color2: nord14
-*.color3: nord13
-*.color4: nord9
-*.color5: nord15
-*.color6: nord8
-*.color7: nord5
-*.color8: nord3
-*.color9: nord11
-*.color10: nord14
-*.color11: nord13
-*.color12: nord9
-*.color13: nord15
-*.color14: nord7
-*.color15: nord6
+urxvt*color0: #200a04
+urxvt*color1: #a04677
+urxvt*color2: #a06f7c
+urxvt*color3: #EFB169
+urxvt*color4: #492da0
+urxvt*color5: #685da0
+urxvt*color6: #dfa05e
+urxvt*color7: #a01c13
+!urxvt*color8: #6B2F4F
+urxvt*color8: #8F3F69
+urxvt*color9: #6a45c8
+urxvt*color10: #e8f3ef
+urxvt*color11: #c8351a
+urxvt*color12: #c89d9d
+urxvt*color13: #a1cbdb
+urxvt*color14: #c8867e
+urxvt*color15: #9eabc8

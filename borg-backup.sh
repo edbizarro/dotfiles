@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Setting this, so the repo does not need to be given on the commandline:
-export BORG_REPO=/storage/arc-reactor-backup
+export BORG_REPO=/backups/arc-reactor-backup
 
 # Setting this, so you won't be asked for your repository passphrase:
 # export BORG_PASSPHRASE=''
@@ -17,19 +17,22 @@ info "Starting backup"
 # Backup the most important directories into an archive named after
 # the machine this script is currently running on:
 
-borg create                         \
-    --verbose                       \
-    --filter AME                    \
-    --list                          \
-    --stats                         \
-    --show-rc                       \
-    --compression zstd              \
-    --exclude-caches                \
-    --exclude '/home/*/.cache/*'    \
-    --exclude '/var/cache/*'        \
-    --exclude '/var/tmp/*'          \
-    --exclude '/home/edbizarro/workspace/*'          \
-    --exclude '/home/edbizarro/storage/*' \
+borg create                                 \
+    --verbose                               \
+    --filter AME                            \
+    --list                                  \
+    --stats                                 \
+    --show-rc                               \
+    --compression zstd                      \
+    --exclude-caches                        \
+    --exclude '/home/*/.cache/*'            \
+    --exclude '/var/cache/*'                \
+    --exclude '/var/lock/*'                 \
+    --exclude '/var/tmp/*'                  \
+    --exclude '/var/log/*'                  \
+    --exclude '/home/edbizarro/workspace/*' \
+    --exclude '/home/edbizarro/storage/*'   \
+    --exclude '/home/edbizarro/pCloudDrive/*'   \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \
