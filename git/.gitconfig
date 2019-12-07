@@ -294,7 +294,7 @@
 	wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
 
 [credential]
-	helper = cache
+	helper = cache --timeout=36000000
 [init]
 	templatedir = .git-templates
 [commit]
