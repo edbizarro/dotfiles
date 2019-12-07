@@ -63,8 +63,8 @@ URxvt.perl-ext:
 URxvt.perl-ext-common:
 
 !! Fonts
-URxvt.font: xft:Iosevka Nerd Font:size=16
-URxvt.boldFont: xft:Iosevka Nerd Font:bold:size=16
+URxvt.font: xft:TamzenForPowerline:pixelsize=22
+URxvt.boldFont: xft:TamzenForPowerline:bold:pixelsize=22
 
 !URxvt.font:     -*-terminus-medium-*-*-*-20-*-*-*-*-*-iso10646-*
 !URxvt.boldFont: -*-terminus-bold-*-*-*-20-*-*-*-*-*-iso10646-*
