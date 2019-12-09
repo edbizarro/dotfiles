@@ -33,6 +33,7 @@ borg create                                 \
     --exclude '/home/edbizarro/workspace/*' \
     --exclude '/home/edbizarro/storage/*'   \
     --exclude '/home/edbizarro/pCloudDrive/*'   \
+    --exclude '/home/edbizarro/GoogleDrive*'   \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \
@@ -53,8 +54,8 @@ borg prune                          \
     --list                          \
     --prefix '{hostname}-'          \
     --show-rc                       \
-    --keep-daily    7               \
-    --keep-weekly   2               \
+    --keep-daily    3               \
+    --keep-weekly   1               \
     --keep-monthly  1               \
 
 prune_exit=$?
