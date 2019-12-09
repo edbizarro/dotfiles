@@ -26,6 +26,8 @@ borg create                                 \
     --compression zstd                      \
     --exclude-caches                        \
     --exclude '/home/*/.cache/*'            \
+    --exclude '/home/*/.npm/*'              \
+    --exclude '/home/*/.composer/*'         \
     --exclude '/var/cache/*'                \
     --exclude '/var/lock/*'                 \
     --exclude '/var/tmp/*'                  \
@@ -45,7 +47,6 @@ backup_exit=$?
 
 info "Pruning repository"
 
-# Use the `prune` subcommand to maintain 7 daily, 4 weekly and 6 monthly
 # archives of THIS machine. The '{hostname}-' prefix is very important to
 # limit prune's operation to this machine's archives and not apply to
 # other machines' archives also:
@@ -55,8 +56,6 @@ borg prune                          \
     --prefix '{hostname}-'          \
     --show-rc                       \
     --keep-daily    3               \
-    --keep-weekly   1               \
-    --keep-monthly  1               \
 
 prune_exit=$?
 
@@ -70,5 +69,9 @@ elif [ ${global_exit} -eq 1 ]; then
 else
     info "Backup and/or Prune finished with errors"
 fi
+
+info "Sending to Digital Ocean"
+
+rclone sync -v /backups/arc-reactor-backup do:edbizarro-backup --s3-chunk-size=100M --s3-upload-concurrency=10 --create-empty-src-dirs --fast-list
 
 exit ${global_exit}
