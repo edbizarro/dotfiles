@@ -101,20 +101,61 @@ type = internal/network
 interface = wlan0
 interval = 3.0
 
-format-connected = <label-connected>
+; Available tags:
+;   <label-connected> (default)
+;   <ramp-signal>
+format-connected = <ramp-signal><label-connected>
 
-label-connected = "  %essid%   %signal%% "
-label-disconnected = " %ifname% off "
+; Available tags:
+;   <label-disconnected> (default)
+format-disconnected = <label-disconnected>
 
-ramp-signal-0 =" "
-ramp-signal-1 =" "
-ramp-signal-2 =" "
-ramp-signal-3 =" "
-ramp-signal-4 =" "
+; Available tags:
+;   <label-connected> (default)
+;   <label-packetloss>
+;   <animation-packetloss>
+format-packetloss = <animation-packetloss> <label-connected>
+
+; All labels support the following tokens:
+;   %ifname%    [wireless+wired]
+;   %local_ip%  [wireless+wired]
+;   %local_ip6% [wireless+wired]
+;   %essid%     [wireless]
+;   %signal%    [wireless]
+;   %upspeed%   [wireless+wired]
+;   %downspeed% [wireless+wired]
+;   %linkspeed% [wired]
+
+; Default: %ifname% %local_ip%
+label-connected = %essid%   %signal%% %downspeed%
+label-connected-foreground = #eefafafa
+
+; Default: (none)
+label-disconnected = not connected
+label-disconnected-foreground = #66ffffff
+
+; Default: (none)
+label-packetloss = %essid%  %signal%% %downspeed%
+label-packetloss-foreground = #eefafafa
+
+ramp-signal-0 =""
+ramp-signal-1 =""
+ramp-signal-2 =""
+ramp-signal-3 =""
+ramp-signal-4 =""
+
+
+; Only applies if <animation-packetloss> is used
+animation-packetloss-0 = ⚠
+animation-packetloss-0-foreground = #ffa64c
+animation-packetloss-1 = 📶
+animation-packetloss-1-foreground = #000000
+; Framerate in milliseconds
+animation-packetloss-framerate = 500
 
 [module/eth]
 type = internal/network
-interface = sit0
+interface = enp3s0
 interval = 3.0
 
 format-connected-prefix = " "
@@ -154,17 +195,19 @@ label-muted-foreground = ${colors.foreground}
 [module/battery]
 type = internal/battery
 battery = BAT0
-adapter = AT0
-full-at = 98
+adapter = ADP1
+full-at = 99
+time-format = %H:%M
 
 poll-interval = 5
 
 format-charging = <animation-charging><label-charging>
 format-discharging = <ramp-capacity><label-discharging>
 format-full = <ramp-capacity><label-full>
-label-charging = %percentage%%
+
+label-charging = Charging %percentage%%
 label-discharging = %percentage%%
-label-full = %percentage%%
+label-full = Fully charged
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -369,5 +412,6 @@ format-prefix = " "
 format = <label>
 exec = python ~/.config/polybar/spotify_status.py -f '{artist}: {song}'
 format-underline = #1db954
+
 
 ; vim:ft=dosini
