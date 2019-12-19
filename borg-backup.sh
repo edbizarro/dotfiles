@@ -2,6 +2,7 @@
 
 # Setting this, so the repo does not need to be given on the commandline:
 export BORG_REPO=/backups/arc-reactor-backup
+export BORG_FILES_CACHE_TTL=$(expr `ls /home/* | wc -l` \* 4)
 
 # Setting this, so you won't be asked for your repository passphrase:
 # export BORG_PASSPHRASE=''
