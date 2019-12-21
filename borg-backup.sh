@@ -37,6 +37,7 @@ borg create                                 \
     --exclude '/home/edbizarro/storage/*'   \
     --exclude '/home/edbizarro/pCloudDrive/*'   \
     --exclude '/home/edbizarro/GoogleDrive*'   \
+    --exclude '/home/edbizarro/.friday/Downloads*'   \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \
