@@ -6,9 +6,9 @@ A collection of my personal dotfiles. Here's a little preview of what it can loo
 ### Current desktop
 
 
-![](https://i.imgur.com/i7tpPPQ.jpg?1)
+![](https://i.imgur.com/VywRKOD.jpg)
 
-![gotop](https://i.imgur.com/0V7DXHs.jpg)
+![gotop](https://i.imgur.com/qSk2LDQ.jpg)
 
 #### Previous themes
 
