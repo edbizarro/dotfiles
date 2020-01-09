@@ -26,18 +26,13 @@ SPACESHIP_PROMPT_ORDER=(
   terraform
   exec_time     # Execution time
   line_sep      # Line break
-  vi_mode       # Vi-mode indicator
   jobs          # Background jobs indicator
   char          # Prompt character
 )
 
 SPACESHIP_USER_SHOW=always
 SPACESHIP_PROMPT_ADD_NEWLINE=true
-
-
-SPACESHIP_PROMPT_DEFAULT_SUFFIX=
-
-SPACESHIP_GIT_SYMBOL=""
+SPACESHIP_CHAR_SYMBOL=" "
  
-SPACESHIP_DOCKER_SYMBOL=" " 
+SPACESHIP_DOCKER_SYMBOL=" " 
 SPACESHIP_DOCKER_PREFIX=""
