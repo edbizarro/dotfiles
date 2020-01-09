@@ -29,13 +29,13 @@ rofi.window-format: {t}
 !-------------------------------------------------------------------------------
 ! Xft settings
 !-------------------------------------------------------------------------------
-Xft.autohint:   1
+Xft.autohint:   0
 Xft.dpi:        96
 Xft.antialias:  true
 Xft.rgba:       rgb
-Xft.hinting:    true
+Xft.hinting:    1
 Xft.lcdfilter:  lcddefault
-Xft.hintstyle:  hintfull
+Xft.hintstyle:  hintslight
 
 !-------------------------------------------------------------------------------
 ! URxvt settings
@@ -48,7 +48,7 @@ URxvt.geometry: 90x20
 URxvt.internalBorder: 30
 URxvt.lineSpace: 1
 URxvt.saveLines: 0
-URxvt*termName: rxvt-unicode-256color
+URxvt*termName: rxvt-256color
 URxvt.transparent: false
 URxvt.visualBell: false
 
@@ -63,25 +63,17 @@ URxvt.perl-ext:
 URxvt.perl-ext-common:
 
 !! Fonts
-URxvt.font: xft: Iosevka Nerd Font:pixelsize=22
-URxvt.boldFont: xft:Iosevka Nerd Font:bold:pixelsize=22
-
-!URxvt.font: xft:TamzenForPowerline:pixelsize=22
-!URxvt.boldFont: xft:TamzenForPowerline:bold:pixelsize=22
-
-!URxvt.font:     -*-terminus-medium-*-*-*-20-*-*-*-*-*-iso10646-*
-!URxvt.boldFont: -*-terminus-bold-*-*-*-20-*-*-*-*-*-iso10646-*
-
-!Tamzen
-!URxvt.font: -misc-tamzen-medium-r-normal--22-*-*-*-*-*-iso8859-1
-!URxvt.boldFont: -misc-tamzen-bold-r-normal--22-*-*-*-*-*-iso8859-1
-
-! Source Sans
-!URxvt.font: xft:Source Code Pro:size=14
-!URxvt.boldFont: xft:Source Code Pro:bold:size=14
-
+!! regular
+URxvt*.font: \
+              xft:Iosevka:size=16:antialias=true, \
+              xft:Source Code Pro:size=14:antialias=true, \
+              xft:TerminessTTF Nerd Font:size=14:antialias=true, \
+              xft:Unifont:size=14:antialias=false
+              
+                      
 URxvt.allow_bold:           false
 URxvt*boldMode:             true
+
 ! Fix font space
 URxvt*letterSpace:          -1
 
@@ -98,9 +90,8 @@ URxvt.cursorUnderline:      false
 URxvt.pointerBlank:         false
 
 URxvt.foreground: #ffffff
-URxvt.scrollBar: false
 URxvt.background: #0E0E0E
-!URxvt.background: #201615
+
 ! Colorz
 
 urxvt*color0: #200a04

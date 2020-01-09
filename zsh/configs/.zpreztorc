@@ -17,14 +17,14 @@ zstyle ':prezto:load' pmodule \
   'syntax-highlighting' \
   'history-substring-search' \
   'autosuggestions' \
+  'contrib-prompt' \
   'prompt'
   
-zstyle ':prezto:module:prompt' theme 'pure'
+zstyle ':prezto:module:prompt' theme 'spaceship'
 zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
 zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'aur'
 zstyle ':prezto:module:tmux:auto-start' local 'yes'
 zstyle ':prezto:module:tmux:auto-start' remote 'no'
-zstyle ':prezto:module:pacman' frontend 'yaourt'
-zstyle ':prezto:module:pacman:yaourt' color 'yes'
+zstyle ':prezto:module:pacman' frontend 'yay'
 zstyle ':prezto:module:prompt' pwd-length 'long'
 
