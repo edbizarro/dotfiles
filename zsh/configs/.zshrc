@@ -23,6 +23,8 @@ SPACESHIP_PROMPT_ORDER=(
   host          # Hostname section
   git           # Git section (git_branch + git_status)
   docker
+  venv
+  pyenv
   terraform
   exec_time     # Execution time
   line_sep      # Line break
@@ -36,3 +38,5 @@ SPACESHIP_CHAR_SYMBOL=" "
  
 SPACESHIP_DOCKER_SYMBOL=" " 
 SPACESHIP_DOCKER_PREFIX=""
+
+SPACESHIP_PYENV_SYMBOL="🐍·"
