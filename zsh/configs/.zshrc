@@ -22,7 +22,7 @@ SPACESHIP_PROMPT_ORDER=(
   dir           # Current directory section
   host          # Hostname section
   git           # Git section (git_branch + git_status)
-  docker
+  # docker
   venv
   pyenv
   terraform
