@@ -22,7 +22,7 @@ zstyle ':prezto:load' pmodule \
   
 zstyle ':prezto:module:prompt' theme 'spaceship'
 zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
-zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'aur'
+zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'aur' 'bitbucket_rsa'
 zstyle ':prezto:module:tmux:auto-start' local 'yes'
 zstyle ':prezto:module:tmux:auto-start' remote 'no'
 zstyle ':prezto:module:pacman' frontend 'yay'
