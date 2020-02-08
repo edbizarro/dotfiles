@@ -78,6 +78,9 @@ Or to install all my dotfiles config:
       stow mopidy && \
       stow cava && \
       stow ncmpcpp && \
+      stow neofetch && \
+      stow stow && \
+      stow wal && \
       stow git && \
       stow ssh && \
       stow tmux && \
