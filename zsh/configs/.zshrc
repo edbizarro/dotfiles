@@ -40,3 +40,4 @@ SPACESHIP_DOCKER_SYMBOL=" "
 SPACESHIP_DOCKER_PREFIX=""
 
 SPACESHIP_PYENV_SYMBOL="🐍·"
+if [ /usr/bin/kubectl ]; then source <(kubectl completion zsh); fi
