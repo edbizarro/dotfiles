@@ -14,3 +14,5 @@ alias monitor_disk='sudo iotop -Pao'
 alias hdmi='xrandr --dpi 96 --output HDMI-1  --primary && mons -o'
 
 alias sudo="sudo "
+
+alias abnt2="setxkbmap -model abnt2 -layout br -variant abnt2"
