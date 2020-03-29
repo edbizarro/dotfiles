@@ -179,9 +179,9 @@ assign [class="(?i)slack"] 5
 
 
 # Start-up programs
-exec_always --no-startup-id xrdb -merge ~/.Xresources
-exec_always --no-startup-id wal -i ${HOME}/Imagens/Wallpapers/spacingout.jpg -a "95"
 exec_always --no-startup-id ${HOME}/.i3/startup/dunst.sh
+exec_always --no-startup-id xrdb -merge ~/.Xresources
+exec_always --no-startup-id wal -i ${HOME}/Imagens/Wallpapers/spacingout.jpg -a 95
 exec_always --no-startup-id ${HOME}/.i3/startup/compton.sh
 exec_always --no-startup-id ${HOME}/.i3/startup/mons.sh
 #exec_always --no-startup-id ${HOME}/.i3/startup/mopidy.sh

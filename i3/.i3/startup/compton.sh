@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 
 # Terminate already running bar instances
-killall -q compton
+killall -q picom
 
 # Wait until the processes have been shut down
-while pgrep -x compton >/dev/null; do sleep 1; done
+while pgrep -x picom >/dev/null; do sleep 1; done
 
 # Launch compton
-compton --config  ~/.config/compton.conf -b &
+picom --config  ~/.config/compton.conf -b &
