@@ -7,4 +7,4 @@ killall -q picom
 while pgrep -x picom >/dev/null; do sleep 1; done
 
 # Launch compton
-picom --config  ~/.config/compton.conf -b &
+picom --use-damage --config  ~/.config/compton.conf -b &

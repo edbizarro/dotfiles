@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Setting this, so the repo does not need to be given on the commandline:
-export BORG_REPO=/backups/arc-reactor-backup
+export BORG_REPO=/backups/mark-g5-backup
 export BORG_FILES_CACHE_TTL=$(expr `ls /home/* | wc -l` \* 4)
 
 # Setting this, so you won't be asked for your repository passphrase:
@@ -72,6 +72,6 @@ fi
 
 info "Sending to Digital Ocean"
 
-rclone sync -v /backups/arc-reactor-backup do:edbizarro-backup --s3-chunk-size=100M --s3-upload-concurrency=10 --create-empty-src-dirs --fast-list
+#rclone sync -v /backups/arc-reactor-backup do:edbizarro-backup --s3-chunk-size=100M --s3-upload-concurrency=10 --create-empty-src-dirs --fast-list
 
 exit ${global_exit}
