@@ -70,7 +70,7 @@ else
     info "Backup and/or Prune finished with errors"
 fi
 
-info "Sending to Digital Ocean"
+# info "Sending to Digital Ocean"
 
 #rclone sync -v /backups/arc-reactor-backup do:edbizarro-backup --s3-chunk-size=100M --s3-upload-concurrency=10 --create-empty-src-dirs --fast-list
 
