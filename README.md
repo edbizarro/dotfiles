@@ -19,6 +19,7 @@ Previous themes can be found on [reddit](https://www.reddit.com/r/unixporn/searc
 * [rxvt-unicode](https://wiki.archlinux.org/index.php/rxvt-unicode)
 * [tmux](https://github.com/tmux/tmux) + [tpm](https://github.com/tmux-plugins/tpm)
 * [prezto](https://github.com/sorin-ionescu/prezto) (for zsh)
+* [prezto-contrib](https://github.com/belak/prezto-contrib)
 * [i3-gaps](https://github.com/Airblader/i3)
 * [polybar](https://github.com/jaagr/polybar)
 * [tamzen](https://github.com/sunaku/tamzen-font) (font for polybar text)

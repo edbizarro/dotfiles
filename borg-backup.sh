@@ -42,8 +42,6 @@ borg create                                 \
     ::'{hostname}-{now}'            \
     /etc                            \
     /home                           \
-    /root                           \
-    /var                            \
 
 backup_exit=$?
 
@@ -57,7 +55,7 @@ borg prune                          \
     --list                          \
     --prefix '{hostname}-'          \
     --show-rc                       \
-    --keep-daily    7               \
+    --keep-daily    5               \
 
 prune_exit=$?
 
