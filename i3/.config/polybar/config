@@ -14,39 +14,39 @@ wrapping-scroll = false
 strip-wsnumbers = true
 pin-workspaces = true
 
-label-focused = %icon%
+label-focused =%icon%
 label-focused-background = ${colors.background}
-label-focused-foreground = ${colors.foreground}
+label-focused-foreground = ${colors.foreground-alt}
 label-focused-padding = 3
 label-focused-underline = ${colors.foreground-alt}
 
-label-unfocused = %icon%
+label-unfocused =%icon%
 label-unfocused-background = ${colors.background}
 label-unfocused-foreground = ${colors.background-alt}
 label-unfocused-padding = 3
 label-unfocused-underline = ${colors.background}
 
-label-urgent = %icon%
+label-urgent =%icon%
 label-urgent-background = ${colors.background}
 label-urgent-foreground = ${colors.foreground-alt}
 label-urgent-padding = 3
 label-urgent-underline = ${colors.background}
 
-label-visible = %icon%
+label-visible =%icon%
 label-visible-background = ${colors.background}
-label-visible-foreground = ${colors.foreground}
+label-visible-foreground = ${colors.foreground-alt}
 label-visible-padding = 3
 label-visible-underline = ${colors.background}
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-default =
+ws-icon-0 = 1; 
+ws-icon-1 = 2; 
+ws-icon-2 = 3; 
+ws-icon-3 = 4; 
+ws-icon-4 = 5; 
+ws-icon-5 = 6; 
+ws-icon-6 = 7; 
+ws-icon-7 = 8; 
+ws-icon-default =  
 
 [module/mpd]
 type = internal/mpd
@@ -236,11 +236,10 @@ menu-2-1-exec = menu-open-0
 [module/ip]
 type = custom/script
 interval = 2
-format = "<label>"
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-background = ${colors.background-alt}
+format = <label>
+
 exec = curl -sf4 ifconfig.co
-exec-if = ping -c 1 gentoo.org
+exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 [module/hostname]
 type = custom/script
@@ -386,3 +385,40 @@ format-prefix = " "
 format = <label>
 exec = python ~/.config/polybar/spotify_status.py -f '{artist}: {song}'
 format-underline = #1db954
+
+[module/backlight]
+type = internal/backlight
+
+; Use the following command to list available cards:
+; $ ls -1 /sys/class/backlight/
+card = intel_backlight
+
+; Enable changing the backlight with the scroll wheel (unreleased)
+; NOTE: This may require additional configuration on some systems. Polybar will
+; write to `/sys/class/backlight/${self.card}/brightness` which requires polybar
+; to have write access to that file.
+; DO NOT RUN POLYBAR AS ROOT. 
+; The recommended way is to add the user to the
+; `video` group and give that group write-privileges for the `brightness` file.
+; See the ArchWiki for more information:
+; https://wiki.archlinux.org/index.php/Backlight#ACPI
+; Default: false
+
+enable-scroll = true
+
+; Available tags:
+;   <label> (default)
+;   <ramp>
+;   <bar>
+format = <ramp> <label>
+
+; Available tokens:
+;   %percentage% (default)
+label = %percentage%%
+
+; Only applies if <ramp> is used
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
