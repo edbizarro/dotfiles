@@ -2,16 +2,6 @@ include-file = /home/edbizarro/.config/polybar/global.conf
 include-file = /home/edbizarro/.config/polybar/bars/top.conf
 include-file = /home/edbizarro/.config/polybar/bars/bottom.conf
 
-[module/filesystem]
-type = internal/fs
-interval = 25
-
-mount-0 = /
-mount-1 = /media/mediabarbosa
-
-label-mounted =  %percentage_free%%
-label-unmounted = %mountpoint%: not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/i3]
 type = internal/i3
@@ -389,17 +379,6 @@ ramp-free-5 = ▆
 ramp-free-6 = ▇
 ramp-free-7 = █
 
-[module/weather]
-type = custom/script
-interval = 1800
-format = <label>
-format-padding = 1
-; format-suffix = "°C"
-format-prefix-foreground = ${colors.foreground-alt}
-format-background = ${colors.background}
-exec = ~/.dotfiles/i3/.i3/scripts/weather.sh -i
-
-
 [module/spotify]
 type = custom/script
 interval = 1
@@ -407,6 +386,3 @@ format-prefix = " "
 format = <label>
 exec = python ~/.config/polybar/spotify_status.py -f '{artist}: {song}'
 format-underline = #1db954
-
-
-; vim:ft=dosini
