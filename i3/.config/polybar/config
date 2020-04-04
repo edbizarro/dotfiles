@@ -165,16 +165,16 @@ label = %date% %time%
 type = internal/alsa
 
 format-volume = <ramp-volume><label-volume>
-label-volume = "%percentage%"
-ramp-volume-0 =" "
-ramp-volume-1 =" "
-ramp-volume-2 =" "
-ramp-volume-3 =" "
+label-volume = %percentage%
+ramp-volume-0 =""
+ramp-volume-1 =""
+ramp-volume-2 =""
+ramp-volume-3 =""
 label-volume-foreground = ${colors.foreground}
 
 format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground}
-label-muted = muted
+label-muted = " muted"
 label-muted-foreground = ${colors.foreground}
 
 [module/battery]
@@ -349,14 +349,6 @@ format = "<label> "
 
 label = " %gb_used% / %gb_total%"
 
-
-; Only applies if <bar-used> is used
-bar-used-indicator =
-bar-used-width = 20
-bar-used-foreground-0 = ${colors.foreground}
-bar-used-fill = ▐
-bar-used-empty = ▐
-bar-used-empty-foreground = #444444
 
 ; Only applies if <ramp-used> is used
 ramp-used-0 = ▁
