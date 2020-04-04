@@ -14,29 +14,18 @@ wrapping-scroll = false
 strip-wsnumbers = true
 pin-workspaces = true
 
-label-focused =%icon%
-label-focused-background = ${colors.background}
-label-focused-foreground = ${colors.foreground-alt}
+label-focused = %icon%
 label-focused-padding = 3
 label-focused-underline = ${colors.foreground-alt}
 
 label-unfocused =%icon%
-label-unfocused-background = ${colors.background}
-label-unfocused-foreground = ${colors.background-alt}
 label-unfocused-padding = 3
-label-unfocused-underline = ${colors.background}
 
 label-urgent =%icon%
-label-urgent-background = ${colors.background}
-label-urgent-foreground = ${colors.foreground-alt}
 label-urgent-padding = 3
-label-urgent-underline = ${colors.background}
 
 label-visible =%icon%
-label-visible-background = ${colors.background}
-label-visible-foreground = ${colors.foreground-alt}
 label-visible-padding = 3
-label-visible-underline = ${colors.background}
 
 ws-icon-0 = 1; 
 ws-icon-1 = 2; 
@@ -69,17 +58,11 @@ icon-next = 
 icon-random = 
 icon-repeat = 
 
-toggle-on-foreground = ${colors.foreground}
-toggle-off-foreground = ${colors.foreground-alt}
-
 bar-progress-width = 30
 bar-progress-format = %{A4:mpdseek+2: A5:mpdseek-2:}%fill%%indicator%%empty%%{A A}
 bar-progress-indicator = >
-bar-progress-indicator-foreground = ${colors.foreground}
 bar-progress-fill = -
-bar-progress-fill-foreground = ${colors.foreground}
 bar-progress-empty = -
-bar-progress-empty-foreground = ${colors.foreground}
 
 [module/wlan]
 type = internal/network
@@ -113,15 +96,12 @@ format-packetloss = <animation-packetloss> <label-connected>
 
 ; Default: %ifname% %local_ip%
 label-connected = %essid%   %signal%% %downspeed%
-label-connected-foreground = ${colors.foreground}
 
 ; Default: (none)
 label-disconnected = not connected
-label-disconnected-foreground = ${colors.foreground}
 
 ; Default: (none)
 label-packetloss = %essid%  %signal%% %downspeed%
-label-packetloss-foreground = ${colors.foreground}
 
 ramp-signal-0 =""
 ramp-signal-1 =""
@@ -144,11 +124,9 @@ interface = enp3s0
 interval = 3.0
 
 format-connected-prefix = " "
-format-connected-foreground-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
 label-disconnected = %ifname% disconnected
-label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/date]
 type = internal/date
@@ -170,12 +148,9 @@ ramp-volume-0 =""
 ramp-volume-1 =""
 ramp-volume-2 =""
 ramp-volume-3 =""
-label-volume-foreground = ${colors.foreground}
 
 format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground}
 label-muted = " muted"
-label-muted-foreground = ${colors.foreground}
 
 [module/battery]
 type = internal/battery
@@ -214,9 +189,7 @@ format-spacing = 1
 
 label-open = 
 label-close = cancel
-label-close-foreground = ${colors.foreground-alt}
 label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
 
 menu-0-0 = reboot
 menu-0-0-exec = menu-open-1
@@ -244,11 +217,9 @@ exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 [module/hostname]
 type = custom/script
 interval = 256
-format = "<label> "
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format = "<label>"
+format-prefix = "  "
 format-padding = 0
-format-background = ${colors.background}
 exec = echo "$(uname -n)"
 
 [module/temperature]
@@ -347,7 +318,7 @@ format = "<label> "
 ;   %gb_swap_free%
 ;   %gb_swap_used%
 
-label = " %gb_used% / %gb_total%"
+label = "  %gb_used% / %gb_total%"
 
 
 ; Only applies if <ramp-used> is used
