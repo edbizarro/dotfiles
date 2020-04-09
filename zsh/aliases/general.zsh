@@ -17,3 +17,6 @@ alias sudo="sudo "
 
 alias k-abnt2="setxkbmap -model abnt2 -layout br -variant abnt2"
 alias k-us="setxkbmap -model us -layout us"
+
+alias desktop-mode="k-abnt2 && xrandr --dpi 96 --output DP1  --primary && mons -o && light -A 100"
+alias laptop-mode="k-us && light -U 30"
