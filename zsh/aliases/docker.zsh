@@ -23,7 +23,7 @@ chown -R $(whoami) $A_BASE
 # home directory
 A_USER_HOME=/home/php
 
-DOCKER_OPTS="-it --rm -v $HOME:$HOME -v $(pwd):/var/www/html -v $A_COMPOSER:$A_USER_HOME/.composer -v $A_YARN:$A_USER_HOME/.yarn -v $A_CONFIG:$A_USER_HOME/.config -v $A_CACHE:$A_USER_HOME/.cache -v $A_LOCAL:$A_USER_HOME/.local -v $A_SSH:$A_USER_HOME/.ssh"
+DOCKER_OPTS="-it --rm -v $HOME:$HOME -v $PWD:/var/www/html -v $A_COMPOSER:$A_USER_HOME/.composer -v $A_YARN:$A_USER_HOME/.yarn -v $A_CONFIG:$A_USER_HOME/.config -v $A_CACHE:$A_USER_HOME/.cache -v $A_LOCAL:$A_USER_HOME/.local -v $A_SSH:$A_USER_HOME/.ssh"
 
 # COMPOSER
 alias c="docker run $DOCKER_OPTS edbizarro/gitlab-ci-pipeline-php:7.4-alpine composer"
