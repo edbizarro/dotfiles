@@ -13,7 +13,7 @@ rofi.color-window: argb:DA222222, argb:DA222222, argb:00222222
 rofi.color-normal: argb:00000000, #e8e8e8, argb:00000000, argb:00000000, #E918D8
 rofi.color-urgent: argb:00000000, #E918D8, argb:00000000, argb:00000000, #e29a49
 rofi.color-active: argb:00000000, #E918D8, argb:00000000, argb:00000000, #e29a49
-rofi.font: TamzenForPowerline:antialias=true 14
+rofi.font: FantasqueSansMono Nerd Font Mono 14
 rofi.eh: 2
 rofi.separator-style: solid
 rofi.hide-scrollbar: true
@@ -65,8 +65,9 @@ URxvt.perl-ext-common:
 !! Fonts
 !! regular
 URxvt.font: \
-              xft:SF Mono:size=14, \              
-              xft:Iosevka Nerd Font:size=14             
+              xft:FantasqueSansMono Nerd Font Mono:size=14, \
+              xft:Hack Nerd Font Mono:size=14, \
+              xft:Iosevka Nerd Font:size=14
               
                       
 URxvt.allow_bold:           false
