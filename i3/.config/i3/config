@@ -2,6 +2,8 @@
 set $mod Mod1
 # set $monitor HDMI1 # external screen, they are set here to make it easier to move to new setups
 
+font pango:DejaVu Sans Mono 10
+
 
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use
