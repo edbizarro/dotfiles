@@ -13,6 +13,7 @@ zstyle ':prezto:load' pmodule \
   'pacman' \
   'python' \
   'tmux' \
+  'wakatime' \
   'completion' \
   'syntax-highlighting' \
   'history-substring-search' \
