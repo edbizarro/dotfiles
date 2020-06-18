@@ -36,6 +36,7 @@ Previous themes can be found on [reddit](https://www.reddit.com/r/unixporn/searc
 * [feh](https://feh.finalrewind.org) (change wallpaper)
 * [pywal](https://github.com/dylanaraps/pywal) (generate colourschemes based on wallpaper)
 * [cava](https://github.com/karlstav/cava)
+* [prezto-wakatime](https://github.com/philihp/wakatime-zprezto)
 
 ##### Cool fonts
 
