@@ -7,6 +7,7 @@ alias grep='grep --color=auto'
 alias show-fonts="fc-list | cut -d ' ' -f2 | sort -u"
 alias vim="nvim"
 alias vi="nvim"
+alias cat="bat"
 
 alias reboot='sudo systemctl reboot'
 alias shutdown='sudo systemctl poweroff'
