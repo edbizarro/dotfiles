@@ -145,7 +145,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bindsym $mod+Ctrl+l exec --no-startup-id $HOME/.dotfiles/i3/.i3/scripts/i3lock.sh
-bindsym $mod+Shift+a exec --no-startup-id wal -i ~/Pictures/Wallpapers -q --iterative
+bindsym $mod+Shift+a exec --no-startup-id wal -i ${HOME}/Pictures/Wallpapers/space.jpg -q
 
 # Ncmpcpp
 bindsym $mod+Shift+n exec --no-startup-id urxvt -name 'ncmpcpp' -e ncmpcpp
@@ -182,8 +182,8 @@ assign [class="(?i)slack"] 5
 
 # Start-up programs
 exec_always --no-startup-id ${HOME}/.i3/startup/dunst.sh
-exec_always --no-startup-id xrdb -merge ~/.Xresources
-exec_always --no-startup-id wal -i ${HOME}/Pictures/Wallpapers -q --iterative
+exec_always --no-startup-id xrdb -merge ${HOME}/.Xresources
+exec_always --no-startup-id wal -i ${HOME}/Pictures/Wallpapers/space.jpg -q --iterative
 exec_always --no-startup-id ${HOME}/.i3/startup/picom.sh
 exec_always --no-startup-id ${HOME}/.i3/startup/mons.sh
 #exec_always --no-startup-id ${HOME}/.i3/startup/mopidy.sh
