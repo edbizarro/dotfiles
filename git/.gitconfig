@@ -12,9 +12,11 @@
 	pager = delta
 	
 [delta]
-	plus-color = "#012800"
-	minus-color = "#340001"
-		
+	features = side-by-side line-numbers decorations
+	syntax-theme = OneHalfDark
+	
+
+	
 [interactive]
 	diffFilter = delta --color-only
 		
@@ -312,3 +314,4 @@
 	# Usage: $ git wipe
 	#
 	wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+
