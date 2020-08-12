@@ -4,3 +4,8 @@ function dbt_run_changed() {
     echo "Running models: ${models}"
     dkc exec dbt dbt run --models $models
 }
+
+function cycle_logs() {
+  suffix=$(date '+%Y-%m-%dT%H:%M:%S')
+  mv -v logs/dbt.log logs/dbt.log.${suffix}
+}
