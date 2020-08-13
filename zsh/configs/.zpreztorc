@@ -18,13 +18,14 @@ zstyle ':prezto:load' pmodule \
   'syntax-highlighting' \
   'history-substring-search' \
   'autosuggestions' \
+  'rsync' \
   'contrib-prompt' \
   'prompt'
   
-zstyle ':prezto:module:prompt' theme 'spaceship'
+zstyle ':prezto:module:prompt' theme 'pure'
 zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'bitbucket_rsa'
 zstyle ':prezto:module:tmux:auto-start' local 'yes'
 zstyle ':prezto:module:tmux:auto-start' remote 'no'
 zstyle ':prezto:module:pacman' frontend 'yay'
-zstyle ':prezto:module:prompt' pwd-length 'long'
+zstyle ':prezto:module:prompt' pwd-length 'short'
 
