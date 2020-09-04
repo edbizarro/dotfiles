@@ -21,13 +21,11 @@ zstyle ':prezto:load' pmodule \
   'rsync' \
   'contrib-prompt' \
   'prompt'
-  
-zstyle ':prezto:module:prompt' theme 'pure'
+
+# spaceship  
+zstyle ':prezto:module:prompt' theme 'paradox'
 zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'bitbucket_rsa'
 zstyle ':prezto:module:tmux:auto-start' local 'yes'
 zstyle ':prezto:module:tmux:auto-start' remote 'no'
 zstyle ':prezto:module:pacman' frontend 'yay'
 zstyle ':prezto:module:prompt' pwd-length 'short'
-# Set python-info parameters.
-zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
-zstyle ':prezto:module:python:info:virtualenv' format ' %F{4}pyenv%f:%F{2}%v%f'

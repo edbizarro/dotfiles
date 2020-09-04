@@ -72,6 +72,6 @@ fi
 
 # info "Sending to Digital Ocean"
 
-# rclone sync -v /backups do:edbizarro-backup --s3-chunk-size=100M --s3-upload-concurrency=10 --create-empty-src-dirs --fast-list
+# rclone sync -v /backups do:edbizarro-backup/mark-g5 --s3-chunk-size=100M --s3-upload-concurrency=10 --create-empty-src-dirs --fast-list
 
 exit ${global_exit}
