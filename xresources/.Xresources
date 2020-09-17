@@ -64,17 +64,17 @@ URxvt.perl-ext-common:
 
 !! Fonts
 !! regular
-URxvt.font: \
+URxvt.font: \            
               xft:FantasqueSansMono Nerd Font Mono:size=14, \
-              xft:Hack Nerd Font Mono:size=14, \
-              xft:Iosevka Nerd Font:size=14
+              xft:Iosevka Nerd Font:size=14, \
+              xft:Hack Nerd Font Mono:size=14              
               
                       
 URxvt.allow_bold:           false
 URxvt*boldMode:             true
 
 ! Fix font space
-URxvt*letterSpace:          -1
+URxvt*letterSpace:          0
 
 
 ! Scrollbar
@@ -91,22 +91,39 @@ URxvt.pointerBlank:         false
 URxvt.foreground: #ffffff
 URxvt.background: #0E0E0E
 
-! Colorz
+! special
+*.foreground:   #a39e9b
+*.background:   #2f1e2e
+*.cursorColor:  #a39e9b
 
-urxvt*color0: #200a04
-urxvt*color1: #a04677
-urxvt*color2: #a06f7c
-urxvt*color3: #EFB169
-urxvt*color4: #492da0
-urxvt*color5: #685da0
-urxvt*color6: #dfa05e
-urxvt*color7: #a01c13
-!urxvt*color8: #6B2F4F
-urxvt*color8: #8F3F69
-urxvt*color9: #6a45c8
-urxvt*color10: #e8f3ef
-urxvt*color11: #c8351a
-urxvt*color12: #c89d9d
-urxvt*color13: #a1cbdb
-urxvt*color14: #c8867e
-urxvt*color15: #9eabc8
+! black
+*.color0:       #2f1e2e
+*.color8:       #776e71
+
+! red
+*.color1:       #ef6155
+*.color9:       #ef6155
+
+! green
+*.color2:       #48b685
+*.color10:      #48b685
+
+! yellow
+*.color3:       #fec418
+*.color11:      #fec418
+
+! blue
+*.color4:       #06b6ef
+*.color12:      #06b6ef
+
+! magenta
+*.color5:       #815ba4
+*.color13:      #815ba4
+
+! cyan
+*.color6:       #5bc4bf
+*.color14:      #5bc4bf
+
+! white
+*.color7:       #a39e9b
+*.color15:      #e7e9db
