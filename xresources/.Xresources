@@ -74,7 +74,7 @@ URxvt.allow_bold:           false
 URxvt*boldMode:             true
 
 ! Fix font space
-URxvt*letterSpace:          0
+URxvt*letterSpace:          -1
 
 
 ! Scrollbar
