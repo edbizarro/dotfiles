@@ -4,7 +4,7 @@
 #
 
 [global]
-    font = TamzenForPowerline:antialias=true 12
+    font = FantasqueSansMono Nerd Font Mono:antialias=true 12
 
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -32,7 +32,7 @@
     sort = no
 
     # Show how many messages are currently hidden (because of geometry).
-    indicate_hidden = no
+    indicate_hidden = yes
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -138,7 +138,7 @@
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
     # automatically after a crash.
-    startup_notification = false
+    startup_notification = true
 
     # Browser for opening urls in context menu.
     browser = /usr/bin/google-chrome-stable
@@ -147,7 +147,7 @@
     icon_position = right
 
     # Paths to default icons.
-    icon_path = /usr/share/icons/Numix-Square/16@2x/panel/
+    icon_path = /usr/share/icons/Papirus-Dark/16x16/actions/
 
 [frame]
     width = 1
@@ -227,11 +227,11 @@
 
 
 
-[Spotify]
-    appname= Mpc
-    format = "<b>Now Playing:</b>\n%s\n%b"
-    ew_icon = Spotify
-    timeout = 10
+# [Spotify]
+#    appname= Mpc
+#    format = "<b>Now Playing:</b>\n%s\n%b"
+#    ew_icon = Spotify
+#    timeout = 10
 
 
 #[ignore]
