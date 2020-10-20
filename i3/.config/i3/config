@@ -174,6 +174,7 @@ assign [class="(?i)chrome"] 2
 assign [class="(?i)atom"] 3
 assign [class="(?i)pstorm"] 3
 assign [class="(?i)pycharm"] 3
+assign [class="(?i)code"] 3
 assign [class="(?i)ncmpcpp"] 4
 assign [class="(?i)cava"] 4
 assign [class="(?i)bum"] 4
