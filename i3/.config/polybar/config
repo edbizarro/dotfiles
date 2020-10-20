@@ -72,7 +72,7 @@ bar-progress-empty = -
 
 [module/wlan]
 type = internal/network
-interface = wlp4s0
+interface = wlan0
 interval = 3.0
 
 ; Available tags:
