@@ -164,7 +164,7 @@ label-muted-font = 2
 [module/battery]
 type = internal/battery
 battery = BAT0
-adapter = ADP1
+adapter = AC
 full-at = 99
 time-format = %H:%M
 
@@ -174,9 +174,9 @@ format-charging = <animation-charging><label-charging>
 format-discharging = <ramp-capacity><label-discharging>
 format-full = <ramp-capacity><label-full>
 
-label-charging = Charging %percentage%%
-label-discharging = %percentage%%
-label-full = Fully charged
+label-charging = Charging %percentage%% %consumption%w
+label-discharging = %percentage%% %consumption%w
+label-full = Full
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
