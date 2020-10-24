@@ -255,7 +255,7 @@ thermal-zone = 0
 ; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
 ; to find path to desired file
 ; Default reverts to thermal zone setting
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
 
 ; Threshold temperature to display warning label (in degrees celsius)
 ; Default: 80
