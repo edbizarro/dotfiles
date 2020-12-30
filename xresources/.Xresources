@@ -64,8 +64,7 @@ URxvt.perl-ext-common:
 
 !! Fonts
 !! regular
-URxvt.font: \            
-              xft:FantasqueSansMono Nerd Font Mono:size=14, \
+URxvt.font:   xft:FantasqueSansMono Nerd Font Mono:size=14, \
               xft:Iosevka Nerd Font:size=14, \
               xft:Hack Nerd Font Mono:size=14              
               

@@ -13,7 +13,7 @@ export BORG_FILES_CACHE_TTL=$(expr `ls /home/* | wc -l` \* 4)
 info() { printf "\n%s %s\n\n" "$( date )" "$*" >&2; }
 trap 'echo $( date ) Backup interrupted >&2; exit 2' INT TERM
 
-info "Starting backup"
+info "Starting backup..."
 
 # Backup the most important directories into an archive named after
 # the machine this script is currently running on:
@@ -55,7 +55,7 @@ borg prune                          \
     --list                          \
     --prefix '{hostname}-'          \
     --show-rc                       \
-    --keep-daily    2               \
+    --keep-daily    3               \
 
 prune_exit=$?
 

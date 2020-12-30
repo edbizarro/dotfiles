@@ -2,3 +2,4 @@
 spotify
 core/*
 http/*
+local/*
