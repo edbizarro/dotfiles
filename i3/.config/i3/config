@@ -184,12 +184,12 @@ assign [class="(?i)slack"] 5
 # Start-up programs
 exec_always --no-startup-id ${HOME}/.i3/startup/dunst.sh
 exec_always --no-startup-id xrdb -merge ${HOME}/.Xresources
+exec_always --no-startup-id ${HOME}/.i3/startup/polybar.sh
 exec_always --no-startup-id wal -i ${HOME}/Pictures/Wallpapers/space.jpg -q --iterative
 exec_always --no-startup-id ${HOME}/.i3/startup/picom.sh
 exec_always --no-startup-id ${HOME}/.i3/startup/mons.sh
-#exec_always --no-startup-id ${HOME}/.i3/startup/mopidy.sh
-exec_always --no-startup-id ${HOME}/.i3/startup/polybar.sh
 exec_always --no-startup-id ${HOME}/.i3/startup/unclutter.sh
+exec_always --no-startup-id ${HOME}/.i3/startup/mopidy.sh
 
 exec --no-startup-id betterlockscreen -u ${HOME}/Pictures/Wallpapers
 exec --no-startup-id xset -dpms
