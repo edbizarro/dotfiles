@@ -33,9 +33,9 @@ Xft.autohint:   0
 Xft.dpi:        96
 Xft.antialias:  true
 Xft.rgba:       rgb
-Xft.hinting:    1
+Xft.hinting:    true
 Xft.lcdfilter:  lcddefault
-Xft.hintstyle:  hintslight
+Xft.hintstyle:  hintfull
 
 !-------------------------------------------------------------------------------
 ! URxvt settings
@@ -47,7 +47,7 @@ URxvt.internalBorder: 20
 URxvt.externalBorder: 0
 URxvt.lineSpace: 1
 URxvt.saveLines: 0
-URxvt*termName: rxvt-unicode-256color
+URxvt*termName: xterm-256color
 URxvt.transparent: false
 URxvt.visualBell: false
 
