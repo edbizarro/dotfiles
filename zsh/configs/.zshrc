@@ -17,3 +17,5 @@ done
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.garden/bin:$PATH"
 export ZSH_WAKATIME_PROJECT_DETECTION=true
+
+(cat ~/.cache/wal/sequences &)

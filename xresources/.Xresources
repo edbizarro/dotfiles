@@ -42,13 +42,12 @@ Xft.hintstyle:  hintslight
 !-------------------------------------------------------------------------------
 URxvt.modifier: mod1
 URxvt*loginShell: true
-URxvt.borderless: true
-URxvt*dynamicColors: on
-URxvt.geometry: 90x20
-URxvt.internalBorder: 30
+URxvt.borderless: false
+URxvt.internalBorder: 20
+URxvt.externalBorder: 0
 URxvt.lineSpace: 1
 URxvt.saveLines: 0
-URxvt*termName: rxvt-256color
+URxvt*termName: rxvt-unicode-256color
 URxvt.transparent: false
 URxvt.visualBell: false
 
@@ -86,9 +85,6 @@ URxvt.cursorUnderline:      false
 
 ! Pointer
 URxvt.pointerBlank:         false
-
-URxvt.foreground: #ffffff
-URxvt.background: #0E0E0E
 
 ! special
 *.foreground:   #a39e9b

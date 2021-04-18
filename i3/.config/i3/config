@@ -10,8 +10,8 @@ font pango:DejaVu Sans Mono 10
 # from the generated scheme.
 # NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
 # it fails to get colors from Xresources.
-set_from_resource $fg i3wm.color5 #f0f0f0
-set_from_resource $bg i3wm.color6 #1DFAFF
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
 
 # class                 border  backgr. text indicator child_border
 client.focused          $bg     $bg     $fg  $bg       $bg
@@ -183,15 +183,13 @@ assign [class="(?i)slack"] 5
 
 # Start-up programs
 exec_always --no-startup-id ${HOME}/.i3/startup/dunst.sh
-exec_always --no-startup-id xrdb -merge ${HOME}/.Xresources
 exec_always --no-startup-id ${HOME}/.i3/startup/polybar.sh
-exec_always --no-startup-id wal -i ${HOME}/Pictures/Wallpapers/space.jpg -q --iterative
 exec_always --no-startup-id ${HOME}/.i3/startup/picom.sh
 exec_always --no-startup-id ${HOME}/.i3/startup/mons.sh
 exec_always --no-startup-id ${HOME}/.i3/startup/unclutter.sh
-exec_always --no-startup-id ${HOME}/.i3/startup/mopidy.sh
+exec_always --no-startup-id wal -i ${HOME}/Pictures/Wallpapers/orange.jpg -q -a 100
 
+exec --no-startup-id ${HOME}/.i3/startup/mopidy.sh
 exec --no-startup-id betterlockscreen -u ${HOME}/Pictures/Wallpapers
-exec --no-startup-id xset -dpms
-exec --no-startup-id xset s off
+exec --no-startup-id xset s off && xset -dpms # Turn off screen blanking
 exec --no-startup-id rmmod pcspkr

@@ -145,6 +145,34 @@ time-alt = %H:%M
 
 label = %date% %time%
 
+[module/pulseaudio]
+type = internal/pulseaudio
+
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+; sink = alsa_output.pci-0000_12_00.3.analog-stereo
+
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = false
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
+
+format-volume = <ramp-volume><label-volume>
+label-volume = %percentage%
+ramp-volume-0 =""
+ramp-volume-1 =""
+ramp-volume-2 =""
+ramp-volume-3 =""
+ramp-volume-font = 2
+
+format-muted-prefix = " "
+format-muted-prefix-font = 2
+label-muted = " muted"
+label-muted-font = 2
+
 [module/alsa]
 type = internal/alsa
 
