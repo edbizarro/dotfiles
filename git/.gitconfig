@@ -15,8 +15,6 @@
 	features = side-by-side line-numbers decorations
 	syntax-theme = OneHalfDark
 	
-
-	
 [interactive]
 	diffFilter = delta --color-only
 		
