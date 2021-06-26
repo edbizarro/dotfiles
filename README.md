@@ -30,7 +30,7 @@ Previous themes can be found on [reddit](https://www.reddit.com/r/unixporn/searc
 * [betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen) (fancy lockscreen)
 * [mopidy](https://www.mopidy.com/)
 * [mons](https://github.com/Ventto/mons)
-* [compton](https://github.com/chjj/compton)
+* [picom](https://github.com/yshui/picom)
 * [dunst](https://github.com/dunst-project/dunst)
 * [ncmpcpp](http://rybczak.net/ncmpcpp/) + [lyvi](http://ok100.github.io/lyvi/) for lyrics + [bum](https://github.com/dylanaraps/bum) (album artwork)
 * [feh](https://feh.finalrewind.org) (change wallpaper)
@@ -86,7 +86,7 @@ Or to install all my dotfiles config:
       stow git && \
       stow ssh && \
       stow tmux && \
-      stow compton && \
+      stow picom && \
       stow dunst && \
       stow xresources && \
       cd ~/.dotfiles/zsh && \
