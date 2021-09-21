@@ -189,7 +189,7 @@ exec_always --no-startup-id ${HOME}/.i3/startup/mons.sh
 exec_always --no-startup-id ${HOME}/.i3/startup/unclutter.sh
 exec_always --no-startup-id wal -i ${HOME}/Pictures/Wallpapers/orange.jpg -q -a 100
 
-exec --no-startup-id ${HOME}/.i3/startup/mopidy.sh
+# exec --no-startup-id ${HOME}/.i3/startup/mopidy.sh
 exec --no-startup-id betterlockscreen -u ${HOME}/Pictures/Wallpapers
 exec --no-startup-id xset s off && xset -dpms # Turn off screen blanking
 exec --no-startup-id rmmod pcspkr
