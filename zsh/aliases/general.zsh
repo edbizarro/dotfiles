@@ -3,6 +3,7 @@ alias ll="ls -lah --color=auto --group-directories-first"
 alias l='ls -CF'
 
 alias grep='grep --color=auto'
+alias man='tldr'
 
 alias show-fonts="fc-list | cut -d ' ' -f2 | sort -u"
 alias vim="nvim"

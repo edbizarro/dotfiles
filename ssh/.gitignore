@@ -2,6 +2,6 @@ hosts/*
 !hosts/.gitkeep
 id_rsa
 id_rsa.pub
-bitbucket_rsa*
+bitbucket*
 google_compute*
 known_hosts

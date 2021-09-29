@@ -1,31 +1,30 @@
 zstyle ':prezto:*:*' color 'yes'
 
 zstyle ':prezto:load' pmodule \
-  'command-not-found' \
-  'terminal' \
-  'history' \
-  'directory' \
-  'utility' \
-  'spectrum' \
-  'git' \
-  'ssh' \
-  'docker' \
-  'pacman' \
-  'python' \
-  'tmux' \
-  'wakatime' \
-  'completion' \
-  'syntax-highlighting' \
-  'history-substring-search' \
   'autosuggestions' \
-  'rsync' \
+  'command-not-found' \
+  'completion' \
   'contrib-prompt' \
-  'prompt'
+  'directory' \
+  'docker' \
+  'git' \
+  'history-substring-search' \
+  'history' \
+  'pacman' \
+  'prompt' \
+  'python' \
+  'rsync' \
+  'spectrum' \
+  'ssh' \
+  'syntax-highlighting' \
+  'terminal' \
+  'tmux' \
+  'utility' \
+  'wakatime'
 
-# spaceship  
 zstyle ':prezto:module:prompt' theme 'paradox'
-zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'bitbucket_rsa'
+zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'bitbucket_rsa' 'bitbucket_new'
 zstyle ':prezto:module:tmux:auto-start' local 'yes'
 zstyle ':prezto:module:tmux:auto-start' remote 'no'
 zstyle ':prezto:module:pacman' frontend 'yay'
-zstyle ':prezto:module:prompt' pwd-length 'short'
+
