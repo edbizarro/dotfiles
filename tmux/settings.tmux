@@ -25,7 +25,7 @@ set-option -g set-titles on
 
 # Set the default terminal mode to 256color mode
 set -g default-terminal "tmux-256color"
-set -ga terminal-overrides ",xterm-rxvt-unicode:Tc"
+#set -ga terminal-overrides ",xterm-rxvt-unicode:Tc"
 
 # set scrollback history to 10000 (10k)
 set -g history-limit 10000
