@@ -1,6 +1,7 @@
 alias ls="ls -lah --color=auto --group-directories-first"
 alias ll="ls -lah --color=auto --group-directories-first"
 alias l='ls -CF'
+alias tmux='tmux -2'
 
 alias grep='grep --color=auto'
 alias man='tldr'

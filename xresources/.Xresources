@@ -42,7 +42,7 @@ Xft.hintstyle:  hintfull
 !-------------------------------------------------------------------------------
 URxvt.modifier: mod1
 URxvt*loginShell: true
-URxvt.borderless: false
+URxvt.borderless: true
 URxvt.internalBorder: 20
 URxvt.externalBorder: 0
 URxvt.lineSpace: 1
@@ -50,6 +50,7 @@ URxvt.saveLines: 0
 URxvt*termName: xterm-256color
 URxvt.transparent: false
 URxvt.visualBell: false
+URxvt.intensityStyles: false
 
 ! disable ctrl+shift binding
 URxvt.iso14755:             false

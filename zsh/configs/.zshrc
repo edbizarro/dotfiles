@@ -19,3 +19,4 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.
 export ZSH_WAKATIME_PROJECT_DETECTION=true
 
 (cat ~/.cache/wal/sequences &)
+source ~/.cache/wal/colors-tty.sh
