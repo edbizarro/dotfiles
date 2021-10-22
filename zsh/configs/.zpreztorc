@@ -23,7 +23,7 @@ zstyle ':prezto:load' pmodule \
   'wakatime'
 
 zstyle ':prezto:module:prompt' theme 'paradox'
-zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'bitbucket_rsa' 'bitbucket_new'
+zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'bitbucket_rsa'
 zstyle ':prezto:module:tmux:auto-start' local 'yes'
 zstyle ':prezto:module:tmux:auto-start' remote 'no'
 zstyle ':prezto:module:pacman' frontend 'yay'
