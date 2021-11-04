@@ -37,6 +37,8 @@ borg create                                 \
     --exclude '/home/edbizarro/storage/*'   \
     --exclude '/home/edbizarro/pCloudDrive/*'   \
     --exclude '/home/edbizarro/GoogleDrive/*'   \
+    --exclude '/home/edbizarro/.pyenv/*'   \
+    --exclude '/home/edbizarro/.cargo/*'   \
     --exclude '/home/edbizarro/.friday/Downloads/*'   \
                                     \
     ::'{hostname}-{now}'            \
@@ -51,11 +53,11 @@ info "Pruning repository"
 # limit prune's operation to this machine's archives and not apply to
 # other machines' archives also:
 
-borg prune                          \
-    --list                          \
-    --prefix '{hostname}-'          \
-    --show-rc                       \
-    --keep-daily    1               \
+borg prune                  \
+    --list                  \
+    --prefix '{hostname}-'  \
+    --show-rc               \
+    --keep-daily 1          \
 
 prune_exit=$?
 
@@ -70,8 +72,8 @@ else
     info "Backup and/or Prune finished with errors"
 fi
 
-# info "Sending to Digital Ocean"
+# info "Sending to Wasabi"
 
-# rclone sync -v /backups do:edbizarro-backup/mark-g5 --s3-chunk-size=100M --s3-upload-concurrency=10 --create-empty-src-dirs --fast-list
+rclone sync -v /backups wasabi:mark-g5/mark-g5 --s3-chunk-size=100M --s3-upload-concurrency=10 --create-empty-src-dirs --fast-list
 
 exit ${global_exit}
