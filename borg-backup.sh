@@ -18,28 +18,36 @@ info "Starting backup..."
 # Backup the most important directories into an archive named after
 # the machine this script is currently running on:
 
-borg create                                 \
-    --verbose                               \
-    --filter AME                            \
-    --list                                  \
-    --stats                                 \
-    --show-rc                               \
-    --compression zstd                      \
-    --exclude-caches                        \
-    --exclude '/home/*/.cache/*'            \
-    --exclude '/home/*/.npm/*'              \
-    --exclude '/home/*/.composer/*'         \
-    --exclude '/var/cache/*'                \
-    --exclude '/var/lock/*'                 \
-    --exclude '/var/tmp/*'                  \
-    --exclude '/var/log/*'                  \
-    --exclude '/home/edbizarro/workspace/*' \
-    --exclude '/home/edbizarro/storage/*'   \
-    --exclude '/home/edbizarro/pCloudDrive/*'   \
-    --exclude '/home/edbizarro/GoogleDrive/*'   \
-    --exclude '/home/edbizarro/.pyenv/*'   \
-    --exclude '/home/edbizarro/.cargo/*'   \
-    --exclude '/home/edbizarro/.friday/Downloads/*'   \
+borg create                                                             \
+    --verbose                                                           \
+    --filter AME                                                        \
+    --list                                                              \
+    --stats                                                             \
+    --show-rc                                                           \
+    --compression zstd                                                  \
+    --exclude-caches                                                    \
+    --exclude '/home/*/.cache/*'                                        \
+    --exclude '/home/*/.npm/*'                                          \
+    --exclude '/home/*/.composer/*'                                     \
+    --exclude '/var/cache/*'                                            \
+    --exclude '/var/lock/*'                                             \
+    --exclude '/var/tmp/*'                                              \
+    --exclude '/var/log/*'                                              \
+    --exclude '/home/*/workspace/*'                                     \
+    --exclude '/home/*/storage/*'                                       \
+    --exclude '/home/*/pCloudDrive/*'                                   \
+    --exclude '/home/*/GoogleDrive/*'                                   \
+    --exclude '/home/*/.pyenv/*'                                        \
+    --exclude '/home/*/.cargo/*'                                        \
+    --exclude '/home/*/.friday/Downloads/*'                             \
+    --exclude '/home/*/.kube/cache/*'                                   \
+    --exclude '/home/*/.config/Slack/Service Worker/*'                  \
+    --exclude '/home/*/.config/Slack/Cache/*'                           \
+    --exclude '/home/*/.config/google-chrome/Default/Service Worker/*'  \
+    --exclude '/home/*/.config/Code/Cache/*'                            \
+    --exclude '/home/*/.config/Code/CachedData/*'                       \
+    --exclude '/home/*/.config/Code/Service Worker/*'                   \
+    --exclude '/home/*/.config/Code/logs/*'                             \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \
@@ -74,6 +82,6 @@ fi
 
 # info "Sending to Wasabi"
 
-rclone sync -v /backups wasabi:mark-g5/mark-g5 --s3-chunk-size=100M --s3-upload-concurrency=10 --create-empty-src-dirs --fast-list
+rclone sync -v /backups wasabi:mark-g5/mark-g5 --s3-chunk-size=150M --s3-upload-concurrency=20 --create-empty-src-dirs --fast-list
 
 exit ${global_exit}
