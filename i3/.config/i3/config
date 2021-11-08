@@ -4,7 +4,6 @@ set $mod Mod1
 
 font pango:DejaVu Sans Mono 10
 
-
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use
 # from the generated scheme.

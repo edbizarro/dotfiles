@@ -6,7 +6,7 @@
 ! b3 = 70%
 ! 80 = 50%
 
-rofi.line-margin: 20
+rofi.line-margin: 50
 rofi.fullscreen: true
 rofi.color-enabled: true
 rofi.color-window: argb:DA222222, argb:DA222222, argb:00222222
@@ -30,10 +30,10 @@ rofi.window-format: {t}
 ! Xft settings
 !-------------------------------------------------------------------------------
 Xft.autohint:   0
-Xft.dpi:        96
+Xft.dpi:        110
 Xft.antialias:  true
 Xft.rgba:       rgb
-Xft.hinting:    true
+Xft.hinting:    1
 Xft.lcdfilter:  lcddefault
 Xft.hintstyle:  hintfull
 
@@ -67,7 +67,7 @@ URxvt.perl-ext-common:
 URxvt.font:   xft:FantasqueSansMono Nerd Font Mono:size=14, \
               xft:Iosevka Nerd Font:size=14, \
               xft:Hack Nerd Font Mono:size=14, \
-              xft:VictorMono Nerd Font Mono:size=10
+              xft:VictorMono Nerd Font Mono:size=14
 
 
 URxvt.allow_bold:           false
