@@ -31,15 +31,15 @@ label-visible =%icon%
 label-visible-padding = 3
 label-visible-font = 2
 
-ws-icon-0 = 1; 
-ws-icon-1 = 2; 
-ws-icon-2 = 3; 
-ws-icon-3 = 4; 
-ws-icon-4 = 5; 
-ws-icon-5 = 6; 
-ws-icon-6 = 7; 
-ws-icon-7 = 8; 
-ws-icon-default =  
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-default = 
 
 [module/mpd]
 type = internal/mpd
@@ -403,7 +403,7 @@ card = intel_backlight
 ; NOTE: This may require additional configuration on some systems. Polybar will
 ; write to `/sys/class/backlight/${self.card}/brightness` which requires polybar
 ; to have write access to that file.
-; DO NOT RUN POLYBAR AS ROOT. 
+; DO NOT RUN POLYBAR AS ROOT.
 ; The recommended way is to add the user to the
 ; `video` group and give that group write-privileges for the `brightness` file.
 ; See the ArchWiki for more information:

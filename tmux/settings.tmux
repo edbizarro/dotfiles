@@ -21,8 +21,8 @@ set -g default-command /usr/bin/zsh
 # Reload tmux config
 bind r source-file ~/.tmux.conf \; display-message "Configuration reloaded"
 
-#open window with currrent path                                                                   
-bind c new-window -c '#{pane_current_path}' 
+#open window with currrent path
+bind c new-window -c '#{pane_current_path}'
 
 # Automatically set window title
 set-window-option -g automatic-rename on

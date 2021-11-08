@@ -39,4 +39,3 @@ alias yu="docker run $DOCKER_OPTS edbizarro/gitlab-ci-pipeline-php:7.4-alpine ya
 
 # PHP
 alias p="docker run $DOCKER_OPTS edbizarro/gitlab-ci-pipeline-php:7.4-alpine php"
-

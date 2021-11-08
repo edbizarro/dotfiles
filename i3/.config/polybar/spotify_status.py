@@ -78,10 +78,10 @@ try:
 
     if len(song) > trunclen:
         song = song[0:trunclen]
-        song += '...' 
+        song += '...'
         if ('(' in song) and (')' not in song):
             song += ')'
-    
+
     print(output.format(artist=artist, song=song, play_pause=play_pause))
 
 except Exception as e:
@@ -89,4 +89,3 @@ except Exception as e:
         print('')
     else:
         print(e)
-
