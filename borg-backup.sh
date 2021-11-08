@@ -48,6 +48,7 @@ borg create                                                             \
     --exclude '/home/*/.config/Code/CachedData/*'                       \
     --exclude '/home/*/.config/Code/Service Worker/*'                   \
     --exclude '/home/*/.config/Code/logs/*'                             \
+    --exclude '/home/*/.config/gcloud/logs/*'                           \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \
