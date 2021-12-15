@@ -8,7 +8,7 @@ from decimal import Decimal
 config = configparser.ConfigParser()
 
 # File must be opened with utf-8 explicitly
-with open('/home/edbizarro/.config/polybar/crypto-config', 'r', encoding='utf-8') as f:
+with open('$HOME/.config/polybar/crypto-config', 'r', encoding='utf-8') as f:
 	config.read_file(f)
 
 # Everything except the general section

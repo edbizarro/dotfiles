@@ -157,7 +157,7 @@ bindsym $mod+Shift+d exec --no-startup-id rofi -monitor -1 -show window -display
 
 #Screenshot
 bindsym $mod+Shift+s exec --no-startup-id "scrot -q 95 ${HOME}/Pictures/Screenshots/screenshot-%Y-%m-%d%H:%M:%S.png"
-bindsym Print exec --no-startup-id "scrot -q 95 ${HOME}/Pictures/Screenshotss/screenshot-%Y-%m-%d%H:%M:%S.png"
+bindsym Print exec --no-startup-id "scrot -q 95 ${HOME}/Pictures/Screenshots/screenshot-%Y-%m-%d%H:%M:%S.png"
 
 # Volume controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +10%
@@ -181,16 +181,16 @@ assign [class="(?i)slack"] 5
 
 
 # Start-up programs
-exec_always --no-startup-id urxvtd -q -o -f
+exec --no-startup-id urxvtd -q -o -f
 exec_always --no-startup-id ${HOME}/.i3/startup/polybar.sh
 exec_always --no-startup-id ${HOME}/.i3/startup/dunst.sh
 exec_always --no-startup-id ${HOME}/.i3/startup/picom.sh
 exec_always --no-startup-id ${HOME}/.i3/startup/mons.sh
 exec_always --no-startup-id ${HOME}/.i3/startup/unclutter.sh
-exec_always --no-startup-id wal -i ${HOME}/Pictures/Wallpapers/orange.jpg -q -a 100
+exec_always --no-startup-id wal -i ${HOME}/Pictures/Wallpapers -q -a 100
 
 # exec --no-startup-id ${HOME}/.i3/startup/mopidy.sh
 exec --no-startup-id betterlockscreen -u ${HOME}/Pictures/Wallpapers
 exec --no-startup-id xset s off && xset -dpms # Turn off screen blanking
 exec --no-startup-id rmmod pcspkr
-exec --no-startup-id xinput set-prop "DELL08EA:00 06CB:CCA8 Touchpad" "libinput Tapping Enabled" 1
+exec --no-startup-id xinput set-prop "DELL0A7B:00 06CB:CE26 Touchpad" "libinput Tapping Enabled" 1

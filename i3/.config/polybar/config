@@ -1,6 +1,6 @@
-include-file = /home/edbizarro/.config/polybar/global.conf
-include-file = /home/edbizarro/.config/polybar/bars/top.conf
-include-file = /home/edbizarro/.config/polybar/bars/bottom.conf
+include-file = $HOME/.config/polybar/global.conf
+include-file = $HOME/.config/polybar/bars/top.conf
+include-file = $HOME/.config/polybar/bars/bottom.conf
 
 
 [module/i3]
@@ -72,8 +72,8 @@ bar-progress-empty = -
 
 [module/wlan]
 type = internal/network
-interface = wlan0
-interval = 3.0
+interface = wlp0s20f3
+interval = 4.0
 
 ; Available tags:
 ;   <label-connected> (default)
@@ -283,7 +283,7 @@ thermal-zone = 0
 ; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
 ; to find path to desired file
 ; Default reverts to thermal zone setting
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
 
 ; Threshold temperature to display warning label (in degrees celsius)
 ; Default: 80

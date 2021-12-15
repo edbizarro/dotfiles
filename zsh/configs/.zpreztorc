@@ -7,10 +7,10 @@ zstyle ':prezto:load' pmodule \
   'contrib-prompt' \
   'directory' \
   'docker' \
+  'environment' \
   'git' \
   'history-substring-search' \
   'history' \
-  'pacman' \
   'prompt' \
   'python' \
   'rsync' \
@@ -19,11 +19,10 @@ zstyle ':prezto:load' pmodule \
   'syntax-highlighting' \
   'terminal' \
   'tmux' \
-  'utility' \
-  'wakatime'
+  'utility'
 
 zstyle ':prezto:module:prompt' theme 'paradox'
-zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'bitbucket_rsa'
 zstyle ':prezto:module:tmux:auto-start' local 'yes'
 zstyle ':prezto:module:tmux:auto-start' remote 'no'
-zstyle ':prezto:module:pacman' frontend 'yay'
+zstyle ':prezto:module:ssh:load' identities 'ed25519'
+

@@ -1,7 +1,7 @@
 [user]
     name = Eduardo Bizarro
-    email = edbizarro@gmail.com
-    signingkey = 0E812B0405CF9F7C
+    email = eduardo.bizarr@meliuz.com.br
+    signingkey = C425657E1AE627AF
 
 [github]
     user = edbizarro
@@ -26,7 +26,7 @@
     defaultBranch = main
 
 [commit]
-    gpgsign = true
+	gpgsign = true
 
 [gpg]
     program = gpg2
