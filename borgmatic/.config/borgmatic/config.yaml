@@ -12,7 +12,7 @@ location:
     one_file_system: true
     exclude_patterns:
       - '*.pyc'
-      - ~/*/.cache
+      - /home/*/.cache
       - '*/.vim*.tmp'
       - /etc/ssl
       - /home/*/.npm/*
@@ -48,6 +48,7 @@ location:
       - /home/.dotfiles/mopidy/.config/mopidy/spotify/*
       - /home/*/.cache/google-chrome/*
       - /home/*/.cache/spotify/*
+      - /home/*/.local/share/Trash/*
 
     exclude_caches: true
     exclude_if_present: .nobackup
