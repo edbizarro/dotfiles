@@ -66,7 +66,7 @@ borg prune                  \
     --list                  \
     --prefix '{hostname}-'  \
     --show-rc               \
-    --keep-daily 1          \
+    --keep-daily 5          \
 
 prune_exit=$?
 
@@ -83,6 +83,6 @@ fi
 
 # info "Sending to Wasabi"
 
-rclone sync -v /backups wasabi:mark-g5/mark-g5 --s3-chunk-size=150M --s3-upload-concurrency=20 --create-empty-src-dirs --fast-list
+#rclone sync -v /backups wasabi:mark-g5/mark-g5 --s3-chunk-size=150M --s3-upload-concurrency=20 --create-empty-src-dirs --fast-list
 
 exit ${global_exit}
