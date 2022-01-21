@@ -179,14 +179,14 @@ assign [class="(?i)cava"] 4
 assign [class="(?i)bum"] 4
 assign [class="(?i)slack"] 5
 
-
 # Start-up programs
-exec_always --no-startup-id urxvtd -q -o -f
+exec --no-startup-id urxvtd -q -o -f
+exec_always --no-startup-id ${HOME}/.i3/startup/picom.sh
 exec_always --no-startup-id ${HOME}/.i3/startup/polybar.sh
 exec_always --no-startup-id ${HOME}/.i3/startup/dunst.sh
-exec_always --no-startup-id ${HOME}/.i3/startup/picom.sh
 exec_always --no-startup-id ${HOME}/.i3/startup/mons.sh
 exec_always --no-startup-id ${HOME}/.i3/startup/unclutter.sh
+exec_always --no-startup-id ${HOME}/.i3/startup/udiskie.sh
 exec_always --no-startup-id wal -i ${HOME}/Pictures/Wallpapers/orange.jpg -q -a 100
 
 # exec --no-startup-id ${HOME}/.i3/startup/mopidy.sh
