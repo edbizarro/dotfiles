@@ -7,6 +7,10 @@ set -g terminal-overrides ',xterm-256color:Tc'
 set -g default-terminal "tmux-256color"
 set -as terminal-overrides ',xterm*:sitm=\E[3m'
 
+# UTF is great, let us use that
+set -g utf8
+set-window-option -g utf8 on
+
 # No delay for escape key press
 set -sg escape-time 0
 
@@ -27,6 +31,10 @@ bind c new-window -c '#{pane_current_path}'
 # Automatically set window title
 set-window-option -g automatic-rename on
 set-option -g set-titles on
+set-option -g allow-rename on
+
+# Open last window
+bind-key L last-window
 
 # set scrollback history to 10000 (10k)
 set -g history-limit 10000
