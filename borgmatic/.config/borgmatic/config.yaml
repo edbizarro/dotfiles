@@ -1,7 +1,6 @@
 location:
     source_directories:
         - /home
-        # - /etc
 
     repositories:
         - /backups
@@ -21,7 +20,6 @@ location:
       - /var/lock/*
       - /var/tmp/*
       - /var/log/*
-    #   - /home/*/workspace/*
       - /home/*/storage/*
       - /home/*/pCloudDrive/*
       - /home/*/GoogleDrive/*
@@ -30,11 +28,12 @@ location:
       - /home/*/.friday/Downloads/*
       - /home/*/.kube/cache/*
       - /home/*/.kube/http-cache/*
-      - /home/*/.config/Slack/Service Worker/*
+      - "/home/*/.config/Slack/Service Worker/*"
       - /home/*/.config/Slack/Cache/*
-      - /home/*/.config/google-chrome/Default/Service Worker/*
+      - "/home/*/.config/google-chrome/Default/Service Worker/*"
+      - "/home/*/.config/google-chrome/Profile 2/Service Worker/*"
       - /home/*/.config/Code/Cache/*
-      - /home/*/.config/Code/CachedDta/*
+      - /home/*/.config/Code/CachedData/*
       - /home/*/.config/Code/Service Worker/*
       - /home/*/.config/Code/logs/*
       - /home/*/.config/gcloud/logs/*
@@ -84,13 +83,13 @@ retention:
     # keep_hourly: 24
 
     # Number of daily archives to keep.
-    keep_daily: 2
+    keep_daily: 3
 
     # Number of weekly archives to keep.
     keep_weekly: 1
 
     # Number of monthly archives to keep.
-    # keep_monthly: 6
+    keep_monthly: 1
 
     # Number of yearly archives to keep.
     # keep_yearly: 1
@@ -127,7 +126,7 @@ consistency:
     # Restrict the number of checked archives to the last n.
     # Applies only to the "archives" check. Defaults to checking
     # all archives.
-    check_last: 3
+    check_last: 4
 
     # When performing the "archives" check, only consider archive
     # names starting with this prefix. Borg placeholders can be

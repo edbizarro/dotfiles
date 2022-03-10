@@ -1,6 +1,6 @@
-alias ls="ls -lah --color=auto --group-directories-first"
-alias ll="ls -lah --color=auto --group-directories-first"
-alias l='ls -CF'
+alias ls="exa -lah --color=auto --group-directories-first --icons"
+alias ll="exa -lah --color=auto --group-directories-first --icons"
+alias l='exa -lah --color=auto --group-directories-first --icons'
 alias tmux='tmux -2'
 
 alias grep='grep --color=auto'
@@ -14,8 +14,8 @@ alias vi="nvim"
 alias reboot='sudo systemctl reboot'
 alias shutdown='sudo systemctl poweroff'
 
-alias monitor_disk='sudo iotop -Pao'
-alias disk-details="ncdu / --exclude ~/.avfs --exclude /media"
+alias monitor-disk='sudo iotop -Pao'
+alias disk-details="ncdu / --exclude ~/.avfs --exclude /media --exclude /run/timeshift --exclude /timeshift"
 
 alias sudo="sudo "
 
