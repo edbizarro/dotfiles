@@ -20,3 +20,5 @@ export ZSH_WAKATIME_PROJECT_DETECTION=true
 
 (cat ~/.cache/wal/sequences &)
 source ~/.cache/wal/colors-tty.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

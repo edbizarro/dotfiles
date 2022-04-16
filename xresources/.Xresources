@@ -61,6 +61,7 @@ URxvt.iso14755_52:          false
 ! If you do not use the Perl extension features, you can improve the security
 ! and speed by disabling Perl extensions completely.
 URxvt.perl-ext:
+! URxvt.perl-ext-common: resize-font
 URxvt.perl-ext-common:
 
 !! Fonts

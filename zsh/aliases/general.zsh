@@ -15,7 +15,7 @@ alias reboot='sudo systemctl reboot'
 alias shutdown='sudo systemctl poweroff'
 
 alias monitor-disk='sudo iotop -Pao'
-alias disk-details="ncdu / --exclude ~/.avfs --exclude /media --exclude /run/timeshift --exclude /timeshift"
+alias disk-details="ncdu / --exclude ~/.avfs --exclude /media --exclude /run/timeshift --exclude /timeshift --exclude /proc"
 
 alias sudo="sudo "
 
@@ -24,3 +24,7 @@ alias k-us="setxkbmap -model us -layout us -variant intl"
 
 alias desktop-mode="k-us && xrandr --output DP-1 --primary --mode 3440x1440 --rate 100 && mons -o && light -A 100"
 alias laptop-mode="k-us && xrandr --output eDP-1 --primary && light -S 70"
+
+gpgd(){
+    gpg --output $2 --decrypt $1
+}

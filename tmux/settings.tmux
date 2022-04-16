@@ -8,8 +8,8 @@ set -g default-terminal "tmux-256color"
 set -as terminal-overrides ',xterm*:sitm=\E[3m'
 
 # UTF is great, let us use that
-set -g utf8
-set-window-option -g utf8 on
+#set -g utf8
+#set-window-option -g utf8 on
 
 # No delay for escape key press
 set -sg escape-time 0
