@@ -1,7 +1,7 @@
 [user]
     name = Eduardo Bizarro
     email = edbizarro@gmail.com
-    signingkey = 0E812B0405CF9F7C
+	signingkey = DA22EEC470AD6ACF
 
 [github]
     user = edbizarro

@@ -4,7 +4,7 @@
 #
 
 [global]
-    font = FantasqueSansMono Nerd Font Mono:antialias=true 12
+    font = FantasqueSansM Nerd Font Mono:antialias=true 12
 
     # Allow a small subset of html markup:
     #   <b>bold</b>

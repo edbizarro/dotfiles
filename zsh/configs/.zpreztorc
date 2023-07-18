@@ -18,8 +18,7 @@ zstyle ':prezto:load' pmodule \
   'syntax-highlighting' \
   'terminal' \
   'tmux' \
-  'utility' \
-  'wakatime'
+  'utility'
 
 zstyle ':prezto:module:prompt' theme 'paradox'
 zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'bitbucket_rsa'

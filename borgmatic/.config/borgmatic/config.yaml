@@ -3,51 +3,48 @@ location:
         - /home
 
     repositories:
-        - /backups
-        - /run/media/edbizarro/SEAGATE/Borg/MARK-G5-V2
-        - /run/media/edbizarro/HYDRA/Borg/MARK-G5-V2
-        - v5205ujp@v5205ujp.repo.borgbase.com:repo
+        - /run/media/edbizarro/SEAGATE/Borg/MARK-G5-V3
 
     one_file_system: true
     exclude_patterns:
       - '*.pyc'
-      - /home/*/.cache
       - '*/.vim*.tmp'
+      - "/home/*/.config/google-chrome/Default/Service Worker/*"
+      - "/home/*/.config/google-chrome/Profile 2/Service Worker/*"
+      - "/home/*/.config/Slack/Service Worker/*"
+      - /backups
       - /etc/ssl
-      - /home/*/.npm/*
-      - /home/*/.composer/*
-      - /var/cache/*
-      - /var/lock/*
-      - /var/tmp/*
-      - /var/log/*
-      - /home/*/storage/*
-      - /home/*/pCloudDrive/*
-      - /home/*/GoogleDrive/*
-      - /home/*/.pyenv/*
+      - /home/.dotfiles/mopidy/.config/mopidy/local/*
+      - /home/.dotfiles/mopidy/.config/mopidy/spotify/*
+      - /home/*/.cache
+      - /home/*/.cache/google-chrome/*
+      - /home/*/.cache/spotify/*
       - /home/*/.cargo/*
+      - /home/*/.composer/*
+      - /home/*/.config/Code/Cache/*
+      - /home/*/.config/Code/CachedData/*
+      - /home/*/.config/Code/logs/*
+      - /home/*/.config/Code/Service Worker/*
+      - /home/*/.config/gcloud/logs/*
+      - /home/*/.config/Slack/Cache/*
       - /home/*/.friday/Downloads/*
       - /home/*/.kube/cache/*
       - /home/*/.kube/http-cache/*
-      - "/home/*/.config/Slack/Service Worker/*"
-      - /home/*/.config/Slack/Cache/*
-      - "/home/*/.config/google-chrome/Default/Service Worker/*"
-      - "/home/*/.config/google-chrome/Profile 2/Service Worker/*"
-      - /home/*/.config/Code/Cache/*
-      - /home/*/.config/Code/CachedData/*
-      - /home/*/.config/Code/Service Worker/*
-      - /home/*/.config/Code/logs/*
-      - /home/*/.config/gcloud/logs/*
-      - /backups
+      - /home/*/.local/share/Trash/*
+      - /home/*/.local/share/virtualenv/*
+      - /home/*/.node_modules/*
+      - /home/*/.npm/*
+      - /home/*/.pyenv/*
+      - /home/*/.stremio-server/*
       - /home/*/Documents/Fernanda/*
       - /home/*/go/*
-      - /home/*/.node_modules/*
-      - /home/*/.stremio-server/*
-      - /home/*/.local/share/virtualenv/*
-      - /home/.dotfiles/mopidy/.config/mopidy/local/*
-      - /home/.dotfiles/mopidy/.config/mopidy/spotify/*
-      - /home/*/.cache/google-chrome/*
-      - /home/*/.cache/spotify/*
-      - /home/*/.local/share/Trash/*
+      - /home/*/GoogleDrive/*
+      - /home/*/pCloudDrive/*
+      - /home/*/storage/*
+      - /var/cache/*
+      - /var/lock/*
+      - /var/log/*
+      - /var/tmp/*
 
     exclude_caches: true
     exclude_if_present: .nobackup
@@ -83,13 +80,13 @@ retention:
     # keep_hourly: 24
 
     # Number of daily archives to keep.
-    keep_daily: 3
+    keep_daily: 1
 
     # Number of weekly archives to keep.
-    keep_weekly: 1
+    keep_weekly: 0
 
     # Number of monthly archives to keep.
-    keep_monthly: 1
+    keep_monthly: 0
 
     # Number of yearly archives to keep.
     # keep_yearly: 1

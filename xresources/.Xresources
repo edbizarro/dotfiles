@@ -13,7 +13,7 @@ rofi.color-window: argb:DA222222, argb:DA222222, argb:00222222
 rofi.color-normal: argb:00000000, #e8e8e8, argb:00000000, argb:00000000, #E918D8
 rofi.color-urgent: argb:00000000, #E918D8, argb:00000000, argb:00000000, #e29a49
 rofi.color-active: argb:00000000, #E918D8, argb:00000000, argb:00000000, #e29a49
-rofi.font: FantasqueSansMono Nerd Font Mono 14
+rofi.font: FantasqueSansM Nerd Font Mono 14
 rofi.eh: 2
 rofi.separator-style: solid
 rofi.hide-scrollbar: true
@@ -66,11 +66,18 @@ URxvt.perl-ext-common:
 
 !! Fonts
 !! regular
-URxvt.font:   xft:FantasqueSansMono Nerd Font Mono:size=14, \
-              xft:Iosevka Nerd Font:size=14, \
-              xft:Hack Nerd Font Mono:size=14, \
-              xft:VictorMono Nerd Font Mono:size=14
+URxvt.font: xft:FantasqueSansM Nerd Font Mono:size=14, \
+            xft:Iosevka Nerd Font:size=14
 
+
+URxvt.boldFont:   xft:FantasqueSansM Nerd Font Mono:bold:size=14, \
+                  xft:Iosevka Nerd Font:bold:size=14
+
+URxvt.italicFont: xft:FantasqueSansM Nerd Font Mono:italic:size=14, \
+                  xft:Iosevka Nerd Font:italic:size=14
+
+URxvt.boldItalicFont: xft:FantasqueSansM Nerd Font Mono:bold:italic:size=14, \
+                      xft:Iosevka Nerd Font:bold:italic:size=14
 
 URxvt.allow_bold:           false
 URxvt*boldMode:             true
@@ -80,7 +87,7 @@ URxvt*letterSpace:          -1
 
 
 ! Scrollbar
-URxvt.scrollStyle:          rxvt
+URxvt.scrollStyle:          plain
 URxvt.scrollBar:            false
 
 ! Cursor
@@ -89,6 +96,7 @@ URxvt.cursorUnderline:      false
 
 ! Pointer
 URxvt.pointerBlank:         false
+
 
 ! special
 *.foreground:   #a39e9b
