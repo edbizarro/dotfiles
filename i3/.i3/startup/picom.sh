@@ -7,4 +7,4 @@ killall -q picom
 while pgrep -x picom >/dev/null; do sleep 1; done
 
 # Launch compton
-picom --use-damage --config  ~/.config/picom.conf -b &
+picom --no-frame-pacing --config  ~/.config/picom.conf -b &
