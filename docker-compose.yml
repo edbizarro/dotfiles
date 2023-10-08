@@ -1,0 +1,20 @@
+---
+version: "2.1"
+services:
+  syncthing:
+    image: lscr.io/linuxserver/syncthing:latest
+    container_name: syncthing
+    hostname: mlz-mc-056863 #optional
+    environment:
+      - PUID=119230
+      - PGID=110513
+      - TZ=America/Sao_Paulo
+    volumes:
+      - /user/edbizarro/config/syncthing2:/config
+      - /home/eduardo.oliveira/workspace:/workspace
+    ports:
+      - 8384:8384
+      - 22000:22000/tcp
+      - 22000:22000/udp
+      - 21027:21027/udp
+    restart: unless-stopped

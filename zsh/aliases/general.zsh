@@ -23,4 +23,4 @@ alias k-abnt2="setxkbmap -model abnt2 -layout br -variant abnt2"
 alias k-us="setxkbmap -model us -layout us -variant intl"
 
 alias desktop-mode="k-us && xrandr --output HDMI-1 --primary --mode 3440x1440 --rate 100 && mons -o && light -A 100"
-alias laptop-mode="k-us && xrandr --output eDP-1-1 --primary && light -S 70"
+alias laptop-mode="k-us && xrandr --output eDP-1 --primary && mons -o"

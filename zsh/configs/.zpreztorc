@@ -1,6 +1,8 @@
 zstyle ':prezto:*:*' color 'yes'
 
 zstyle ':prezto:load' pmodule \
+  'gnu-utility' \
+  'utility' \
   'autosuggestions' \
   'command-not-found' \
   'completion' \
@@ -18,11 +20,10 @@ zstyle ':prezto:load' pmodule \
   'ssh' \
   'syntax-highlighting' \
   'terminal' \
-  'tmux' \
-  'utility'
+  'tmux'
 
 zstyle ':prezto:module:prompt' theme 'paradox'
 zstyle ':prezto:module:tmux:auto-start' local 'yes'
 zstyle ':prezto:module:tmux:auto-start' remote 'no'
 zstyle ':prezto:module:ssh:load' identities 'ed25519'
-
+zstyle -s ':prezto:module:utility:download' helper 'aria2c'

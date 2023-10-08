@@ -20,3 +20,8 @@ export ZSH_WAKATIME_PROJECT_DETECTION=true
 
 (cat ~/.cache/wal/sequences &)
 source ~/.cache/wal/colors-tty.sh
+source ~/.make_life_easier.zsh
+
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc

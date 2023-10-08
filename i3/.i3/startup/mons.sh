@@ -7,4 +7,4 @@ killall -q mons
 while pgrep -x mons >/dev/null; do sleep 1; done
 
 # Launch mons
-nohup mons -a > /dev/null 2>&1 &
+nohup mons -a -x "${HOME}/.i3/startup/mons_handler.sh" > /dev/null 2>&1 &

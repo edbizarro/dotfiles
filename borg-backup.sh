@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Setting this, so the repo does not need to be given on the commandline:
-export BORG_REPO=/backups
+export BORG_REPO=/media/eduardo.oliveira/SEAGATE/mlz-mc-056863
 export BORG_FILES_CACHE_TTL=$(expr `ls /home/* | wc -l` \* 4)
 
 # Setting this, so you won't be asked for your repository passphrase:
@@ -66,7 +66,7 @@ borg prune                  \
     --list                  \
     --prefix '{hostname}-'  \
     --show-rc               \
-    --keep-daily 1          \
+    --keep-daily 3          \
 
 prune_exit=$?
 
@@ -80,9 +80,5 @@ elif [ ${global_exit} -eq 1 ]; then
 else
     info "Backup and/or Prune finished with errors"
 fi
-
-# info "Sending to Wasabi"
-
-rclone sync -v /backups wasabi:mark-g5/mark-g5 --s3-chunk-size=150M --s3-upload-concurrency=20 --create-empty-src-dirs --fast-list
 
 exit ${global_exit}
