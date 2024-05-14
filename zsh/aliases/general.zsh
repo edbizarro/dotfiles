@@ -28,3 +28,8 @@ alias laptop-mode="k-us && xrandr --output eDP-1 --primary && light -S 70"
 gpgd(){
     gpg --output $2 --decrypt $1
 }
+
+wal-tile() {
+    wal -n -i "$@"
+    feh --bg-tile "$(< "${HOME}/.cache/wal/wal")"
+}

@@ -185,7 +185,7 @@ assign [class="(?i)slack"] 5
 # Start-up programs
 exec --no-startup-id urxvtd -q -o -f
 exec_always --no-startup-id ${HOME}/.i3/startup/picom.sh
-exec_always --no-startup-id wal -i ${HOME}/Pictures/wallpapers/2k/ -q -a 100
+exec_always --no-startup-id wal -R
 exec_always --no-startup-id ${HOME}/.i3/startup/dunst.sh
 exec_always --no-startup-id ${HOME}/.i3/startup/mons.sh
 exec_always --no-startup-id ${HOME}/.i3/startup/unclutter.sh
@@ -193,7 +193,7 @@ exec_always --no-startup-id ${HOME}/.i3/startup/udiskie.sh
 exec_always --no-startup-id ${HOME}/.i3/startup/polybar.sh
 
 # exec --no-startup-id ${HOME}/.i3/startup/mopidy.sh
-exec --no-startup-id betterlockscreen -u ${HOME}/Pictures/wallpapers/2k/
+exec --no-startup-id betterlockscreen -u ${HOME}/Pictures/wallpapers/2k/cyber
 exec --no-startup-id xset s off && xset -dpms # Turn off screen blanking
 exec --no-startup-id rmmod pcspkr
 exec --no-startup-id xinput set-prop "DELL08EA:00 06CB:CCA8 Touchpad" "libinput Tapping Enabled" 1

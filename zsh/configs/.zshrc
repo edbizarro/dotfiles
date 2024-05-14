@@ -22,3 +22,9 @@ export ZSH_WAKATIME_PROJECT_DETECTION=true
 source ~/.cache/wal/colors-tty.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(atuin init zsh)"
+
+[ -f ~/.make_life_easier.zsh ] && source ~/.make_life_easier.zsh
+
+[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
