@@ -4,26 +4,33 @@ default_language_version:
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.2.0
+    rev: v4.6.0
     hooks:
       - id: check-added-large-files
       - id: check-docstring-first
       - id: check-executables-have-shebangs
       - id: check-json
-      - id: pretty-format-json
-        args: ['--autofix']
       - id: check-merge-conflict
+      - id: check-symlinks
       - id: check-yaml
       - id: debug-statements
       - id: detect-private-key
+      - id: double-quote-string-fixer
+      - id: end-of-file-fixer
       - id: end-of-file-fixer
       - id: fix-byte-order-marker
+      - id: forbid-new-submodules
       - id: mixed-line-ending
       - id: requirements-txt-fixer
       - id: trailing-whitespace
+      - id: detect-aws-credentials
+        args: ["--allow-missing-credentials"]
+      - id: pretty-format-json
+        args: ['--autofix']
+
 
   - repo: https://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.1.13
+    rev: v1.5.5
     hooks:
       - id: forbid-tabs
         exclude: Makefile
