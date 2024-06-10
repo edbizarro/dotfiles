@@ -47,7 +47,7 @@ exclude_patterns:
     - /var/tmp/*
 
 exclude_caches: true
-exclude_if_present: 
+exclude_if_present:
     - .nobackup
 
 compression: auto,lz4,zstd

@@ -1,7 +1,7 @@
 [user]
     name = Eduardo Bizarro
     email = edbizarro@gmail.com
-	signingkey = DA22EEC470AD6ACF
+    signingkey = DA22EEC470AD6ACF
 
 [github]
     user = edbizarro
@@ -255,8 +255,8 @@
     # 3. Puts all stashed local commits on top
     #
     # If there are any merge conflicts then for each conflict file do:
-    # 	a. Correct the conflicts
-    #	b. git add . <file_name>
+    #   a. Correct the conflicts
+    #   b. git add . <file_name>
     #
     # Then do `$ git rebase --continue`
     #
@@ -277,13 +277,13 @@
     # 1. Update the parent branch
     # 2. Rebase your branch with the parent branch
     #
-    #	$ git sync <parent_branch>		// (master or your parent branch)
+    #    $ git sync <parent_branch>        // (master or your parent branch)
     #
     # NOTE: It will fail if your branch is tracking a remote branch
     #
     # What it does
-    # 	1. It will checkout to <parent_branch> and do update (to fetch for recent changes)
-    # 	2. It will return to <branch> and rebase <parent_branch> (put parent commits before branch commits)
+    #     1. It will checkout to <parent_branch> and do update (to fetch for recent changes)
+    #     2. It will return to <branch> and rebase <parent_branch> (put parent commits before branch commits)
     #
     sync = "!f() { git sync-check-no-remote-present && CBRANCH=$(git current-branch-name) && git co ${1} && git update && git co $CBRANCH && git rebase ${1}; }; f"
 
