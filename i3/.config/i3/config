@@ -156,8 +156,8 @@ bindsym $mod+d exec --no-startup-id rofi -monitor -1 -show run -display-run "
 bindsym $mod+Shift+d exec --no-startup-id rofi -monitor -1 -show window -display-window " "
 
 #Screenshot
-bindsym $mod+Shift+s exec --no-startup-id "scrot -q 95 ${HOME}/Pictures/Screenshots/screenshot-%Y-%m-%d%H:%M:%S.png"
-bindsym Print exec --no-startup-id "scrot -q 95 ${HOME}/Pictures/Screenshots/screenshot-%Y-%m-%d%H:%M:%S.png"
+bindsym $mod+Shift+s exec --no-startup-id "scrot -q 89 ${HOME}/Pictures/Screenshots/screenshot-%Y-%m-%d%H:%M:%S.png"
+bindsym Print exec --no-startup-id "scrot -q 89 ${HOME}/Pictures/Screenshots/screenshot-%Y-%m-%d%H:%M:%S.png"
 
 # Volume controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +10%
