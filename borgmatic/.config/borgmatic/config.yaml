@@ -2,11 +2,16 @@ source_directories:
     - /home
 
 repositories:
-    - path: /run/media/edbizarro/SEAGATE/Borg/MARK-G5-V3
-      label: external_drive
+    - path: /run/media/edbizarro/SEAGATE/Borg/MARK-G5-V4
+      label: SEAGATE
+    - path: /media/mediabarbosa/Backups/MARK-G5
+      label: mediabarbosa
+    # - path: /media/medianerv/backups/MARK-G5/
+    #   label: medianerv
 
 one_file_system: true
 exclude_patterns:
+    - /home/*/Downloads/insider-events-manual/*
     - '*.pyc'
     - '*/.vim*.tmp'
     - "/home/*/.config/google-chrome/Default/Service Worker/*"
@@ -17,6 +22,7 @@ exclude_patterns:
     - /home/.dotfiles/mopidy/.config/mopidy/local/*
     - /home/.dotfiles/mopidy/.config/mopidy/spotify/*
     - /home/*/.cache
+    - /home/*/.cache/*
     - /home/*/.cache/google-chrome/*
     - /home/*/.cache/spotify/*
     - /home/*/.cargo/*
@@ -50,7 +56,7 @@ exclude_caches: true
 exclude_if_present:
     - .nobackup
 
-compression: auto,lz4,zstd
+compression: lz4,zstd
 archive_name_format: '{hostname}-{now:%Y-%m-%d-%H:%M:%S}'
 
 extra_borg_options:
@@ -58,13 +64,13 @@ extra_borg_options:
     # init: --make-parent-dirs
 
     # Extra command-line options to pass to "borg prune".
-    prune: --show-rc --list
+    prune: --show-rc --list --save-space
 
     # Extra command-line options to pass to "borg create".
     create: --filter AME --show-rc --list --stats --verbose
 
     # Extra command-line options to pass to "borg check".
-    # check: --save-space
+    check: --save-space
 
 # Keep all archives within this time interval.
 # keep_within: 3H
@@ -76,10 +82,10 @@ extra_borg_options:
 # keep_minutely: 60
 
 # Number of hourly archives to keep.
-keep_hourly: 1
+keep_hourly: 3
 
 # Number of daily archives to keep.
-keep_daily: 1
+keep_daily: 0
 
 # Number of weekly archives to keep.
 keep_weekly: 0
