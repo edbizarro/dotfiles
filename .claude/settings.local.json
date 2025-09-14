@@ -1,0 +1,11 @@
+{
+  "enableAllProjectMcpServers": true,
+  "env": {
+    "PYTHONPATH": "."
+  },
+  "permissions": {
+    "allow": [
+      "mcp__serena__list_dir"
+    ]
+  }
+}
