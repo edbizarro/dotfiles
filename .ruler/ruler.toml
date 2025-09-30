@@ -1,0 +1,49 @@
+default_agents = ["copilot", "claude", "gemini-cli"]
+
+[gitignore]
+# Enable/disable automatic .gitignore updates (default: true)
+enabled = false
+
+[agents.copilot]
+enabled = true
+output_path = ".github/copilot-instructions.md"
+
+[agents.claude]
+enabled = true
+output_path = "CLAUDE.md"
+
+[agents.gemini-cli]
+enabled = true
+
+# --- MCP Servers ---
+
+[mcp]
+# Enable/disable MCP propagation globally (default: true)
+enabled = true
+# Global merge strategy: 'merge' or 'overwrite' (default: 'merge')
+merge_strategy = "merge"
+
+[mcp_servers.context7]
+args = [
+    "-y",
+    "@upstash/context7-mcp"
+]
+command = "npx"
+
+[mcp_servers.sequential-thinking]
+args = [
+    "-y",
+    "@modelcontextprotocol/server-sequential-thinking"
+]
+command = "npx"
+
+[mcp_servers.serena]
+args = [
+    "--from",
+    "git+https://github.com/oraios/serena",
+    "serena",
+    "start-mcp-server",
+    "--context",
+    "ide-assistant"
+]
+command = "uvx"

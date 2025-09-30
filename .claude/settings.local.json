@@ -5,7 +5,13 @@
   },
   "permissions": {
     "allow": [
-      "mcp__serena__list_dir"
+      "mcp__serena__list_dir",
+      "Bash(cat:*)",
+      "mcp__context7__resolve-library-id",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:man.archlinux.org)",
+      "mcp__sequential-thinking__sequentialthinking"
     ]
   }
 }

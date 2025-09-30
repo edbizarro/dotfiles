@@ -1,7 +1,3 @@
-
-
-<!-- Source: .ruler/AGENTS.md -->
-
 # AGENTS
 
 ## Project Architecture
