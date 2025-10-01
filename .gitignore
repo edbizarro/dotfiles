@@ -1,0 +1,17 @@
+.serena/
+
+# Claude settings
+.claude/settings.local.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
+*.DS_Store
+*.egg
+*.egg-info/
+*.env
+*.idea
+*.log
+*.manifest
+*.pyc
+*.spec
