@@ -42,3 +42,9 @@ export PATH="$PATH:/home/edbizarro/.local/bin"
 
 # dbt aliases
 alias dbtf=/home/edbizarro/.local/bin/dbt
+
+
+# PAI Configuration (added by Kai Bundle installer)
+export DA=""HAL""
+export TIME_ZONE="America/Sao_Paulo"
+export PAI_SOURCE_APP="$DA"
