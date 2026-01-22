@@ -25,11 +25,13 @@ alias k-us="setxkbmap -model us -layout us -variant intl"
 alias desktop-mode="k-us && xrandr --output DP-1 --primary --mode 3440x1440 --rate 100 && mons -o && light -A 100"
 alias laptop-mode="k-us && xrandr --output eDP-1 --primary && light -S 70"
 
+alias uvsh='source .venv/bin/activate'
+
 gpgd(){
     gpg --output $2 --decrypt $1
 }
 
 wal-tile() {
-    wal -n -i "$@"
+    wal  -n -i "$@" --iterative -a 100
     feh --bg-tile "$(< "${HOME}/.cache/wal/wal")"
 }
