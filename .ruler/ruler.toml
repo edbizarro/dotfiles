@@ -36,14 +36,3 @@ args = [
     "@modelcontextprotocol/server-sequential-thinking"
 ]
 command = "npx"
-
-[mcp_servers.serena]
-args = [
-    "--from",
-    "git+https://github.com/oraios/serena",
-    "serena",
-    "start-mcp-server",
-    "--context",
-    "ide-assistant"
-]
-command = "uvx"
