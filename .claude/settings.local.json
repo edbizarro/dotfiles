@@ -12,7 +12,9 @@
       "Skill(commit)",
       "Skill(go)",
       "WebFetch(domain:github.com)",
-      "WebFetch(domain:man.archlinux.org)"
+      "WebFetch(domain:man.archlinux.org)",
+      "mcp__sequential-thinking__sequentialthinking",
+      "Skill(Upgrades)"
     ]
   },
   "enableAllProjectMcpServers": true,
