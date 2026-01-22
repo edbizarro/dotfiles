@@ -11,7 +11,8 @@
       "WebSearch",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:man.archlinux.org)",
-      "mcp__sequential-thinking__sequentialthinking"
+      "mcp__sequential-thinking__sequentialthinking",
+      "Skill(Upgrades)"
     ]
   }
 }
