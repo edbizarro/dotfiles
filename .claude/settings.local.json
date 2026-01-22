@@ -8,13 +8,11 @@
       "mcp__context7__resolve-library-id",
       "mcp__sequential-thinking__sequentialthinking",
       "mcp__serena__list_dir",
-      "Skill(Upgrades)",
       "Skill(commit)",
       "Skill(go)",
+      "Skill(Upgrades)",
       "WebFetch(domain:github.com)",
-      "WebFetch(domain:man.archlinux.org)",
-      "mcp__sequential-thinking__sequentialthinking",
-      "Skill(Upgrades)"
+      "WebFetch(domain:man.archlinux.org)"
     ]
   },
   "enableAllProjectMcpServers": true,
