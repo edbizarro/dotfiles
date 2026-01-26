@@ -3,7 +3,8 @@ alias ll="exa -lah --color=auto --group-directories-first --icons"
 alias l='exa -lah --color=auto --group-directories-first --icons'
 alias tmux='tmux -2'
 
-alias grep='grep --color=auto'
+alias grep='rg'
+alias find='fd'
 alias man='tldr'
 
 alias show-fonts="fc-list | cut -d ' ' -f2 | sort -u"
