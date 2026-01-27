@@ -9,3 +9,6 @@ function cycle_logs() {
   suffix=$(date '+%Y-%m-%dT%H:%M:%S')
   mv -v logs/dbt.log logs/dbt.log.${suffix}
 }
+
+# dbt aliases
+alias dbtf=/home/edbizarro/.local/bin/dbt

@@ -34,17 +34,10 @@ export WORKON_HOME=$HOME/.virtualenvs
 
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 
-eval "$(pyenv init - zsh)"
-
-eval "$(pyenv virtualenv-init -)"
-# Added by dbt installer
-export PATH="$PATH:/home/edbizarro/.local/bin"
-
-# dbt aliases
-alias dbtf=/home/edbizarro/.local/bin/dbt
-
-
 # PAI Configuration (added by Kai Bundle installer)
 export DA=""HAL""
 export TIME_ZONE="America/Sao_Paulo"
 export PAI_SOURCE_APP="$DA"
+
+eval "$(pyenv init - zsh)"
+eval "$(pyenv virtualenv-init -)"
