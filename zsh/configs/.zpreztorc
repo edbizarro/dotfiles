@@ -21,7 +21,7 @@ zstyle ':prezto:load' pmodule \
   'utility'
 
 zstyle ':prezto:module:prompt' theme 'paradox'
-zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'bitbucket_rsa'
+zstyle ':prezto:module:ssh:load' identities 'id_rsa'
 zstyle ':prezto:module:tmux:auto-start' local 'yes'
 zstyle ':prezto:module:tmux:auto-start' remote 'no'
 zstyle ':prezto:module:pacman' frontend 'yay'
