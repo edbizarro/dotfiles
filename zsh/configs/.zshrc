@@ -30,6 +30,13 @@ export ZSH_WAKATIME_PROJECT_DETECTION=true
 command -v atuin &>/dev/null && eval "$(atuin init zsh)"
 
 
+eval "$(pyenv init - zsh)"
+eval "$(pyenv virtualenv-init -)"
+
+
+eval "$(atuin init zsh)"
+
+
 # PAI Configuration (added by Kai Bundle installer)
 export DA=""HAL""
 export TIME_ZONE="America/Sao_Paulo"
