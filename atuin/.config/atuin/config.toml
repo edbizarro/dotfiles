@@ -211,7 +211,7 @@ width = "80%"
 
 ## Height of the tmux popup window
 ## Can be a percentage, or integer (e.g. "100" means 100 lines tall)
-height = "60%"
+height = "80%"
 
 [ui]
 columns = ["duration", "time", "host", "command"]
