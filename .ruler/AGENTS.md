@@ -35,7 +35,7 @@ The `zsh/` package has a unique structure:
 ### Requirements
 
 - i3, polybar, dunst, picom
-- NerdFonts, tamzen font
+- NerdFonts
 - tmux + tpm, zsh + prezto
 - Optional: pywal, betterlockscreen, cava, feh
 
@@ -129,5 +129,5 @@ Many packages use `.config/` subdirectories to match XDG conventions:
 - Stow commands should always be run from the repo root (`~/.dotfiles`) with `--target=$HOME`
 - Git operations in this repo should use conventional commit messages (pre-commit hooks enforce quality)
 - Supports both Arch Linux and Ubuntu 24.04 — use `$DISTRO_ID` for conditional logic
-- Font references (NerdFonts, tamzen) are critical for UI rendering
+- Font references (NerdFonts) are critical for UI rendering
 - Polybar hardware values are machine-specific — run `setup-hardware.sh` after stow

@@ -21,7 +21,6 @@ Previous themes can be found on [reddit](https://www.reddit.com/r/unixporn/searc
 * [polybar](https://github.com/polybar/polybar)
 * [prezto-contrib](https://github.com/belak/prezto-contrib)
 * [prezto](https://github.com/sorin-ionescu/prezto) (zsh framework)
-* [tamzen](https://github.com/sunaku/tamzen-font) (polybar text font)
 * [tmux](https://github.com/tmux/tmux) + [tpm](https://github.com/tmux-plugins/tpm)
 * [zsh](http://www.zsh.org)
 
@@ -82,6 +81,18 @@ Or to install all configs:
       stow --target=$HOME pipewire && \
       cd ~/.dotfiles/zsh && stow configs -t ~/
 
+### Install Atuin (shell history)
+
+    curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
+
+See [Atuin installation docs](https://docs.atuin.sh/cli/guide/installation/) for alternative methods.
+
+### Install TPM (Tmux Plugin Manager)
+
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+After starting tmux, press `prefix` + <kbd>I</kbd> to install the plugins listed in the tmux config.
+
 ### Handling conflicts
 
 If stow warns about existing files, rename them first:
@@ -131,5 +142,4 @@ Setup polybar hardware detection:
 * [icomoon](https://icomoon.io)
 * [Input Font](http://input.fontbureau.com/download/)
 * [Pragmata](https://github.com/fabrizioschiavi/pragmatapro)
-* [tamzen](https://github.com/sunaku/tamzen-font)
 * [tewi-font](https://github.com/lucy/tewi-font)
