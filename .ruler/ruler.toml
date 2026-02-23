@@ -1,4 +1,4 @@
-default_agents = ["copilot", "claude", "gemini-cli"]
+default_agents = ["copilot", "claude", "gemini-cli", "codex"]
 
 [gitignore]
 # Enable/disable automatic .gitignore updates (default: true)
@@ -27,12 +27,5 @@ merge_strategy = "merge"
 args = [
     "-y",
     "@upstash/context7-mcp"
-]
-command = "npx"
-
-[mcp_servers.sequential-thinking]
-args = [
-    "-y",
-    "@modelcontextprotocol/server-sequential-thinking"
 ]
 command = "npx"

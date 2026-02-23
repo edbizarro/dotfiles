@@ -6,16 +6,14 @@
         "-y",
         "@upstash/context7-mcp"
       ],
-      "command": "npx",
-      "type": "stdio"
+      "command": "npx"
     },
     "sequential-thinking": {
       "args": [
         "-y",
         "@modelcontextprotocol/server-sequential-thinking"
       ],
-      "command": "npx",
-      "type": "stdio"
+      "command": "npx"
     }
   }
 }
