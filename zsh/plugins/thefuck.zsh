@@ -1,1 +1,1 @@
-eval $(thefuck --alias)
+command -v thefuck &>/dev/null && eval $(thefuck --alias)

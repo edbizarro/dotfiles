@@ -1,6 +1,6 @@
 # dotfiles
 
-A collection of my personal dotfiles. Here's a little preview of what it can look like:
+A collection of my personal dotfiles for **Arch Linux** and **Ubuntu 24.04**, managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
 ## Current desktop
 
@@ -12,20 +12,28 @@ A collection of my personal dotfiles. Here's a little preview of what it can loo
 
 Previous themes can be found on [reddit](https://www.reddit.com/r/unixporn/search?q=author:edbizarro&sort=new&restrict_sr=on&t=all) and [releases](https://github.com/edbizarro/dotfiles/releases) page
 
-### Requirements
+## Requirements
 
 * [dunst](https://github.com/dunst-project/dunst)
-* [i3-gaps](https://github.com/Airblader/i3)
-* [NerdFonts](https://github.com/ryanoasis/nerd-fonts) (font polybar icons)
+* [i3](https://i3wm.org/) (with gaps support)
+* [NerdFonts](https://github.com/ryanoasis/nerd-fonts) (polybar icons)
 * [picom](https://github.com/yshui/picom)
-* [polybar](https://github.com/jaagr/polybar)
+* [polybar](https://github.com/polybar/polybar)
 * [prezto-contrib](https://github.com/belak/prezto-contrib)
-* [prezto](https://github.com/sorin-ionescu/prezto) (for zsh)
-* [rxvt-unicode](https://wiki.archlinux.org/index.php/rxvt-unicode)
-* [tamzen](https://github.com/sunaku/tamzen-font) (font for polybar text)
+* [prezto](https://github.com/sorin-ionescu/prezto) (zsh framework)
+* [tamzen](https://github.com/sunaku/tamzen-font) (polybar text font)
 * [tmux](https://github.com/tmux/tmux) + [tpm](https://github.com/tmux-plugins/tpm)
-* [Undefined Medium Fonts](https://github.com/andirueckel/undefined-medium)
 * [zsh](http://www.zsh.org)
+
+### CLI tools
+
+* [eza](https://github.com/eza-community/eza) or exa (ls replacement)
+* [fd](https://github.com/sharkdp/fd) (find replacement)
+* [ripgrep](https://github.com/BurntSushi/ripgrep) (grep replacement)
+* [tldr](https://github.com/tldr-pages/tldr) (man replacement)
+* [delta](https://github.com/dandavison/delta) (git diff pager)
+* [atuin](https://github.com/atuinsh/atuin) (shell history)
+* [uv](https://github.com/astral-sh/uv) (Python package/env manager)
 
 ### Optional
 
@@ -34,24 +42,8 @@ Previous themes can be found on [reddit](https://www.reddit.com/r/unixporn/searc
 * [feh](https://feh.finalrewind.org) (change wallpaper)
 * [mons](https://github.com/Ventto/mons)
 * [mopidy](https://www.mopidy.com/)
-* [ncmpcpp](http://rybczak.net/ncmpcpp/) + [lyvi](http://ok100.github.io/lyvi/) for lyrics + [bum](https://github.com/dylanaraps/bum) (album artwork)
-* [prezto-wakatime](https://github.com/philihp/wakatime-zprezto)
+* [ncmpcpp](http://rybczak.net/ncmpcpp/)
 * [pywal](https://github.com/dylanaraps/pywal) (generate colourschemes based on wallpaper)
-
-#### Cool fonts
-
-* [icomoon](https://icomoon.io)
-* [Input Font](http://input.fontbureau.com/download/)
-* [Pragmata](https://github.com/fabrizioschiavi/pragmatapro)
-* Bitmap fonts
-   * [bitmap fonts](https://github.com/Tecate/bitmap-fonts) (A collection of monospaced bitmap fonts)
-   * [cherry](https://github.com/MarinHoc/cherry-font)
-   * [proggyfonts](https://proggyfonts.net/download/) (Monospaced Bitmap Fonts)
-   * [scientifica](https://github.com/NerdyPepper/scientifica)
-   * [siji-font](https://github.com/stark/siji)
-   * [tamsyn](http://www.fial.com/~scott/tamsyn-font/)
-   * [tewi-font](https://github.com/lucy/tewi-font)
-
 
 ## Installation
 
@@ -59,54 +51,85 @@ Clone this repository:
 
     git clone https://github.com/edbizarro/dotfiles.git ~/.dotfiles
 
-### Using [GNU Stow](https://www.gnu.org/software/stow/) _(recommended)_
+### Using GNU Stow _(recommended)_
 
-Install GNU Stow _(if not already installed)_
+Install GNU Stow:
 
-    Mac:      brew install stow
-    Ubuntu:   apt-get install stow
-    Fedora:   yum install stow
     Arch:     pacman -S stow
+    Ubuntu:   sudo apt install stow
 
-Then simply use stow to install the dotfiles you want to use Ex:
+Use stow to install the dotfiles you want:
 
-    stow xresources
+    cd ~/.dotfiles && stow --target=$HOME <package>
 
-Or to install all my dotfiles config:
+Or to install all configs:
 
     cd ~/.dotfiles && \
-      stow i3 && \
-      stow mopidy && \
-      stow cava && \
-      stow ncmpcpp && \
-      stow neofetch && \
-      stow stow && \
-      stow wal && \
-      stow git && \
-      stow ssh && \
-      stow tmux && \
-      stow picom && \
-      stow dunst && \
-      stow xresources && \
-      cd ~/.dotfiles/zsh && \
-      stow configs -t ~/
+      stow --target=$HOME i3 && \
+      stow --target=$HOME mopidy && \
+      stow --target=$HOME cava && \
+      stow --target=$HOME ncmpcpp && \
+      stow --target=$HOME wal && \
+      stow --target=$HOME git && \
+      stow --target=$HOME ssh && \
+      stow --target=$HOME tmux && \
+      stow --target=$HOME picom && \
+      stow --target=$HOME dunst && \
+      stow --target=$HOME xresources && \
+      stow --target=$HOME atuin && \
+      stow --target=$HOME nvim && \
+      stow --target=$HOME borgmatic && \
+      stow --target=$HOME pipewire && \
+      cd ~/.dotfiles/zsh && stow configs -t ~/
 
-We may get some warning messages like the following one:
+### Handling conflicts
 
-    cd ~/Dotfiles
-    stow git
-    WARNING! stowing git would cause conflicts:
-      * existing target is neither a link nor a directory: .gitconfig
-    All operations aborted.
-
-Or
-
-    WARNING! stowing git would cause conflicts:
-      * existing target is not owned by stow: .gitconfig
-    All operations aborted.
-
-This means that the file `.gitconfig` (or any other file name that appear in the warning) exists before the symlinking. We need to
-manually change its name so GNU Stow can create the symlink. My recommendation is
-to rename it:
+If stow warns about existing files, rename them first:
 
     mv ~/.gitconfig ~/.gitconfig.old
+    cd ~/.dotfiles && stow --target=$HOME git
+
+## Multi-distro support
+
+These dotfiles work on both **Arch Linux** and **Ubuntu 24.04**.
+
+### How it works
+
+* **Distro detection**: `zsh/exports/00-distro.zsh` sets `$DISTRO_ID` (`arch` or `ubuntu`) via `/etc/os-release`
+* **Conditional aliases**: `arch.zsh` and `ubuntu.zsh` load distro-specific commands (e.g., `update-shit` uses `pacman` on Arch, `apt` on Ubuntu)
+* **Tool availability guards**: All tool-specific aliases check `command -v` before setting, so missing tools don't cause errors
+* **Prezto modules**: Both `pacman` and `dpkg` modules are loaded; each has internal guards and only activates on the correct distro
+* **Polybar hardware**: Run `setup-hardware.sh` to auto-detect thermal zones, network interfaces, backlight, and battery for your machine
+
+### Tool name differences
+
+| Tool | Arch | Ubuntu |
+|------|------|--------|
+| ls replacement | `exa` | `eza` (auto-detected) |
+| find replacement | `fd` | `fdfind` (auto-detected) |
+| bat | `bat` | `batcat` |
+| ripgrep | `rg` | `rg` |
+
+## Ubuntu 24.04 setup
+
+Install required packages:
+
+    sudo apt install i3 polybar picom dunst zsh tmux stow git curl \
+      eza fd-find ripgrep tldr fzf
+
+Install NerdFonts:
+
+    # Download from https://github.com/ryanoasis/nerd-fonts/releases
+    # Extract to ~/.local/share/fonts/ and run fc-cache -fv
+
+Setup polybar hardware detection:
+
+    bash ~/.config/polybar/setup-hardware.sh
+
+## Cool fonts
+
+* [icomoon](https://icomoon.io)
+* [Input Font](http://input.fontbureau.com/download/)
+* [Pragmata](https://github.com/fabrizioschiavi/pragmatapro)
+* [tamzen](https://github.com/sunaku/tamzen-font)
+* [tewi-font](https://github.com/lucy/tewi-font)

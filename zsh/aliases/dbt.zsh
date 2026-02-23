@@ -11,4 +11,4 @@ function cycle_logs() {
 }
 
 # dbt aliases
-alias dbtf=/home/edbizarro/.local/bin/dbt
+alias dbtf=$HOME/.local/bin/dbt

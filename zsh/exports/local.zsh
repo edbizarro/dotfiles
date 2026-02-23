@@ -1,1 +1,1 @@
-export PATH=$PATH:/home/edbizarro/.local/bin:/home/edbizarro/.dotfiles/zsh/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/.dotfiles/zsh/bin

@@ -1,3 +1,3 @@
-if [ /usr/bin/kubectl ]; then source <(kubectl completion zsh); fi
+command -v kubectl &>/dev/null && source <(kubectl completion zsh)
 
 alias k='kubectl'

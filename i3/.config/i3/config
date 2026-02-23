@@ -197,4 +197,4 @@ exec_always --no-startup-id ${HOME}/.i3/startup/polybar.sh
 exec --no-startup-id betterlockscreen -u ${HOME}/Pictures/wallpapers/2k/cyber
 exec --no-startup-id xset s off && xset -dpms # Turn off screen blanking
 exec --no-startup-id rmmod pcspkr
-exec --no-startup-id xinput set-prop "DELL08EA:00 06CB:CCA8 Touchpad" "libinput Tapping Enabled" 1
+exec --no-startup-id bash -c 'TOUCHPAD=$(xinput list --name-only | grep -i touchpad | head -1); [ -n "$TOUCHPAD" ] && xinput set-prop "$TOUCHPAD" "libinput Tapping Enabled" 1'

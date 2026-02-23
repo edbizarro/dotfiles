@@ -1,5 +1,5 @@
 hosts/*
-ssh/.ssh/known_hosts.old
+known_hosts.old
 !hosts/.gitkeep
 id_rsa
 id_rsa.pub

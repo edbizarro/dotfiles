@@ -17,8 +17,8 @@ done
 
 export ZSH_WAKATIME_PROJECT_DETECTION=true
 
-(cat ~/.cache/wal/sequences &)
-source ~/.cache/wal/colors-tty.sh
+[[ -f ~/.cache/wal/sequences ]] && (cat ~/.cache/wal/sequences &)
+[[ -f ~/.cache/wal/colors-tty.sh ]] && source ~/.cache/wal/colors-tty.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -27,16 +27,7 @@ source ~/.cache/wal/colors-tty.sh
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
 
-export PYENV_ROOT="$HOME/.pyenv"
-export WORKON_HOME=$HOME/.virtualenvs
-
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-
-eval "$(pyenv init - zsh)"
-eval "$(pyenv virtualenv-init -)"
-
-
-eval "$(atuin init zsh)"
+command -v atuin &>/dev/null && eval "$(atuin init zsh)"
 
 
 # PAI Configuration (added by Kai Bundle installer)

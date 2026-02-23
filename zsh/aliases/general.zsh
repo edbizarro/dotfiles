@@ -1,11 +1,24 @@
-alias ls="exa -lah --color=auto --group-directories-first --icons"
-alias ll="exa -lah --color=auto --group-directories-first --icons"
-alias l='exa -lah --color=auto --group-directories-first --icons'
+if command -v eza &>/dev/null; then
+  alias ls="eza -lah --color=auto --group-directories-first --icons"
+  alias ll="eza -lah --color=auto --group-directories-first --icons"
+  alias l='eza -lah --color=auto --group-directories-first --icons'
+elif command -v exa &>/dev/null; then
+  alias ls="exa -lah --color=auto --group-directories-first --icons"
+  alias ll="exa -lah --color=auto --group-directories-first --icons"
+  alias l='exa -lah --color=auto --group-directories-first --icons'
+fi
+
 alias tmux='tmux -2'
 
-alias grep="rg -uuu"
-alias find='fd'
-alias man='tldr'
+command -v rg &>/dev/null && alias grep="rg -uuu"
+
+if command -v fd &>/dev/null; then
+  alias find='fd'
+elif command -v fdfind &>/dev/null; then
+  alias find='fdfind'
+fi
+
+command -v tldr &>/dev/null && alias man='tldr'
 
 alias show-fonts="fc-list | cut -d ' ' -f2 | sort -u"
 alias vim="nvim"

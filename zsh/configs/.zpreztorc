@@ -6,6 +6,7 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'contrib-prompt' \
   'directory' \
+  'dpkg' \
   'git' \
   'history-substring-search' \
   'history' \

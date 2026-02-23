@@ -1,1 +1,1 @@
-eval "$(fasd --init auto)"
+command -v fasd &>/dev/null && eval "$(fasd --init auto)"
