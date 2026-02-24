@@ -1,5 +1,4 @@
 {
-  "enableAllProjectMcpServers": true,
   "env": {
     "PYTHONPATH": "."
   },
@@ -15,5 +14,9 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:man.archlinux.org)"
     ]
-  }
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "context7"
+  ]
 }

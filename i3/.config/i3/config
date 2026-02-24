@@ -43,7 +43,7 @@ new_window none
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Shift+Return exec --no-startup-id urxvtc -e zsh
+bindsym $mod+Shift+Return exec --no-startup-id kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -176,6 +176,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 
 #Assigns
 assign [class="URxvt"] 1
+assign [class="kitty"] 1
 assign [class="(?i)chrome"] 2
 assign [class="(?i)atom"] 3
 assign [class="(?i)pstorm"] 3
