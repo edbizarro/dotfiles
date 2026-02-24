@@ -126,7 +126,7 @@ These dotfiles work on both **Arch Linux** and **Ubuntu 24.04**.
 Install required packages:
 
     sudo apt install i3 polybar picom dunst zsh tmux stow git curl \
-      eza fd-find ripgrep tldr fzf
+      eza fd-find ripgrep tldr fzf neovim borgbackup
 
 Install NerdFonts:
 

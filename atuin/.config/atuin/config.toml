@@ -164,6 +164,7 @@ prefers_reduced_motion = false
 ## Set commands where we should consider the subcommand for statistics. Eg, kubectl get vs just kubectl
 common_subcommands = [
   "apt",
+  "bun",
   "composer",
   "dnf",
   "docker",
@@ -180,7 +181,7 @@ common_subcommands = [
   "port",
   "systemctl",
   "tmux",
-  "yarn",
+  "uv",
 ]
 
 ## Set commands that should be totally stripped and ignored from stats

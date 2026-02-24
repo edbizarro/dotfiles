@@ -3,9 +3,9 @@ source_directories:
   - /home
 
 repositories:
-  - path: /run/media/edbizarro/SEAGATE/Borg/MARK-G5-V4
-    label: SEAGATE
-  - path: /media/mediabarbosa/Backups/MARK-G5
+  # - path: /run/media/edbizarro/SEAGATE/Borg/MARK-G5-V4
+  #   label: SEAGATE
+  - path: /media/mediabarbosa/Backups/JUS-1434
     label: mediabarbosa
     # - path: /media/medianerv/backups/MARK-G5/
     #   label: medianerv

@@ -35,7 +35,17 @@ export DA=""HAL""
 export TIME_ZONE="America/Sao_Paulo"
 export PAI_SOURCE_APP="$DA"
 
-# PAI alias
-alias pai='bun ~/.claude/skills/PAI/Tools/pai.ts'
 
 # export ATUIN_TMUX_POPUP=false
+
+. "$HOME/.atuin/bin/env"
+
+# bun completions
+[ -s "/home/eduardo.bizarro/.bun/_bun" ] && source "/home/eduardo.bizarro/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# PAI alias
+alias pai='bun /home/eduardo.bizarro/.claude/skills/PAI/Tools/pai.ts'
