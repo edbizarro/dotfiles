@@ -1,6 +1,6 @@
 # when working with gitlab
 [includeIf "gitdir:**/.git"]
-  path = ~/.dotfiles/git/config/config.pessoal
+  path = ~/.dotfiles/git/config/config.jusbrasil
 
 [includeIf "gitdir:**/jusbrasil/**/.git"]
   path = ~/.dotfiles/git/config/config.jusbrasil
