@@ -41,13 +41,36 @@ The `zsh/` package has a unique structure:
 
 ### Installing Configurations
 
+Using the Makefile (recommended):
+
+```bash
+# Full fresh-machine setup (packages, fonts, symlinks, prezto, tpm, polybar, pre-commit)
+cd ~/.dotfiles && make all
+
+# Or individual targets
+make install        # Install system packages (auto-detects Arch/Ubuntu)
+make stow           # Symlink all config packages
+make stow-core      # Core only (git, zsh, tmux, nvim, vim, atuin, stow, ssh, xresources)
+make stow-desktop   # Desktop only (i3, picom, dunst, wal, kitty)
+make stow-media     # Media only (mopidy, mpd, ncmpcpp, pipewire)
+make fonts          # Install NerdFonts (Cascadia Code)
+make prezto         # Install Prezto ZSH framework
+make tmux-plugins   # Install TPM
+make atuin          # Install Atuin shell history
+make polybar-hw     # Detect hardware for polybar
+make unstow         # Remove all symlinks
+make help           # Show all available targets
+```
+
+Manual stow (alternative):
+
 ```bash
 # Single package
 cd ~/.dotfiles && stow --target=$HOME <package-name>
 
 # All packages
 cd ~/.dotfiles && \
-  stow --target=$HOME i3 mopidy cava ncmpcpp wal git ssh tmux picom dunst xresources atuin nvim borgmatic pipewire && \
+  stow --target=$HOME i3 mopidy ncmpcpp wal git ssh tmux picom dunst xresources atuin nvim borgmatic pipewire && \
   cd zsh && stow configs -t ~/
 
 # Polybar hardware detection (run once per machine)

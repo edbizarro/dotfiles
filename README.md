@@ -50,48 +50,42 @@ Clone this repository:
 
     git clone https://github.com/edbizarro/dotfiles.git ~/.dotfiles
 
-### Using GNU Stow _(recommended)_
+### Using Make _(recommended)_
+
+Full setup on a fresh machine (installs packages, fonts, symlinks, prezto, tpm, polybar, pre-commit):
+
+    cd ~/.dotfiles && make all
+
+Or run individual targets:
+
+    make install        # Install system packages (auto-detects Arch/Ubuntu)
+    make stow           # Symlink all config packages
+    make stow-core      # Symlink core only (git, zsh, tmux, nvim, ...)
+    make stow-desktop   # Symlink desktop only (i3, picom, dunst, wal, kitty)
+    make stow-media     # Symlink media only (mopidy, mpd, ncmpcpp, pipewire)
+    make fonts          # Install NerdFonts (Cascadia Code)
+    make prezto         # Install Prezto ZSH framework
+    make tmux-plugins   # Install TPM + plugins
+    make atuin          # Install Atuin shell history
+    make polybar-hw     # Detect hardware for polybar
+    make unstow         # Remove all symlinks
+
+Run `make` or `make help` to see all available targets.
+
+### Using GNU Stow _(manual alternative)_
 
 Install GNU Stow:
 
     Arch:     pacman -S stow
     Ubuntu:   sudo apt install stow
 
-Use stow to install the dotfiles you want:
+Symlink individual packages:
 
     cd ~/.dotfiles && stow --target=$HOME <package>
 
-Or to install all configs:
+ZSH has a special stow structure:
 
-    cd ~/.dotfiles && \
-      stow --target=$HOME i3 && \
-      stow --target=$HOME mopidy && \
-      stow --target=$HOME cava && \
-      stow --target=$HOME ncmpcpp && \
-      stow --target=$HOME wal && \
-      stow --target=$HOME git && \
-      stow --target=$HOME ssh && \
-      stow --target=$HOME tmux && \
-      stow --target=$HOME picom && \
-      stow --target=$HOME dunst && \
-      stow --target=$HOME xresources && \
-      stow --target=$HOME atuin && \
-      stow --target=$HOME nvim && \
-      stow --target=$HOME borgmatic && \
-      stow --target=$HOME pipewire && \
-      cd ~/.dotfiles/zsh && stow configs -t ~/
-
-### Install Atuin (shell history)
-
-    curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
-
-See [Atuin installation docs](https://docs.atuin.sh/cli/guide/installation/) for alternative methods.
-
-### Install TPM (Tmux Plugin Manager)
-
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-After starting tmux, press `prefix` + <kbd>I</kbd> to install the plugins listed in the tmux config.
+    cd ~/.dotfiles/zsh && stow configs -t ~/
 
 ### Handling conflicts
 
@@ -123,19 +117,22 @@ These dotfiles work on both **Arch Linux** and **Ubuntu 24.04**.
 
 ## Ubuntu 24.04 setup
 
-Install required packages:
+Using Make:
+
+    cd ~/.dotfiles && make install && make fonts && make stow
+
+Or manually:
 
     sudo apt install i3 polybar picom dunst zsh tmux stow git curl \
       eza fd-find ripgrep tldr fzf neovim borgbackup
 
-Install NerdFonts:
-
-    # Download from https://github.com/ryanoasis/nerd-fonts/releases
+    # Install NerdFonts: download from https://github.com/ryanoasis/nerd-fonts/releases
     # Extract to ~/.local/share/fonts/ and run fc-cache -fv
 
 Setup polybar hardware detection:
 
-    bash ~/.config/polybar/setup-hardware.sh
+    make polybar-hw
+    # Or manually: bash ~/.config/polybar/setup-hardware.sh
 
 ## Cool fonts
 
