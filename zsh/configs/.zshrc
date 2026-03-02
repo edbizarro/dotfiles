@@ -48,4 +48,5 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # PAI alias
-alias pai='bun /home/eduardo.bizarro/.claude/skills/PAI/Tools/pai.ts'
+alias pai="bun ~/.claude/skills/PAI/Tools/pai.ts"
+alias hal="pai"
