@@ -146,8 +146,10 @@
     # Align icons left/right/off
     icon_position = right
 
-    # Paths to default icons.
-    icon_path = /usr/share/icons/Papirus-Dark/16x16/actions/
+    # Icon theme fallback chain — first available theme wins, hicolor is the
+    # universal fallback per freedesktop spec. No hardcoded paths needed.
+    enable_recursive_icon_lookup = true
+    icon_theme = "Papirus, Adwaita, breeze, hicolor"
 
 [frame]
     width = 1

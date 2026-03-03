@@ -16,3 +16,6 @@
 *.pyc
 *.spec
 .cache
+
+# Per-machine local overrides (kitty, etc.)
+**/local.conf

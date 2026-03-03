@@ -41,12 +41,13 @@ export PAI_SOURCE_APP="$DA"
 . "$HOME/.atuin/bin/env"
 
 # bun completions
-[ -s "/home/eduardo.bizarro/.bun/_bun" ] && source "/home/eduardo.bizarro/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# PAI alias
-alias pai="bun ~/.claude/skills/PAI/Tools/pai.ts"
 alias hal="pai"
+
+# PAI alias
+alias pai='bun ~/.claude/PAI/Tools/pai.ts'
