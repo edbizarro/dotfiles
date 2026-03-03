@@ -1,3 +1,4 @@
+---
 default_stages: [pre-commit, pre-push]
 default_language_version:
   python: python3
@@ -24,13 +25,35 @@ repos:
       - id: requirements-txt-fixer
       - id: trailing-whitespace
       - id: detect-aws-credentials
-        args: ["--allow-missing-credentials"]
+        args: [--allow-missing-credentials]
       - id: pretty-format-json
-        args: ['--autofix']
+        args: [--autofix]
 
 
   - repo: https://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.5.5
+    rev: v1.5.6
     hooks:
       - id: forbid-tabs
         exclude: Makefile
+
+  - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
+    rev: 0.2.3
+    hooks:
+      - id: yamlfmt
+        args: [--mapping, '2', --sequence, '4', --offset, '2', --width, '140']
+
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.38.0
+    hooks:
+      - id: yamllint
+        args: [--format, parsable, --strict, -c=./.yamllint.yml]
+
+  - repo: https://github.com/DavidAnson/markdownlint-cli2
+    rev: v0.20.0
+    hooks:
+      - id: markdownlint-cli2
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.0
+    hooks:
+      - id: gitleaks

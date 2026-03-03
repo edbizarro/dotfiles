@@ -1,0 +1,37 @@
+---
+# Markdownlint configuration for technical documentation
+default: true
+
+# Line length - allow longer lines for technical documentation
+MD013:
+  line_length: 300  # Very permissive for technical docs
+  code_blocks: false
+  tables: false
+
+# Allow inline HTML (useful for technical docs)
+MD033: false
+
+# Allow duplicate headings (common in structured docs)
+MD024:
+  siblings_only: true
+
+# Allow bare URLs (useful for references)
+MD034: false
+
+# Allow emphasis as headings (common in technical docs)
+MD036: false
+
+# Allow missing language in code blocks (some are just examples)
+MD040: false
+
+# Allow lists without blank lines around them
+MD032: false
+
+# Allow table column style inconsistencies
+MD060: false
+
+# Allow headings without blank lines
+MD022: false
+
+# Allow fences without blank lines
+MD031: false

@@ -1,17 +1,22 @@
 {
-  "enableAllProjectMcpServers": true,
   "env": {
     "PYTHONPATH": "."
   },
   "permissions": {
     "allow": [
-      "mcp__serena__list_dir",
       "Bash(cat:*)",
       "mcp__context7__resolve-library-id",
-      "WebSearch",
+      "mcp__sequential-thinking__sequentialthinking",
+      "mcp__serena__list_dir",
+      "Skill(Upgrades)",
+      "Skill(commit)",
+      "Skill(go)",
       "WebFetch(domain:github.com)",
-      "WebFetch(domain:man.archlinux.org)",
-      "mcp__sequential-thinking__sequentialthinking"
+      "WebFetch(domain:man.archlinux.org)"
     ]
-  }
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "context7"
+  ]
 }

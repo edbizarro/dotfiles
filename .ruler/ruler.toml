@@ -1,4 +1,4 @@
-default_agents = ["copilot", "claude", "gemini-cli"]
+default_agents = ["copilot", "claude", "gemini-cli", "codex"]
 
 [gitignore]
 # Enable/disable automatic .gitignore updates (default: true)
@@ -29,21 +29,3 @@ args = [
     "@upstash/context7-mcp"
 ]
 command = "npx"
-
-[mcp_servers.sequential-thinking]
-args = [
-    "-y",
-    "@modelcontextprotocol/server-sequential-thinking"
-]
-command = "npx"
-
-[mcp_servers.serena]
-args = [
-    "--from",
-    "git+https://github.com/oraios/serena",
-    "serena",
-    "start-mcp-server",
-    "--context",
-    "ide-assistant"
-]
-command = "uvx"

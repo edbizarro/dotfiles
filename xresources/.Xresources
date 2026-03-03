@@ -66,19 +66,22 @@ URxvt.perl-ext-common:
 
 !! Fonts
 !! regular
-URxvt.font: xft:IosevkaTerm Nerd Font Mono:size=14:antialias=true, \
-            xft:Iosevka Nerd Font:size=14:antialias=true, \
-            xft:Apple Color Emoji:size=14:antialias=true
+URxvt.font: xft:Cascadia Code:size=14:antialias=true, \
+            xft:Iosevka Nerd Font Mono:size=14:antialias=true, \
+            xft:DejaVuSansM Nerd Font Mono:size=14:antialias=true, \
+            xft:Noto Sans Symbols2:size=14:antialias=true
 
+URxvt.boldFont: xft:FantasqueSansM Nerd Font Mono:bold:size=14, \
+                xft:Iosevka Nerd Font Mono:bold:size=14, \
+                xft:DejaVuSansM Nerd Font Mono:bold:size=14
 
-URxvt.boldFont:   xft:FantasqueSansM Nerd Font Mono:bold:size=14, \
-                  xft:Iosevka Nerd Font:bold:size=14
+URxvt.italicFont:   xft:FantasqueSansM Nerd Font Mono:italic:size=14, \
+                    xft:Iosevka Nerd Font Mono:italic:size=14, \
+                    xft:DejaVuSansM Nerd Font Mono:style=Oblique:size=14
 
-URxvt.italicFont: xft:FantasqueSansM Nerd Font Mono:italic:size=14, \
-                  xft:Iosevka Nerd Font:italic:size=14
-
-URxvt.boldItalicFont: xft:FantasqueSansM Nerd Font Mono:bold:italic:size=14, \
-                      xft:Iosevka Nerd Font:bold:italic:size=14
+URxvt.boldItalicFont:   xft:FantasqueSansM Nerd Font Mono:bold:italic:size=14, \
+                        xft:Iosevka Nerd Font Mono:bold:italic:size=14, \
+                        xft:DejaVuSansM Nerd Font Mono:bold:style=Bold Oblique:size=14
 
 URxvt.allow_bold:           false
 URxvt*boldMode:             true

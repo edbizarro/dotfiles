@@ -19,8 +19,8 @@ set -g base-index 1
 set -g pane-base-index 1
 set-option -g repeat-time 0
 
-set -g default-shell /usr/bin/zsh
-set -g default-command /usr/bin/zsh
+set -g default-shell "$SHELL"
+set -g default-command "$SHELL"
 
 # Reload tmux config
 bind r source-file ~/.tmux.conf \; display-message "Configuration reloaded"

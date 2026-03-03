@@ -1,0 +1,10 @@
+#define BG #CC{background.strip}
+#define HI #CC{color1.strip}
+#define FG {color15}
+#define TX {color15}
+
+! State:           bg, fg, bg2,  hlbg, hlfg
+rofi.color-normal: BG, FG, BG,   HI,   TX
+rofi.color-active: BG, FG, BG,   HI,   TX
+rofi.color-urgent: BG, HI, BG,   HI,   FG
+rofi.color-window: BG, BG, BG

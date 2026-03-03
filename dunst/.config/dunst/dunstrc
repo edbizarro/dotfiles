@@ -141,7 +141,7 @@
     startup_notification = true
 
     # Browser for opening urls in context menu.
-    browser = /usr/bin/google-chrome-stable
+    browser = /usr/bin/xdg-open
 
     # Align icons left/right/off
     icon_position = right

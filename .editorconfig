@@ -1,0 +1,37 @@
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+end_of_line = lf
+charset = utf-8
+
+[*.py]
+max_line_length = 180
+
+[*.sql]
+indent_size = 4
+max_line_length = 180
+
+[Dockerfile]
+indent_size = 2
+max_line_length = 180
+
+[*.{yml,yaml}]
+indent_size = 2
+max_line_length = 180
+quote_type = single
+
+# The JSON files contain newlines inconsistently
+[*.json]
+indent_size = 2
+insert_final_newline = false
+
+# Makefiles always use tabs for indentation
+[Makefile]
+indent_style = tab
+
+[COMMIT_EDITMSG]
+max_line_length = 0

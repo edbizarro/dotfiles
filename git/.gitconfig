@@ -1,7 +1,9 @@
-[user]
-    name = Eduardo Bizarro
-    email = edbizarro@gmail.com
-    signingkey = DA22EEC470AD6ACF
+# when working with gitlab
+[includeIf "gitdir:**/.git"]
+  path = ~/.dotfiles/git/config/config.pessoal
+
+[includeIf "gitdir:**/jusbrasil/**/.git"]
+  path = ~/.dotfiles/git/config/config.jusbrasil
 
 [github]
     user = edbizarro
@@ -29,7 +31,7 @@
     gpgsign = true
 
 [gpg]
-    program = gpg2
+    program = gpg
 
 [color]
     ui = auto

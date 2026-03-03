@@ -123,7 +123,7 @@ show_preview = true
 # show_help = true
 
 ## Configure whether or not to show tabs for search and inspect
-# show_tabs = true
+show_tabs = true
 
 ## Defaults to true. This matches history against a set of default regex, and will not save it if we get a match. Defaults include
 ## 1. AWS key id
@@ -164,7 +164,7 @@ prefers_reduced_motion = false
 ## Set commands where we should consider the subcommand for statistics. Eg, kubectl get vs just kubectl
 common_subcommands = [
   "apt",
-  "cargo",
+  "bun",
   "composer",
   "dnf",
   "docker",
@@ -181,7 +181,7 @@ common_subcommands = [
   "port",
   "systemctl",
   "tmux",
-  "yarn",
+  "uv",
 ]
 
 ## Set commands that should be totally stripped and ignored from stats
@@ -197,3 +197,22 @@ ignored_commands = [
 [keys]
 # Defaults to true. If disabled, using the up/down key won't exit the TUI when scrolled past the first/last entry.
 # scroll_exits = false
+
+[tmux]
+## Enable using atuin with tmux popup (requires tmux >= 3.2)
+## When enabled and running inside tmux, Atuin will use a popup window for interactive search.
+## Set to false to disable the popup.
+## This can also be controlled with the ATUIN_TMUX_POPUP environment variable.
+## Note: tmux popup is currently supported in zsh, bash, and fish shells.
+enabled = true
+
+## Width of the tmux popup window
+## Can be a percentage, or integer (e.g. "100" means 100 characters wide)
+width = "80%"
+
+## Height of the tmux popup window
+## Can be a percentage, or integer (e.g. "100" means 100 lines tall)
+height = "80%"
+
+[ui]
+columns = ["duration", "time", "host", "command"]

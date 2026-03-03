@@ -1,76 +1,77 @@
+---
 source_directories:
-    - /home
+  - /home
 
 repositories:
-    - path: /run/media/edbizarro/SEAGATE/Borg/MARK-G5-V4
-      label: SEAGATE
-    - path: /media/mediabarbosa/Backups/MARK-G5
-      label: mediabarbosa
+  # - path: /run/media/edbizarro/SEAGATE/Borg/MARK-G5-V4
+  #   label: SEAGATE
+  - path: /media/mediabarbosa/Backups/JUS-1434
+    label: mediabarbosa
     # - path: /media/medianerv/backups/MARK-G5/
     #   label: medianerv
 
 one_file_system: true
 exclude_patterns:
-    - /home/*/Downloads/insider-events-manual/*
-    - '*.pyc'
-    - '*/.vim*.tmp'
-    - "/home/*/.config/google-chrome/Default/Service Worker/*"
-    - "/home/*/.config/google-chrome/Profile 2/Service Worker/*"
-    - "/home/*/.config/Slack/Service Worker/*"
-    - /backups
-    - /etc/ssl
-    - /home/.dotfiles/mopidy/.config/mopidy/local/*
-    - /home/.dotfiles/mopidy/.config/mopidy/spotify/*
-    - /home/*/.cache
-    - /home/*/.cache/*
-    - /home/*/.cache/google-chrome/*
-    - /home/*/.cache/spotify/*
-    - /home/*/.cargo/*
-    - /home/*/.composer/*
-    - /home/*/.config/Code/Cache/*
-    - /home/*/.config/Code/CachedData/*
-    - /home/*/.config/Code/logs/*
-    - /home/*/.config/Code/Service Worker/*
-    - /home/*/.config/gcloud/logs/*
-    - /home/*/.config/Slack/Cache/*
-    - /home/*/.friday/Downloads/*
-    - /home/*/.kube/cache/*
-    - /home/*/.kube/http-cache/*
-    - /home/*/.local/share/Trash/*
-    - /home/*/.local/share/virtualenv/*
-    - /home/*/.node_modules/*
-    - /home/*/.npm/*
-    - /home/*/.pyenv/*
-    - /home/*/.stremio-server/*
-    - /home/*/Documents/Fernanda/*
-    - /home/*/go/*
-    - /home/*/GoogleDrive/*
-    - /home/*/pCloudDrive/*
-    - /home/*/storage/*
-    - /var/cache/*
-    - /var/lock/*
-    - /var/log/*
-    - /var/tmp/*
+  - /home/*/Downloads/insider-events-manual/*
+  - '*.pyc'
+  - '*/.vim*.tmp'
+  - /home/*/.config/google-chrome/Default/Service Worker/*
+  - /home/*/.config/google-chrome/Profile 2/Service Worker/*
+  - /home/*/.config/Slack/Service Worker/*
+  - /backups
+  - /etc/ssl
+  - /home/.dotfiles/mopidy/.config/mopidy/local/*
+  - /home/.dotfiles/mopidy/.config/mopidy/spotify/*
+  - /home/*/.cache
+  - /home/*/.cache/*
+  - /home/*/.cache/google-chrome/*
+  - /home/*/.cache/spotify/*
+  - /home/*/.cargo/*
+  - /home/*/.composer/*
+  - /home/*/.config/Code/Cache/*
+  - /home/*/.config/Code/CachedData/*
+  - /home/*/.config/Code/logs/*
+  - /home/*/.config/Code/Service Worker/*
+  - /home/*/.config/gcloud/logs/*
+  - /home/*/.config/Slack/Cache/*
+  - /home/*/.friday/Downloads/*
+  - /home/*/.kube/cache/*
+  - /home/*/.kube/http-cache/*
+  - /home/*/.local/share/Trash/*
+  - /home/*/.local/share/virtualenv/*
+  - /home/*/.node_modules/*
+  - /home/*/.npm/*
+  - /home/*/.pyenv/*
+  - /home/*/.stremio-server/*
+  - /home/*/Documents/Fernanda/*
+  - /home/*/go/*
+  - /home/*/GoogleDrive/*
+  - /home/*/pCloudDrive/*
+  - /home/*/storage/*
+  - /var/cache/*
+  - /var/lock/*
+  - /var/log/*
+  - /var/tmp/*
 
 exclude_caches: true
 exclude_if_present:
-    - .nobackup
+  - .nobackup
 
 compression: lz4,zstd
 archive_name_format: '{hostname}-{now:%Y-%m-%d-%H:%M:%S}'
 
 extra_borg_options:
-    # Extra command-line options to pass to "borg init".
-    # init: --make-parent-dirs
+  # Extra command-line options to pass to "borg init".
+  # init: --make-parent-dirs
 
-    # Extra command-line options to pass to "borg prune".
-    prune: --show-rc --list --save-space
+  # Extra command-line options to pass to "borg prune".
+  prune: --show-rc --list --save-space
 
-    # Extra command-line options to pass to "borg create".
-    create: --filter AME --show-rc --list --stats --verbose
+  # Extra command-line options to pass to "borg create".
+  create: --filter AME --show-rc --list --stats --verbose
 
-    # Extra command-line options to pass to "borg check".
-    check: --save-space
+  # Extra command-line options to pass to "borg check".
+  check: --save-space
 
 # Keep all archives within this time interval.
 # keep_within: 3H
@@ -110,12 +111,12 @@ keep_monthly: 0
 # archives, and "extract" does an extraction dry-run of the
 # most recent archive. Note that "data" implies "archives".
 checks:
-    - name: repository
-      frequency: always
-    - name: archives
-      frequency: always
-    - name: data
-      frequency: always
+  - name: repository
+    frequency: always
+  - name: archives
+    frequency: always
+  - name: data
+    frequency: always
 
 # Paths to a subset of the repositories in the location
 # section on which to run consistency checks. Handy in case
@@ -124,7 +125,7 @@ checks:
 # running consistency checks on all repositories configured in
 # the location section.
 # check_repositories:
-    # - user@backupserver:sourcehostname.borg
+#   - user@backupserver:sourcehostname.borg
 
 # Restrict the number of checked archives to the last n.
 # Applies only to the "archives" check. Defaults to checking
@@ -133,9 +134,9 @@ check_last: 4
 
 # Options for customizing borgmatic's own output and logging.
 # output:
-    # Apply color to console output. Can be overridden with
-    # --no-color command-line flag. Defaults to true.
-    # color: false
+#   Apply color to console output. Can be overridden with
+#   --no-color command-line flag. Defaults to true.
+#   color: false
 
 # Shell commands, scripts, or integrations to execute at various
 # points during a borgmatic run. IMPORTANT: All provided commands and
@@ -147,59 +148,59 @@ check_last: 4
 # List of one or more shell commands or scripts to execute
 # before creating a backup, run once per configuration file.
 before_backup:
-    - echo "Starting a backup."
+  - echo "Starting a backup."
 
 # List of one or more shell commands or scripts to execute
 # before pruning, run once per configuration file.
 before_prune:
-    - echo "Starting pruning."
+  - echo "Starting pruning."
 
 # List of one or more shell commands or scripts to execute
 # before consistency checks, run once per configuration file.
 before_check:
-    - echo "Starting checks."
+  - echo "Starting checks."
 
 # List of one or more shell commands or scripts to execute
 # before extracting a backup, run once per configuration file.
 before_extract:
-    - echo "Starting extracting."
+  - echo "Starting extracting."
 
 # List of one or more shell commands or scripts to execute
 # after creating a backup, run once per configuration file.
 after_backup:
-    - echo "Finished a backup."
+  - echo "Finished a backup."
 
 # List of one or more shell commands or scripts to execute
 # after pruning, run once per configuration file.
 after_prune:
-    - echo "Finished pruning."
+  - echo "Finished pruning."
 
 # List of one or more shell commands or scripts to execute
 # after consistency checks, run once per configuration file.
 after_check:
-    - echo "Finished checks."
+  - echo "Finished checks."
 
 # List of one or more shell commands or scripts to execute
 # after extracting a backup, run once per configuration file.
 after_extract:
-    - echo "Finished extracting."
+  - echo "Finished extracting."
 
 # List of one or more shell commands or scripts to execute
 # when an exception occurs during a "prune", "create", or
 # "check" action or an associated before/after hook.
 on_error:
-    - echo "Error during prune/create/check."
+  - echo "Error during prune/create/check."
 
 # List of one or more shell commands or scripts to execute
 # before running all actions (if one of them is "create").
 # These are collected from all configuration files and then
 # run once before all of them (prior to all actions).
 # before_everything:
-    # - echo "Starting actions."
+#   - echo "Starting actions."
 
 # List of one or more shell commands or scripts to execute
 # after running all actions (if one of them is "create").
 # These are collected from all configuration files and then
 # run once after all of them (after any action).
 # after_everything:
-    # - echo "Completed actions."
+#   - echo "Completed actions."

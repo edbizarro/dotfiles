@@ -4,8 +4,7 @@ zstyle ':prezto:load' pmodule \
   'autosuggestions' \
   'command-not-found' \
   'completion' \
-  'contrib-prompt' \
-  'directory' \
+  'dpkg' \
   'git' \
   'history-substring-search' \
   'history' \
@@ -21,7 +20,7 @@ zstyle ':prezto:load' pmodule \
   'utility'
 
 zstyle ':prezto:module:prompt' theme 'paradox'
-zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'bitbucket_rsa'
+zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa_personal'
 zstyle ':prezto:module:tmux:auto-start' local 'yes'
 zstyle ':prezto:module:tmux:auto-start' remote 'no'
 zstyle ':prezto:module:pacman' frontend 'yay'
