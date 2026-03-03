@@ -2,16 +2,9 @@
   "contextFileName": "AGENTS.md",
   "mcpServers": {
     "context7": {
-      "command": "npx",
       "args": [
         "-y",
         "@upstash/context7-mcp"
-      ]
-    },
-    "sequential-thinking": {
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-sequential-thinking"
       ],
       "command": "npx"
     }
