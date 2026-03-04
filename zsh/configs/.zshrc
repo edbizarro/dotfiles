@@ -30,8 +30,8 @@ export ZSH_WAKATIME_PROJECT_DETECTION=true
 command -v atuin &>/dev/null && eval "$(atuin init zsh)"
 
 
-eval "$(pyenv init - zsh)"
-eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv init - zsh)"
+# eval "$(pyenv virtualenv-init -)"
 
 
 eval "$(atuin init zsh)"
