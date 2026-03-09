@@ -188,7 +188,7 @@ assign [class="(?i)bum"] 4
 assign [class="(?i)slack"] 5
 
 # Start-up programs
-exec --no-startup-id urxvtd -q -o -f
+# exec --no-startup-id urxvtd -q -o -f
 exec_always --no-startup-id ${HOME}/.i3/startup/picom.sh
 exec_always --no-startup-id wal -R
 exec_always --no-startup-id ${HOME}/.i3/startup/dunst.sh

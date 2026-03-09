@@ -1,0 +1,56 @@
+configuration {
+    modes: "window,drun,run,ssh,combi";
+    show-icons: true;
+    drun-display-format: "{name}";
+
+
+    location: 3;
+
+}
+
+window {
+  fullscreen: false;
+  font: "FantasqueSansM Nerd Font Mono 12";
+  width: 28%;
+  height: 97.3%;
+}
+
+prompt { enabled: false; }
+
+entry {
+  padding: 5px 0 5px 0;
+  horizontal-align: 0.5;
+  margin: 8% 5% 0% 5%;
+
+  font: "FantasqueSansM Nerd Font Mono 12";
+  border-radius: 30px;
+  placeholder: "Search";
+}
+
+listview {
+  columns: 3;
+  padding: 1.5%;
+  margin: 5% 0% 5% 0%;
+}
+
+element {
+  padding: 0.4%;
+  margin: 1% 0.3% 1% 0.3%;
+  orientation: vertical;
+}
+
+element selected {
+  border-radius: 10px;
+}
+
+element-icon {
+  size: 48;
+}
+
+element-text {
+  horizontal-align: 0.5;
+}
+
+/* @import "~/.cache/wal/colors-rofi-dark"*/
+
+@import "~/.cache/wal/colors-rofi-dark"
