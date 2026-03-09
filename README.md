@@ -21,6 +21,7 @@ Previous themes can be found on [reddit](https://www.reddit.com/r/unixporn/searc
 * [polybar](https://github.com/polybar/polybar)
 * [prezto-contrib](https://github.com/belak/prezto-contrib)
 * [prezto](https://github.com/sorin-ionescu/prezto) (zsh framework)
+* [rofi](https://github.com/davatorium/rofi) (application launcher)
 * [tmux](https://github.com/tmux/tmux) + [tpm](https://github.com/tmux-plugins/tpm)
 * [zsh](http://www.zsh.org)
 
@@ -42,7 +43,8 @@ Previous themes can be found on [reddit](https://www.reddit.com/r/unixporn/searc
 * [mons](https://github.com/Ventto/mons)
 * [mopidy](https://www.mopidy.com/)
 * [ncmpcpp](http://rybczak.net/ncmpcpp/)
-* [pywal](https://github.com/dylanaraps/pywal) (generate colourschemes based on wallpaper)
+* [pywal](https://github.com/dylanaraps/pywal) (generate colourschemes based on wallpaper — also used by rofi theme)
+* [ufetch](https://gitlab.com/jschx/ufetch) (minimal system info)
 
 ## Installation
 
@@ -69,6 +71,10 @@ Or run individual targets:
     make atuin          # Install Atuin shell history
     make polybar-hw     # Detect hardware for polybar
     make unstow         # Remove all symlinks
+
+Standalone packages (not yet in a Makefile group):
+
+    cd ~/.dotfiles && stow --target=$HOME rofi scripts wallpapers
 
 Run `make` or `make help` to see all available targets.
 
