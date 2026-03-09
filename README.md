@@ -143,6 +143,4 @@ Setup polybar hardware detection:
 ## Cool fonts
 
 * [icomoon](https://icomoon.io)
-* [Input Font](http://input.fontbureau.com/download/)
 * [Pragmata](https://github.com/fabrizioschiavi/pragmatapro)
-* [tewi-font](https://github.com/lucy/tewi-font)
