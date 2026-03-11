@@ -186,6 +186,7 @@ assign [class="(?i)ncmpcpp"] 4
 assign [class="(?i)cava"] 4
 assign [class="(?i)bum"] 4
 assign [class="(?i)slack"] 5
+assign [class="(?i)obsidian"] 7
 
 # Start-up programs
 # exec --no-startup-id urxvtd -q -o -f
