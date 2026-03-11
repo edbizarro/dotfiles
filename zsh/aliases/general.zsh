@@ -47,5 +47,5 @@ gpgd(){
 
 wal-tile() {
     wal  -n -i "$@" --iterative -a 100
-    feh --bg-tile "$(< "${HOME}/.cache/wal/wal")"
+    feh --bg-fill "$(< "${HOME}/.cache/wal/wal")"
 }
