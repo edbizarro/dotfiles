@@ -23,6 +23,7 @@ Previous themes can be found on [reddit](https://www.reddit.com/r/unixporn/searc
 * [prezto](https://github.com/sorin-ionescu/prezto) (zsh framework)
 * [rofi](https://github.com/davatorium/rofi) (application launcher)
 * [tmux](https://github.com/tmux/tmux) + [tpm](https://github.com/tmux-plugins/tpm)
+* [vim-plug](https://github.com/junegunn/vim-plug) (Neovim plugin manager)
 * [zsh](http://www.zsh.org)
 
 ### CLI tools
@@ -70,7 +71,21 @@ Or run individual targets:
     make tmux-plugins   # Install TPM + plugins
     make atuin          # Install Atuin shell history
     make polybar-hw     # Detect hardware for polybar
+    make vim-plug       # Install vim-plug for Neovim
     make unstow         # Remove all symlinks
+
+### Neovim Plugin Manager (vim-plug)
+
+[vim-plug](https://github.com/junegunn/vim-plug) is required for Neovim plugins. Install it via Make:
+
+    make vim-plug
+
+Or manually:
+
+    curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+After installing, open Neovim and run `:PlugInstall` to install the plugins defined in `nvim/.config/nvim/init.vim`.
 
 Standalone packages (not yet in a Makefile group):
 

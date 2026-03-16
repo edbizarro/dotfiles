@@ -55,7 +55,7 @@ UBUNTU_APT := i3 polybar picom dunst zsh tmux stow git curl \
 
 .PHONY: help all install install-arch install-ubuntu \
 	stow stow-core stow-desktop stow-media unstow \
-	fonts prezto tmux-plugins polybar-hw pre-commit atuin clean
+	fonts prezto tmux-plugins vim-plug polybar-hw pre-commit atuin clean
 
 help: ## Show all available targets
 	@echo ""
@@ -68,7 +68,7 @@ help: ## Show all available targets
 	@echo "  Packages: $(ALL_PACKAGES)"
 	@echo ""
 
-all: install fonts stow prezto tmux-plugins polybar-hw pre-commit ## Full fresh-machine setup
+all: install fonts stow prezto tmux-plugins vim-plug polybar-hw pre-commit ## Full fresh-machine setup
 
 # ─── Package Installation ─────────────────────────────────────────────
 
@@ -149,6 +149,16 @@ tmux-plugins: ## Install TPM and tmux plugins
 		echo "TPM already installed."; \
 	fi
 	@echo "Run 'prefix + I' inside tmux to install plugins."
+
+vim-plug: ## Install vim-plug for Neovim
+	@if [ -f "$(HOME)/.local/share/nvim/site/autoload/plug.vim" ]; then \
+		echo "vim-plug already installed."; \
+	else \
+		echo "Installing vim-plug for Neovim..."; \
+		curl -fLo $(HOME)/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+			https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim; \
+		echo "vim-plug installed. Run :PlugInstall inside Neovim to install plugins."; \
+	fi
 
 polybar-hw: ## Detect hardware for polybar configuration
 	@if [ -f "$(HOME)/.config/polybar/setup-hardware.sh" ]; then \
