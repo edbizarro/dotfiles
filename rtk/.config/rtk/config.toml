@@ -1,0 +1,9 @@
+[tracking]
+enabled = false
+history_days = 90
+
+[telemetry]
+enabled = false
+
+[hooks]
+exclude_commands = ["curl"]

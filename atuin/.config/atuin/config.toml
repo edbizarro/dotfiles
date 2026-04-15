@@ -38,7 +38,7 @@ sync_frequency = "10m"
 
 ## which search mode to use
 ## possible values: prefix, fulltext, fuzzy, skim
-search_mode = "fuzzy"
+search_mode = "daemon-fuzzy"
 
 ## which filter mode to use
 ## possible values: global, host, session, directory
@@ -216,3 +216,7 @@ height = "80%"
 
 [ui]
 columns = ["duration", "time", "host", "command"]
+
+[daemon]
+enabled = true
+autostart = true

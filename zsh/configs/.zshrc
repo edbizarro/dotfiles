@@ -56,5 +56,11 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 alias hal="pai"
 
+
+. "/home/eduardo.bizarro/.config/jus-cli/init_zsh.sh"
+
+fpath=(/home/eduardo.bizarro/.config/jus-cli/completion_zsh $fpath)
+autoload -U compinit; compinit
+
 # PAI alias
-alias pai='bun ~/.claude/PAI/Tools/pai.ts'
+alias pai='bun /home/eduardo.bizarro/.claude/PAI/Tools/pai.ts'

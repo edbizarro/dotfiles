@@ -5,7 +5,6 @@ zstyle ':prezto:load' pmodule \
   'command-not-found' \
   'completion' \
   'dpkg' \
-  'git' \
   'history-substring-search' \
   'history' \
   'pacman' \
@@ -17,6 +16,7 @@ zstyle ':prezto:load' pmodule \
   'syntax-highlighting' \
   'terminal' \
   'tmux' \
+  'git' \
   'utility'
 
 zstyle ':prezto:module:prompt' theme 'paradox'
