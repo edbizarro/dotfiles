@@ -146,7 +146,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec --no-startup-id powerprofilesctl set performance
+exec --no-startup-id powerprofilesctl set balanced
 
 bindsym $mod+Ctrl+l exec --no-startup-id $HOME/.dotfiles/i3/.i3/scripts/i3lock.sh
 bindsym $mod+Shift+a exec --no-startup-id wal -R

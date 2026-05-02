@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/eduardo.bizarro/.zsh/completions:"* ]]; then export FPATH="/home/eduardo.bizarro/.zsh/completions:$FPATH"; fi
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -57,10 +59,12 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 alias hal="pai"
 
 
-. "/home/eduardo.bizarro/.config/jus-cli/init_zsh.sh"
+. "$HOME/.config/jus-cli/init_zsh.sh"
 
-fpath=(/home/eduardo.bizarro/.config/jus-cli/completion_zsh $fpath)
+fpath=("$HOME/.config/jus-cli/completion_zsh" $fpath)
 autoload -U compinit; compinit
 
 # PAI alias
-alias pai='bun /home/eduardo.bizarro/.claude/PAI/Tools/pai.ts'
+alias pai="bun $HOME/.claude/PAI/Tools/pai.ts"
+
+. "$HOME/.deno/env"
