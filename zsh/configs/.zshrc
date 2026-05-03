@@ -59,12 +59,12 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 alias hal="pai"
 
 
-. "$HOME/.config/jus-cli/init_zsh.sh"
+[[ -f "$HOME/.config/jus-cli/init_zsh.sh" ]] && . "$HOME/.config/jus-cli/init_zsh.sh"
 
-fpath=("$HOME/.config/jus-cli/completion_zsh" $fpath)
+[[ -d "$HOME/.config/jus-cli/completion_zsh" ]] && fpath=("$HOME/.config/jus-cli/completion_zsh" $fpath)
 autoload -U compinit; compinit
 
 # PAI alias
 alias pai="bun $HOME/.claude/PAI/Tools/pai.ts"
 
-. "$HOME/.deno/env"
+[[ -f "$HOME/.deno/env" ]] && . "$HOME/.deno/env"
