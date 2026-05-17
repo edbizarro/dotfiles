@@ -36,11 +36,8 @@ command -v atuin &>/dev/null && eval "$(atuin init zsh)"
 # eval "$(pyenv virtualenv-init -)"
 
 
-eval "$(atuin init zsh)"
-
-
 # PAI Configuration (added by Kai Bundle installer)
-export DA=""HAL""
+export DA="HAL"
 export TIME_ZONE="America/Sao_Paulo"
 export PAI_SOURCE_APP="$DA"
 
@@ -64,7 +61,8 @@ alias hal="pai"
 [[ -d "$HOME/.config/jus-cli/completion_zsh" ]] && fpath=("$HOME/.config/jus-cli/completion_zsh" $fpath)
 autoload -U compinit; compinit
 
-# PAI alias
-alias pai="bun $HOME/.claude/PAI/Tools/pai.ts"
 
 [[ -f "$HOME/.deno/env" ]] && . "$HOME/.deno/env"
+
+# PAI alias
+alias pai='bun /home/eduardo.bizarro/.claude/PAI/TOOLS/pai.ts'

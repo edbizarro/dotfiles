@@ -41,3 +41,9 @@ set -g history-limit 10000
 
 # kill session completely
 bind q kill-session
+
+
+# Claude code
+set -g allow-passthrough on
+set -s extended-keys on
+set -as terminal-features 'xterm*:extkeys'
