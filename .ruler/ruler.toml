@@ -1,4 +1,4 @@
-default_agents = ["copilot", "claude", "gemini-cli", "codex"]
+default_agents = ["claude", "gemini-cli", "codex"]
 
 [gitignore]
 # Enable/disable automatic .gitignore updates (default: true)

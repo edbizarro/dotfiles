@@ -53,13 +53,21 @@ fi
 ################################################################################
 # 3 · one shared snippet we’ll send to tmux
 ################################################################################
+# If a branch named $name already exists, attach the worktree to it; otherwise
+# create a fresh branch off $main_branch.
+if git show-ref --verify --quiet "refs/heads/$name"; then
+  add_cmd="git worktree add \"$wtdir\" \"$name\""
+else
+  add_cmd="git worktree add -b \"$name\" \"$wtdir\" $main_branch"
+fi
+
 setup_worktree=$(
   cat <<EOF
 cd "$root"
 if [ -d "$wtdir/.git" ]; then
   cd "$wtdir"
 else
-  git worktree add -b "$name" "$wtdir" $main_branch
+  $add_cmd
   cd "$wtdir"
 fi
 exec \$SHELL

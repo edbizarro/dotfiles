@@ -7,19 +7,18 @@ alias gff='git flow feature finish'
 alias gfrs='git flow release start'
 alias gfrf='git flow release finish'
 
-# Commit the current changes and push to the current branch
+# pushme: push da branch atual.
+#   sem args: git push (rápido, quando você já commitou).
+#   com args: git add --all && git commit -m "$*" && git push.
 function pushme {
-  br=`git branch | grep "*"`
-  git add --all
-  if (($# > 1)); then
-    params=''
-    for i in $*;
-    do
-      params=" $params $i"
-    done
-    git commit -m "$params"
-  else
-    git commit -m "$1"
+  local branch
+  branch=$(git symbolic-ref --short HEAD 2>/dev/null) || {
+    echo "pushme: not on a branch (detached HEAD?)" >&2
+    return 1
+  }
+  if [[ $# -gt 0 ]]; then
+    git add --all || return $?
+    git commit -m "$*" || return $?
   fi
-  git push origin ${br/* /}
+  git push origin "$branch"
 }
