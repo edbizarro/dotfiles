@@ -150,6 +150,7 @@ exec --no-startup-id powerprofilesctl set balanced
 
 bindsym $mod+Ctrl+l exec --no-startup-id $HOME/.dotfiles/i3/.i3/scripts/i3lock.sh
 bindsym $mod+Shift+a exec --no-startup-id wal -R
+bindsym $mod+Shift+m exec --no-startup-id $HOME/.dotfiles/i3/.i3/scripts/restore-display.sh
 
 # Ncmpcpp
 bindsym $mod+Shift+n exec --no-startup-id urxvt -name 'ncmpcpp' -e ncmpcpp
