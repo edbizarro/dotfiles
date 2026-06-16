@@ -52,3 +52,5 @@ _ide_helper_models.php
 # Vagrant
 .vagrant
 .php_cs.cache
+
+**/.claude/settings.local.json
