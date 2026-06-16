@@ -1,0 +1,102 @@
+#!/usr/bin/env bash
+# slack-fix-mono — restore monospace rendering for Slack inline `code`.
+#
+# Why this exists
+#   The Slack snap rendered backtick `code` as a SERIF font while normal
+#   (sans) text was fine. Slack's content CSS for code falls back to the
+#   generic CSS keyword `monospace`; inside the snap mount namespace that
+#   generic was resolving to a serif (the snap's auto-generated fonts.conf
+#   pins a stale gnome-platform revision path). The host fontconfig is
+#   healthy — this is snap-local only.
+#
+#   The fix is a Slack-snap-LOCAL fontconfig rule. It is intentionally
+#   decoupled from ~/.config/gtk-3.0/settings.ini (shared with Chrome) and
+#   from the host fontconfig, so tuning fonts for one app never breaks the
+#   other again. The snap copies its user data forward on refresh, so this
+#   normally persists — re-run this script only after a full snap reinstall.
+#
+# Usage: slack-fix-mono   (idempotent; safe to re-run)
+set -euo pipefail
+
+snap_cfg="${HOME}/snap/slack/current/.config/fontconfig"
+conf_dir="${snap_cfg}/conf.d"
+conf="${conf_dir}/99-slack-mono.conf"
+
+if [[ ! -d "${HOME}/snap/slack/current" ]]; then
+  echo "slack-fix-mono: Slack snap not found at ~/snap/slack/current — is the snap installed?" >&2
+  exit 1
+fi
+
+mkdir -p "${conf_dir}"
+
+cat > "${conf}" <<'EOF'
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<!--
+  Slack (snap) inline-code fix — managed by ~/.dotfiles scripts/slack-fix-mono.
+  Pins the generic `monospace` AND the Mac/CSS mono families Slack's code CSS
+  requests to a real installed mono font (Cascadia Code, then DejaVu Sans Mono)
+  with STRONG binding, so a missing name lands on mono — never serif/sans.
+  A weak <prefer> is insufficient: absent names otherwise fall to the default
+  sans. Snap-local only; does not touch the Chrome-shared GTK settings.ini.
+-->
+<fontconfig>
+  <alias binding="strong">
+    <family>monospace</family>
+    <prefer>
+      <family>Cascadia Code</family>
+      <family>DejaVu Sans Mono</family>
+    </prefer>
+  </alias>
+
+  <match target="pattern">
+    <test name="family"><string>Monaco</string></test>
+    <edit name="family" mode="assign" binding="strong"><string>Cascadia Code</string><string>DejaVu Sans Mono</string></edit>
+  </match>
+  <match target="pattern">
+    <test name="family"><string>Menlo</string></test>
+    <edit name="family" mode="assign" binding="strong"><string>Cascadia Code</string><string>DejaVu Sans Mono</string></edit>
+  </match>
+  <match target="pattern">
+    <test name="family"><string>Consolas</string></test>
+    <edit name="family" mode="assign" binding="strong"><string>Cascadia Code</string><string>DejaVu Sans Mono</string></edit>
+  </match>
+  <match target="pattern">
+    <test name="family"><string>Courier New</string></test>
+    <edit name="family" mode="assign" binding="strong"><string>Cascadia Code</string><string>DejaVu Sans Mono</string></edit>
+  </match>
+  <match target="pattern">
+    <test name="family"><string>ui-monospace</string></test>
+    <edit name="family" mode="assign" binding="strong"><string>Cascadia Code</string><string>DejaVu Sans Mono</string></edit>
+  </match>
+  <match target="pattern">
+    <test name="family"><string>SFMono-Regular</string></test>
+    <edit name="family" mode="assign" binding="strong"><string>Cascadia Code</string><string>DejaVu Sans Mono</string></edit>
+  </match>
+  <match target="pattern">
+    <test name="family"><string>SF Mono</string></test>
+    <edit name="family" mode="assign" binding="strong"><string>Cascadia Code</string><string>DejaVu Sans Mono</string></edit>
+  </match>
+</fontconfig>
+EOF
+
+# The snap's auto-generated fonts.conf includes only a RELATIVE `conf.d`,
+# which does not resolve under the snap's runtime fontconfig invocation, so
+# the rule above never loads on its own. The snap does NOT regenerate
+# fonts.conf on launch, so patch it once with an ABSOLUTE include (idempotent).
+fonts_conf="${snap_cfg}/fonts.conf"
+if [[ -f "${fonts_conf}" ]] && ! grep -qF "${conf}" "${fonts_conf}"; then
+  cp -f "${fonts_conf}" "${fonts_conf}.bak-$(date +%Y%m%d-%H%M%S)"
+  # insert the absolute include right before the closing tag
+  awk -v inc="  <include ignore_missing=\"yes\">${conf}</include>" \
+    '/<\/fontconfig>/{print inc} {print}' "${fonts_conf}" > "${fonts_conf}.tmp" \
+    && mv "${fonts_conf}.tmp" "${fonts_conf}"
+  echo "slack-fix-mono: patched ${fonts_conf} with absolute include"
+fi
+
+# Clear the user font cache so the new rules take effect (rules are evaluated
+# live, but this avoids any stale per-font metadata).
+rm -rf "${HOME}/snap/slack/current/.cache/fontconfig/"* 2>/dev/null || true
+
+echo "slack-fix-mono: wrote ${conf}"
+echo "slack-fix-mono: quit and reopen Slack to apply (Chromium caches font resolution at startup)."
