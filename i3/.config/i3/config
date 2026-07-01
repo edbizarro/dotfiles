@@ -163,7 +163,7 @@ bindsym $mod+Shift+d exec --no-startup-id rofi -monitor -1 -show window -display
 
 #Screenshot
 # bindsym $mod+Shift+s exec --no-startup-id "scrot -q 95 ${HOME}/Pictures/Screenshots/screenshot-%Y-%m-%d_%H:%M:%S.png"
-bindsym $mod+Shift+s exec --no-startup-id "flameshot screen"
+bindsym $mod+Shift+s exec --no-startup-id "flameshot screen -n 0"
 bindsym $mod+Shift+t exec --no-startup-id "flameshot gui"
 bindsym Print exec --no-startup-id "scrot -q 95 ${HOME}/Pictures/Screenshots/screenshot-%Y-%m-%d_%H:%M:%S.png"
 
