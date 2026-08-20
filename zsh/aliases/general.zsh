@@ -19,8 +19,10 @@ fi
 command -v tldr &>/dev/null && alias man='tldr'
 
 alias show-fonts="fc-list | cut -d ' ' -f2 | sort -u"
-alias vim="nvim"
-alias vi="nvim"
+if command -v nvim &>/dev/null; then
+  alias vim="nvim"
+  alias vi="nvim"
+fi
 # alias cat="bat"
 
 alias reboot='sudo systemctl reboot'
