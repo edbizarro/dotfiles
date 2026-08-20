@@ -44,6 +44,8 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Shift+Return exec --no-startup-id kitty
+# kitty dedicada para o NERV: fora do tmux local, ja anexa o tmux remoto
+bindsym $mod+Ctrl+n exec --no-startup-id kitty --class kitty-nerv --title NERV ssh nerv
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -177,7 +179,8 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 
 #Assigns
 assign [class="URxvt"] 1
-assign [class="kitty"] 1
+assign [class="^kitty$"] 1
+assign [class="kitty-nerv"] 6
 assign [class="(?i)chrome"] 2
 assign [class="(?i)atom"] 3
 assign [class="(?i)pstorm"] 3
